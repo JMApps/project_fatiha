@@ -9,34 +9,35 @@ class SalomonBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SalomonBottomBar(
-        itemShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.5),
+      itemShape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12.5),
+      ),
+      selectedItemColor: const Color(0xFFFFFFFF),
+      unselectedItemColor: const Color(0xFFC4D4CA),
+      margin: const EdgeInsets.all(16),
+      currentIndex: _currentIndex,
+      items: [
+        SalomonBottomBarItem(
+          icon: const Icon(Icons.add),
+          title: Text('One'),
         ),
-        selectedItemColor: const Color(0xFFFFFFFF),
-        unselectedItemColor: const Color(0xFFC4D4CA),
-        margin: const EdgeInsets.all(16),
-        currentIndex: _currentIndex,
-        items: [
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.add),
-            title: Text('One'),
-          ),
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.add),
-            title: Text('Two'),
-          ),
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.add),
-            title: Text('Three'),
-          ),
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.add),
-            title: Text('Four'),
-          ),
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.add),
-            title: Text('Five'),
-          ),
-        ]);
+        SalomonBottomBarItem(
+          icon: const Icon(Icons.add),
+          title: Text('Two'),
+        ),
+        SalomonBottomBarItem(
+          icon: const Icon(Icons.add),
+          title: Text('Three'),
+        ),
+        SalomonBottomBarItem(
+          icon: const Icon(Icons.add),
+          title: Text('Four'),
+        ),
+        SalomonBottomBarItem(
+          icon: const Icon(Icons.add),
+          title: Text('Five'),
+        ),
+      ],
+    );
   }
 }
