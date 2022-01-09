@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "hatiha_logo_512-2.jpg",
+      "filename" : "f_logo_end_512-2.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hatiha_logo_512.jpg",
+      "filename" : "f_logo_end_512.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "hatiha_logo_512-1.jpg",
+      "filename" : "f_logo_end_512-1.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
