@@ -9,7 +9,11 @@ class AppBarAboutFatiha extends StatelessWidget {
     return AppBar(
       backgroundColor: const Color(0xFFCE7D2E),
       elevation: 0.3,
-      leading: const Icon(Icons.translate),
+      leading: Transform.scale(
+        scale: 0.8,
+        child: Image.asset(
+          'assets/icons/f_logo_end_50.png'),
+      ),
       title: const Text(
         'О Фатихе',
       ),
