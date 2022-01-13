@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/presentation/ui/widgets/body_about_fatiha.dart';
-import 'package:project_fatiha/presentation/ui/widgets/main_app_bar.dart';
+import 'package:project_fatiha/domain/state/main_bottom_navigation_state.dart';
+import 'package:project_fatiha/presentation/ui/pages/page_about_fatiha.dart';
+import 'package:project_fatiha/presentation/ui/pages/page_error_in_reading_fatiha.dart';
+import 'package:project_fatiha/presentation/ui/pages/page_fatiha.dart';
+import 'package:project_fatiha/presentation/ui/pages/page_reading_words_fatiha.dart';
+import 'package:project_fatiha/presentation/ui/pages/page_tajweed_fatiha.dart';
 import 'package:project_fatiha/presentation/ui/widgets/salomon_bottom_navigation_bar.dart';
+import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  MainPage({Key? key}) : super(key: key);
+
+  final _widgetList = [
+    PageAboutFatiha(),
+    PageTajweedFatiha(),
+    PageFatiha(),
+    PageReadingWordsFatiha(),
+    PageErrorInReadingFatiha()
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFC4D4CA),
-      appBar: const PreferredSize(
-        preferredSize: Size(double.maxFinite, 50),
-        child: MainAppBar(),
-      ),
-      body: const BodyAboutFatiha(),
+      backgroundColor: const Color(0xFFFFFFFF),
+      body: _widgetList[context.watch<MainBottomNavigationState>().getCurrentBottomNavigatorIndex],
       bottomNavigationBar: Container(
         margin: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
         decoration: BoxDecoration(
