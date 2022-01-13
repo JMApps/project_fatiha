@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/presentation/ui/widgets/appbars/app_bar_error_in_reading_fatiha.dart';
+import 'package:project_fatiha/presentation/ui/widgets/main_app_bar.dart';
 
 class PageErrorInReadingFatiha extends StatelessWidget {
   const PageErrorInReadingFatiha({Key? key}) : super(key: key);
@@ -9,10 +9,9 @@ class PageErrorInReadingFatiha extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 50),
-        child: AppBarErrorInReadingFatiha(),
+        child: MainAppBar(title: 'ошибки'),
       ),
-      body: Container(
-      ),
+      body: Container(),
     );
   }
 }

@@ -15,9 +15,6 @@ class App extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Фатиха',
-        theme: ThemeData(
-          primarySwatch: Colors.deepOrange,
-        ),
         home: MainPage(),
       ),
     );

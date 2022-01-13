@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/presentation/ui/widgets/appbars/app_bar_reading_words_fatiha.dart';
+import 'package:project_fatiha/presentation/ui/widgets/main_app_bar.dart';
 
 class PageReadingWordsFatiha extends StatelessWidget {
   const PageReadingWordsFatiha({Key? key}) : super(key: key);
@@ -9,10 +9,9 @@ class PageReadingWordsFatiha extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 50),
-        child: AppBarReadingWordsFatiha(),
+        child: MainAppBar(title: 'по словам'),
       ),
-      body: Container(
-      ),
+      body: Container(),
     );
   }
 }
