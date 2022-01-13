@@ -12,7 +12,6 @@ class PageTajweedFatiha extends StatelessWidget {
         child: AppBarTajweedFatiha(),
       ),
       body: Container(
-        color: Colors.grey[100],
       ),
     );
   }

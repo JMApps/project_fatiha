@@ -12,7 +12,6 @@ class PageErrorInReadingFatiha extends StatelessWidget {
         child: AppBarErrorInReadingFatiha(),
       ),
       body: Container(
-        color: Colors.red[100],
       ),
     );
   }

@@ -29,11 +29,11 @@ class SalomonBottomNavigationBar extends StatelessWidget {
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: const Icon(Icons.add),
+          icon: const Icon(Icons.translate),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: const Icon(Icons.add),
+          icon: const Icon(Icons.error_outline),
           title: const SizedBox(),
         ),
       ],

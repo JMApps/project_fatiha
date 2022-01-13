@@ -12,7 +12,6 @@ class PageAboutFatiha extends StatelessWidget {
         child: AppBarAboutFatiha(),
       ),
       body: Container(
-        color: Colors.green[100],
       ),
     );
   }

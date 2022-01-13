@@ -12,7 +12,6 @@ class PageReadingWordsFatiha extends StatelessWidget {
         child: AppBarReadingWordsFatiha(),
       ),
       body: Container(
-        color: Colors.brown[100],
       ),
     );
   }

@@ -7,7 +7,6 @@ class PageFatiha extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.blue[100],
       ),
     );
   }
