@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MainAppBar extends StatelessWidget {
-  const MainAppBar({Key? key}) : super(key: key);
+class AppBarTajweedFatiha extends StatelessWidget {
+  const AppBarTajweedFatiha({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +11,7 @@ class MainAppBar extends StatelessWidget {
       elevation: 0.3,
       leading: const Icon(Icons.translate),
       title: const Text(
-        'الفاتحة',
-        style: TextStyle(fontSize: 25),
+        'Таджвид',
       ),
       actions: [
         IconButton(
