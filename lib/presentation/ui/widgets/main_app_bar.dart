@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MainAppBar extends StatelessWidget {
-  const MainAppBar({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const MainAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +12,12 @@ class MainAppBar extends StatelessWidget {
         scale: 0.6,
         child: Image.asset('assets/icons/f_logo_end.png'),
       ),
-      title: Text(
-        title,
+      title: const Text(
+        'الفاتحة',
+        style: TextStyle(
+          fontFamily: 'NotoNastaliqUrdu',
+          color: Colors.white,
+        ),
       ),
       actions: [
         IconButton(

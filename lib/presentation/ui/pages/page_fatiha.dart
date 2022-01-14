@@ -9,7 +9,7 @@ class PageFatiha extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 50),
-        child: MainAppBar(title: 'Фатиха'),
+        child: MainAppBar(),
       ),
       body: Container(),
     );

@@ -9,7 +9,7 @@ class PageTajweedFatiha extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 50),
-        child: MainAppBar(title: 'таджвид'),
+        child: MainAppBar(),
       ),
       body: Container(),
     );

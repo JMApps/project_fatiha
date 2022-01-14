@@ -9,7 +9,7 @@ class PageReadingWordsFatiha extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 50),
-        child: MainAppBar(title: 'по словам'),
+        child: MainAppBar(),
       ),
       body: Container(),
     );

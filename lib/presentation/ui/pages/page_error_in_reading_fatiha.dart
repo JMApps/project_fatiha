@@ -9,7 +9,7 @@ class PageErrorInReadingFatiha extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 50),
-        child: MainAppBar(title: 'ошибки'),
+        child: MainAppBar(),
       ),
       body: Container(),
     );
