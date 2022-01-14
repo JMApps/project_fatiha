@@ -30,12 +30,32 @@ class TimeLineItem extends StatelessWidget {
             thickness: 2,
           ),
           endChild: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Text(
-              contentDescription,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w100,
+            padding: const EdgeInsets.only(
+              top: 16,
+              right: 16,
+              bottom: 20,
+            ),
+            child: ListTile(
+              title: const Padding(
+                padding: EdgeInsets.only(
+                  bottom: 16,
+                ),
+                child: Text(
+                  'Вопрос',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+              subtitle: Text(
+                contentDescription,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w100,
+                    color: Colors.black87),
               ),
             ),
           ),
@@ -58,12 +78,32 @@ class TimeLineItem extends StatelessWidget {
             thickness: 2,
           ),
           startChild: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Text(
-              contentDescription,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w100,
+            padding: const EdgeInsets.only(
+              left: 16,
+              top: 16,
+              bottom: 20,
+            ),
+            child: ListTile(
+              title: const Padding(
+                padding: EdgeInsets.only(
+                  bottom: 16,
+                ),
+                child: Text(
+                  'Вопрос',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+              subtitle: Text(
+                contentDescription,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w100,
+                    color: Colors.black87),
               ),
             ),
           ),
