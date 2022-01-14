@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MainBottomNavigationState with ChangeNotifier {
-  int _currentBottomNavigationIndex = 2;
+  int _currentBottomNavigationIndex = 0;
 
   int get getCurrentBottomNavigatorIndex => _currentBottomNavigationIndex;
 
