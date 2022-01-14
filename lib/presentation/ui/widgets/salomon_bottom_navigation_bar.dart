@@ -6,6 +6,10 @@ import 'package:provider/provider.dart';
 class SalomonBottomNavigationBar extends StatelessWidget {
   const SalomonBottomNavigationBar({Key? key}) : super(key: key);
 
+  Widget bottomBarIcon(String iconName) {
+    return Image.asset('assets/icons/$iconName', width: 25, height: 25);
+  }
+
   @override
   Widget build(BuildContext context) {
     return SalomonBottomBar(
@@ -17,23 +21,23 @@ class SalomonBottomNavigationBar extends StatelessWidget {
       ),
       items: [
         SalomonBottomBarItem(
-          icon: const Icon(Icons.info),
+          icon: bottomBarIcon('about_f_100.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: const Icon(Icons.language),
+          icon: bottomBarIcon('tajweed_f_100.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: const Icon(Icons.phonelink_erase_rounded),
+          icon: bottomBarIcon('fatiha_100.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: const Icon(Icons.translate),
+          icon: bottomBarIcon('words_f_100.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: const Icon(Icons.error_outline),
+          icon: bottomBarIcon('error_f_100.png'),
           title: const SizedBox(),
         ),
       ],

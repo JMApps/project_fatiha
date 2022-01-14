@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainAppBar extends StatelessWidget {
@@ -20,7 +19,10 @@ class MainAppBar extends StatelessWidget {
       ),
       actions: [
         IconButton(
-          icon: const Icon(CupertinoIcons.text_alignright),
+          icon: Transform.scale(
+            scale: 0.9,
+            child: Image.asset('assets/icons/main_menu.png'),
+          ),
           onPressed: () {},
         ),
       ],
