@@ -21,23 +21,23 @@ class SalomonBottomNavigationBar extends StatelessWidget {
       ),
       items: [
         SalomonBottomBarItem(
-          icon: bottomBarIcon('about_f_100.png'),
+          icon: bottomBarIcon('about_f.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('tajweed_f_100.png'),
+          icon: bottomBarIcon('tajweed_f.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('fatiha_100.png'),
+          icon: bottomBarIcon('fatiha.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('words_f_100.png'),
+          icon: bottomBarIcon('words_f.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('error_f_100.png'),
+          icon: bottomBarIcon('error_f.png'),
           title: const SizedBox(),
         ),
       ],

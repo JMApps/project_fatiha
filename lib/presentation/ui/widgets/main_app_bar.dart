@@ -8,10 +8,7 @@ class MainAppBar extends StatelessWidget {
     return AppBar(
       backgroundColor: const Color(0xFFCE7D2E),
       elevation: 0,
-      leading: Transform.scale(
-        scale: 0.6,
-        child: Image.asset('assets/icons/f_logo_end.png'),
-      ),
+      centerTitle: true,
       title: const Text(
         'الفاتحة',
         style: TextStyle(
