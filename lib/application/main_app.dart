@@ -15,6 +15,9 @@ class App extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Фатиха',
+        theme: ThemeData(
+          fontFamily: 'Gilroy'
+        ),
         home: MainPage(),
       ),
     );
