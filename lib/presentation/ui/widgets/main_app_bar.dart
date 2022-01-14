@@ -9,12 +9,9 @@ class MainAppBar extends StatelessWidget {
       backgroundColor: const Color(0xFFCE7D2E),
       elevation: 0,
       centerTitle: true,
-      title: const Text(
-        'الفاتحة',
-        style: TextStyle(
-          fontFamily: 'NotoNastaliqUrdu',
-          color: Colors.white,
-        ),
+      title: Transform.scale(
+        scale: 0.4,
+        child: Image.asset('assets/icons/f_logo.png'),
       ),
       actions: [
         IconButton(
