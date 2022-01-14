@@ -35,3 +35,7 @@ flutter:
     - family: NotoNastaliqUrdu
       fonts:
         - asset: assets/fonts/NotoNastaliqUrdu.ttf
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/GilroyMedium.ttf
+        - asset: assets/fonts/GilroyRegular.ttf
