@@ -10,7 +10,7 @@ class MainAppBar extends StatelessWidget {
       elevation: 0,
       centerTitle: true,
       title: Transform.scale(
-        scale: 0.4,
+        scale: 0.3,
         child: Image.asset('assets/icons/f_logo.png'),
       ),
       actions: [
