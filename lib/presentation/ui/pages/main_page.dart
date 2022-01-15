@@ -25,7 +25,11 @@ class MainPage extends StatelessWidget {
       backgroundColor: const Color(0xFFFFFFFF),
       body: _widgetList[context.watch<MainBottomNavigationState>().getCurrentBottomNavigatorIndex],
       bottomNavigationBar: Container(
-        margin: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+        margin: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+          bottom: 16,
+        ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: const Color(0xFFCE7D2E),

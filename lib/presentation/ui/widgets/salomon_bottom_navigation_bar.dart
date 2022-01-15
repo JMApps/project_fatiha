@@ -13,7 +13,7 @@ class SalomonBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SalomonBottomBar(
-      margin: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(10),
       selectedColorOpacity: 0.2,
       selectedItemColor: const Color(0xFFFFFFFF),
       unselectedItemColor: const Color(0xFFC4D4CA),

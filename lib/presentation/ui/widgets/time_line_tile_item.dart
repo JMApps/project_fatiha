@@ -1,26 +1,26 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class TimeLineItem extends StatelessWidget {
-  const TimeLineItem({Key? key, required this.contentDescription})
-      : super(key: key);
+  const TimeLineItem({
+    Key? key,
+    required this.contentDescription,
+    required this.isFirst,
+    required this.isLast,
+  }) : super(key: key);
 
   final String contentDescription;
+  final bool isFirst;
+  final bool isLast;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const TimelineDivider(
-          begin: 0.1,
-          end: 0.9,
-          thickness: 1,
-          color: Color(0xFFF0BA64),
-        ),
         TimelineTile(
           alignment: TimelineAlign.manual,
           lineXY: 0.1,
+          isFirst: isFirst,
           indicatorStyle: const IndicatorStyle(
             width: 35,
             color: Color(0xFF79380E),
@@ -69,6 +69,7 @@ class TimeLineItem extends StatelessWidget {
         TimelineTile(
           alignment: TimelineAlign.manual,
           lineXY: 0.9,
+          isLast: isLast,
           indicatorStyle: const IndicatorStyle(
             width: 35,
             color: Color(0xFF79380E),
@@ -108,10 +109,10 @@ class TimeLineItem extends StatelessWidget {
             ),
           ),
         ),
-        const TimelineDivider(
+        isLast ? const SizedBox() : const TimelineDivider(
           begin: 0.1,
           end: 0.9,
-          thickness: 1,
+          thickness: 2,
           color: Color(0xFFF0BA64),
         ),
       ],
