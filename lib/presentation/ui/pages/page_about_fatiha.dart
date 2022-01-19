@@ -20,9 +20,9 @@ class PageAboutFatiha extends StatelessWidget {
           physics: const ClampingScrollPhysics(),
           children: [
             TimeLineLeftItem(index: 1),
-            TimeLineRightItem(index: 1),
-            TimeLineLeftItem(index: 1),
-            TimeLineRightItem(index: 1),
+            TimeLineRightItem(index: 2),
+            TimeLineLeftItem(index: 3),
+            TimeLineRightItem(index: 4),
           ],
         ),
       ),
