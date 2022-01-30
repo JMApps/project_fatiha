@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 class MainPage extends StatelessWidget {
   MainPage({Key? key}) : super(key: key);
 
-  final _pagesList = [
+  final _appPageList = [
     PageAboutFatiha(),
     PageTajweedFatiha(),
     PageFatiha(),
@@ -22,7 +22,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pagesList[context.watch<MainBottomNavigationState>().getCurrentBottomNavigatorIndex],
+      body: _appPageList[context.watch<MainBottomNavigationState>().getCurrentBottomNavigatorIndex],
       bottomNavigationBar: Container(
         margin: const EdgeInsets.only(
           left: 16,
