@@ -10,7 +10,6 @@ class PageAboutFatiha extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFFFFF),
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 50),
         child: MainAppBar(),
@@ -18,9 +17,17 @@ class PageAboutFatiha extends StatelessWidget {
       body: CupertinoScrollbar(
         child: ListView(
           physics: const ClampingScrollPhysics(),
-          children: [
+          children: const [
             TimeLineLeftItem(index: 1),
             TimeLineRightItem(index: 2),
+            TimeLineLeftItem(index: 3),
+            TimeLineRightItem(index: 4),
+            TimeLineLeftItem(index: 3),
+            TimeLineRightItem(index: 4),
+            TimeLineLeftItem(index: 3),
+            TimeLineRightItem(index: 4),
+            TimeLineLeftItem(index: 3),
+            TimeLineRightItem(index: 4),
             TimeLineLeftItem(index: 3),
             TimeLineRightItem(index: 4),
           ],

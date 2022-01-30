@@ -1,5 +1,5 @@
-import 'package:project_fatiha/domain/entities/about_model.dart';
+import 'package:project_fatiha/domain/entities/about.dart';
 
 abstract class AboutRepository {
-  Future<AboutModel> aboutModel();
+  Future<About> aboutModel();
 }

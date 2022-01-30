@@ -1,9 +1,9 @@
-class AboutModel {
+class About {
   final int id;
   final String question;
   final String answer;
 
-  AboutModel({
+  About({
     required this.id,
     required this.question,
     required this.answer,
