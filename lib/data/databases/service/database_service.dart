@@ -26,7 +26,7 @@ class DatabaseService {
         ? await getExternalStorageDirectory()
         : await getApplicationSupportDirectory();
 
-    String _path = join(documentDirectory!.path, 'ContentFatiha.db');
+    String _path = join(documentDirectory!.path, 'FatihaDB.db');
     await deleteDatabase(_path);
 
     var _exists = await databaseExists(_path);
@@ -38,9 +38,8 @@ class DatabaseService {
         Exception('Invalid database');
       }
 
-      ByteData data = await rootBundle.load(join('assets/databases', 'ContentFatiha.db'));
-      List<int> bytes =
-      data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+      ByteData data = await rootBundle.load(join('assets/database', 'FatihaDB.db'));
+      List<int> bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
       await File(_path).writeAsBytes(bytes, flush: true);
     }
 
