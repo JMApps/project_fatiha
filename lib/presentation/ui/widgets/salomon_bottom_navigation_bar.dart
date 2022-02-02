@@ -43,7 +43,7 @@ class SalomonBottomNavigationBar extends StatelessWidget {
         ),
       ],
       currentIndex: context.watch<MainBottomNavigationState>().getCurrentBottomNavigatorIndex,
-      onTap: context.read<MainBottomNavigationState>().changeBottomNavigatorIndex,
+      onTap: context.read<MainBottomNavigationState>().changeNavigationIndex,
     );
   }
 }
