@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/data/databases/db_about.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class TimeLineRightItem extends StatelessWidget {
   const TimeLineRightItem({
     Key? key,
     required this.index,
+    required this.item,
   }) : super(key: key);
 
   final int index;
+  final DbAbout item;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class TimeLineRightItem extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    '$index',
+                    item.id.toString(),
                     style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
@@ -38,30 +41,30 @@ class TimeLineRightItem extends StatelessWidget {
             color: Color(0xFFF0BA64),
             thickness: 2,
           ),
-          startChild: const Padding(
-            padding: EdgeInsets.only(
+          startChild: Padding(
+            padding: const EdgeInsets.only(
               top: 16,
-              right: 16,
-              bottom: 20,
+              left: 24,
+              bottom: 24,
             ),
             child: ListTile(
               title: Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   bottom: 16,
                 ),
                 child: Text(
-                  'Вопрос',
+                  item.question,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
               ),
               subtitle: Text(
-                'Content',
-                textAlign: TextAlign.center,
-                style: TextStyle(
+                item.answer,
+                textAlign: TextAlign.justify,
+                style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w100,
                     color: Colors.black87),
