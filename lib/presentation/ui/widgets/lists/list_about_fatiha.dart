@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/data/databases/service/database_query.dart';
-import 'package:project_fatiha/presentation/ui/widgets/time_line_tile_left_item.dart';
-import 'package:project_fatiha/presentation/ui/widgets/time_line_tile_right_item.dart';
+import 'package:project_fatiha/presentation/ui/widgets/items/time_line_tile_left_item.dart';
+import 'package:project_fatiha/presentation/ui/widgets/items/time_line_tile_right_item.dart';
 
 class ListAboutFatiha extends StatelessWidget {
   ListAboutFatiha({Key? key}) : super(key: key);
