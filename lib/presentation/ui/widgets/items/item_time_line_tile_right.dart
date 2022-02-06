@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/data/databases/db_about.dart';
+import 'package:project_fatiha/data/databases/model/db_about.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
-class TimeLineLeftItem extends StatelessWidget {
-  const TimeLineLeftItem({
+class ItemTimeLineRight extends StatelessWidget {
+  const ItemTimeLineRight({
     Key? key,
     required this.index,
     required this.item,
@@ -18,7 +18,7 @@ class TimeLineLeftItem extends StatelessWidget {
       children: [
         TimelineTile(
           alignment: TimelineAlign.manual,
-          lineXY: 0.1,
+          lineXY: 0.9,
           indicatorStyle: IndicatorStyle(
               indicator: Container(
                 decoration: BoxDecoration(
@@ -41,10 +41,10 @@ class TimeLineLeftItem extends StatelessWidget {
             color: Color(0xFFF0BA64),
             thickness: 2,
           ),
-          endChild: Padding(
+          startChild: Padding(
             padding: const EdgeInsets.only(
               top: 16,
-              right: 24,
+              left: 24,
               bottom: 24,
             ),
             child: ListTile(

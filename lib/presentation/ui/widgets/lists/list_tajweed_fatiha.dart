@@ -3,18 +3,17 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/data/databases/service/database_query.dart';
-import 'package:project_fatiha/presentation/ui/widgets/items/item_time_line_tile_left.dart';
-import 'package:project_fatiha/presentation/ui/widgets/items/item_time_line_tile_right.dart';
+import 'package:project_fatiha/presentation/ui/widgets/items/item_time_line_tajweed.dart';
 
-class ListAboutFatiha extends StatelessWidget {
-  ListAboutFatiha({Key? key}) : super(key: key);
+class ListTajweedFatiha extends StatelessWidget {
+  ListTajweedFatiha({Key? key}) : super(key: key);
 
   final _databaseQuery = DatabaseQuery();
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List>(
-      future: _databaseQuery.getAboutInfo(),
+      future: _databaseQuery.getTajweedContent(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasError) {
           return Center(child: Text('${snapshot.error}'));
@@ -25,15 +24,10 @@ class ListAboutFatiha extends StatelessWidget {
                   physics: const ClampingScrollPhysics(),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return index.isOdd
-                        ? ItemTimeLineLeft(
-                            index: index,
-                            item: snapshot.data![index],
-                          )
-                        : ItemTimeLineRight(
-                            index: index,
-                            item: snapshot.data![index],
-                          );
+                    return ItemTimeLineTajweed(
+                      index: index,
+                      item: snapshot.data![index],
+                    );
                   },
                 ),
               )

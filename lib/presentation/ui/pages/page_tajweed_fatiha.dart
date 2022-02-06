@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/presentation/ui/widgets/lists/list_tajweed_fatiha.dart';
 import 'package:project_fatiha/presentation/ui/widgets/main_app_bar.dart';
 
 class PageTajweedFatiha extends StatelessWidget {
@@ -11,7 +12,7 @@ class PageTajweedFatiha extends StatelessWidget {
         preferredSize: Size(double.maxFinite, 50),
         child: MainAppBar(),
       ),
-      body: Container(),
+      body: ListTajweedFatiha(),
     );
   }
 }
