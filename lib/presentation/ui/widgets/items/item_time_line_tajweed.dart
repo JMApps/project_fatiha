@@ -39,55 +39,70 @@ class ItemTimeLineTajweed extends StatelessWidget {
         color: Color(0xFFF0BA64),
         thickness: 2,
       ),
-      endChild: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            Text(
-              '${item.ayah}',
-              textAlign: TextAlign.center,
-              style: const TextStyle(
+      endChild: Card(
+        margin: const EdgeInsets.only(
+          left: 24,
+          top: 8,
+          bottom: 8,
+        ),
+        elevation: 1,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(15),
+              bottomLeft: Radius.circular(15),
+            ),
+            side: BorderSide(
+              color: Color(0xFFF0BA64),
+              width: 2,
+            )),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              Text(
+                item.ayah,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
                   fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              'С именем Аллаха, Милостивого, Милосердного!',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.black),
-            ),
-            const SizedBox(height: 16),
-            Expanded(
-              child: ListTile(
-                title: Padding(
-                  padding: const EdgeInsets.only(
-                    bottom: 16,
-                  ),
-                  child: Text(
-                    '${item.tajweedTitle}',
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black),
-                  ),
-                ),
-                subtitle: Text(
-                  '${item.tajweedContent}',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w300,
-                      color: Colors.black87),
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  fontFamily: 'UthmanicRegular',
                 ),
               ),
-            ),
-            const SizedBox(height: 16),
-            const Divider(indent: 16, endIndent: 16),
-          ],
+              const SizedBox(height: 8),
+              const Text(
+                'С именем Аллаха, Милостивого, Милосердного!',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 22, color: Colors.black),
+              ),
+              const SizedBox(height: 8),
+              Expanded(
+                child: ListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(
+                      bottom: 16,
+                    ),
+                    child: Text(
+                      '${item.tajweedTitle}',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
+                  subtitle: Text(
+                    '${item.tajweedContent}',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w300,
+                        color: Colors.black87),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

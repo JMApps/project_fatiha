@@ -41,3 +41,6 @@ flutter:
       fonts:
         - asset: assets/fonts/GilroyMedium.ttf
         - asset: assets/fonts/GilroyRegular.ttf
+    - family: UthmanicRegular
+      fonts:
+        - asset: assets/fonts/UthmanicRegular.ttf
