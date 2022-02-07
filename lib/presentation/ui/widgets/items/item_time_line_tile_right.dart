@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/data/databases/model/db_about.dart';
+import 'package:project_fatiha/data/databases/model/about.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class ItemTimeLineRight extends StatelessWidget {
@@ -10,7 +10,7 @@ class ItemTimeLineRight extends StatelessWidget {
   }) : super(key: key);
 
   final int index;
-  final DbAbout item;
+  final About item;
 
   @override
   Widget build(BuildContext context) {

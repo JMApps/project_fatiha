@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/data/databases/model/db_tajweed.dart';
+import 'package:project_fatiha/data/databases/model/tajweed.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class ItemTimeLineTajweed extends StatelessWidget {
@@ -10,7 +10,7 @@ class ItemTimeLineTajweed extends StatelessWidget {
   }) : super(key: key);
 
   final int index;
-  final DbTajweed item;
+  final Tajweed item;
 
   @override
   Widget build(BuildContext context) {
