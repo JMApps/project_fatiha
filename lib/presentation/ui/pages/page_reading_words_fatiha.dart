@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/presentation/ui/widgets/main_app_bar.dart';
+import 'package:project_fatiha/presentation/ui/widgets/lists/list_words_fatiha.dart';
+import 'package:project_fatiha/presentation/ui/widgets/other/main_app_bar.dart';
 
 class PageReadingWordsFatiha extends StatelessWidget {
   const PageReadingWordsFatiha({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class PageReadingWordsFatiha extends StatelessWidget {
         preferredSize: Size(double.maxFinite, 50),
         child: MainAppBar(),
       ),
-      body: Container(),
+      body: ListWordsFatiha(),
     );
   }
 }
