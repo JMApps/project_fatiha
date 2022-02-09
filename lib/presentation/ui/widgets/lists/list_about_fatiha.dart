@@ -17,7 +17,11 @@ class ListAboutFatiha extends StatelessWidget {
       future: _databaseQuery.getAboutInfo(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasError) {
-          return Center(child: Text('${snapshot.error}'));
+          return Center(
+              child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text('${snapshot.error}'),
+          ));
         }
         return snapshot.hasData
             ? CupertinoScrollbar(
