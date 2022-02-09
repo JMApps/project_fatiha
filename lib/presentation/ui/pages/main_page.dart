@@ -5,7 +5,7 @@ import 'package:project_fatiha/presentation/ui/pages/page_error_in_reading_fatih
 import 'package:project_fatiha/presentation/ui/pages/page_fatiha.dart';
 import 'package:project_fatiha/presentation/ui/pages/page_reading_words_fatiha.dart';
 import 'package:project_fatiha/presentation/ui/pages/page_tajweed_fatiha.dart';
-import 'package:project_fatiha/presentation/ui/widgets/salomon_bottom_navigation_bar.dart';
+import 'package:project_fatiha/presentation/ui/widgets/other/salomon_bottom_navigation_bar.dart';
 import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {

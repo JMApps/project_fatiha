@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/presentation/ui/widgets/lists/list_tajweed_fatiha.dart';
-import 'package:project_fatiha/presentation/ui/widgets/main_app_bar.dart';
+import 'package:project_fatiha/presentation/ui/widgets/other/main_app_bar.dart';
 
 class PageTajweedFatiha extends StatelessWidget {
   const PageTajweedFatiha({Key? key}) : super(key: key);

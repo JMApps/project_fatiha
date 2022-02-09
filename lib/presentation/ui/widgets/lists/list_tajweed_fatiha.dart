@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/data/databases/service/database_query.dart';
-import 'package:project_fatiha/presentation/ui/widgets/items/item_time_line_tajweed.dart';
+import 'package:project_fatiha/presentation/ui/widgets/items/item_time_line_tile_tajweed.dart';
 
 class ListTajweedFatiha extends StatelessWidget {
   ListTajweedFatiha({Key? key}) : super(key: key);
@@ -16,7 +16,11 @@ class ListTajweedFatiha extends StatelessWidget {
       future: _databaseQuery.getTajweedContent(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasError) {
-          return Center(child: Text('${snapshot.error}'));
+          return Center(
+              child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text('${snapshot.error}'),
+          ));
         }
         return snapshot.hasData
             ? CupertinoScrollbar(
@@ -24,7 +28,7 @@ class ListTajweedFatiha extends StatelessWidget {
                   physics: const ClampingScrollPhysics(),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ItemTimeLineTajweed(
+                    return ItemTimeLineTileTajweed(
                       index: index,
                       item: snapshot.data![index],
                     );
