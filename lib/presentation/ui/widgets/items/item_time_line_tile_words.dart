@@ -25,7 +25,7 @@ class ItemTimeLineTileWords extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                '1',
+                '${item.id}',
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
@@ -51,21 +51,23 @@ class ItemTimeLineTileWords extends StatelessWidget {
               bottom: 16,
             ),
             child: Text(
-              'Word',
+              item.word,
               textAlign: TextAlign.center,
               style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                  color: Colors.black,
+              ),
             ),
           ),
           subtitle: Text(
-            'Translate',
-            textAlign: TextAlign.justify,
+            item.translate,
+            textAlign: TextAlign.center,
             style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w100,
-                color: Colors.black87),
+              fontSize: 18,
+              fontWeight: FontWeight.w100,
+              color: Colors.black87,
+            ),
           ),
         ),
       ),
