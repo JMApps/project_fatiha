@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/data/databases/service/database_query.dart';
-import 'package:project_fatiha/presentation/ui/widgets/items/item_time_line_tile_tajweed.dart';
+import 'package:project_fatiha/presentation/ui/widgets/items/tajweed_line_left.dart';
 
 class ListTajweedFatiha extends StatelessWidget {
   ListTajweedFatiha({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class ListTajweedFatiha extends StatelessWidget {
                   physics: const ClampingScrollPhysics(),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ItemTimeLineTileTajweed(
+                    return TajweedLineLeft(
                       index: index,
                       item: snapshot.data![index],
                     );

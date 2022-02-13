@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:project_fatiha/data/databases/model/words.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
-class ItemTimeLineTileWords extends StatelessWidget {
-  const ItemTimeLineTileWords({
+class WordsLineRight extends StatelessWidget {
+  const WordsLineRight({
     Key? key,
     required this.index,
     required this.item,

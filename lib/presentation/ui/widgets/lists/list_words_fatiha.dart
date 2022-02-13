@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/data/databases/service/database_query.dart';
-import 'package:project_fatiha/presentation/ui/widgets/items/item_time_line_tile_words.dart';
+import 'package:project_fatiha/presentation/ui/widgets/items/words_line_right.dart';
 
 class ListWordsFatiha extends StatelessWidget {
   ListWordsFatiha({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class ListWordsFatiha extends StatelessWidget {
                   physics: const ClampingScrollPhysics(),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ItemTimeLineTileWords(
+                    return WordsLineRight(
                       index: index,
                       item: snapshot.data![index],
                     );

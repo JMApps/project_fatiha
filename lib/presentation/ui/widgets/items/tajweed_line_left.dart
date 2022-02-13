@@ -3,8 +3,8 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:project_fatiha/data/databases/model/tajweed.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
-class ItemTimeLineTileTajweed extends StatelessWidget {
-  const ItemTimeLineTileTajweed({
+class TajweedLineLeft extends StatelessWidget {
+  const TajweedLineLeft({
     Key? key,
     required this.index,
     required this.item,
