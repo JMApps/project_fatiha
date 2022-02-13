@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/presentation/ui/widgets/lists/list_error_fatiha.dart';
 import 'package:project_fatiha/presentation/ui/widgets/other/main_app_bar.dart';
 
 class PageErrorInReadingFatiha extends StatelessWidget {
@@ -11,7 +12,7 @@ class PageErrorInReadingFatiha extends StatelessWidget {
         preferredSize: Size(double.maxFinite, 50),
         child: MainAppBar(),
       ),
-      body: Container(),
+      body: ListErrorFatiha(),
     );
   }
 }
