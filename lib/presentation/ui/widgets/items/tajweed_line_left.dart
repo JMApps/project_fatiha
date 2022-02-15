@@ -42,16 +42,14 @@ class TajweedLineLeft extends StatelessWidget {
         thickness: 2,
       ),
       endChild: Card(
-        margin: const EdgeInsets.only(
-          left: 24,
-          top: 8,
-          bottom: 8,
+        margin: const EdgeInsets.symmetric(
+          horizontal: 24,
+          vertical: 8,
         ),
         elevation: 1,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(15),
-            bottomLeft: Radius.circular(15),
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
           ),
           side: BorderSide(
             color: Color(0xFFF0BA64),
