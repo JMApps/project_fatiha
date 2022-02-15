@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:project_fatiha/data/databases/model/about.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
@@ -20,23 +21,24 @@ class AboutLineLeft extends StatelessWidget {
           alignment: TimelineAlign.manual,
           lineXY: 0.1,
           indicatorStyle: IndicatorStyle(
-              indicator: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color(0xFF79380E),
-                ),
-                child: Center(
-                  child: Text(
-                    item.id.toString(),
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    ),
+            indicator: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: const Color(0xFF79380E),
+              ),
+              child: Center(
+                child: Text(
+                  item.id.toString(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
-              width: 30,
-              height: 30),
+            ),
+            width: 30,
+            height: 30,
+          ),
           beforeLineStyle: const LineStyle(
             color: Color(0xFFF0BA64),
             thickness: 2,
@@ -44,7 +46,7 @@ class AboutLineLeft extends StatelessWidget {
           endChild: Padding(
             padding: const EdgeInsets.only(
               top: 16,
-              right: 24,
+              right: 48,
               bottom: 24,
             ),
             child: ListTile(
@@ -61,13 +63,16 @@ class AboutLineLeft extends StatelessWidget {
                       color: Colors.black),
                 ),
               ),
-              subtitle: Text(
-                item.answer,
-                textAlign: TextAlign.justify,
-                style: const TextStyle(
-                    fontSize: 18,
+              subtitle: Html(
+                data: item.answer,
+                style: {
+                  '#': Style(
+                    textAlign: TextAlign.justify,
+                    fontSize: const FontSize(18),
                     fontWeight: FontWeight.w100,
-                    color: Colors.black87),
+                    color: Colors.black87,
+                  )
+                },
               ),
             ),
           ),

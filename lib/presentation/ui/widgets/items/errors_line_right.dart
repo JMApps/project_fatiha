@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:project_fatiha/data/databases/model/error.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
@@ -44,7 +45,7 @@ class ErrorsLineRight extends StatelessWidget {
           startChild: Padding(
             padding: const EdgeInsets.only(
               top: 16,
-              left: 24,
+              left: 48,
               bottom: 24,
             ),
             child: ListTile(
@@ -61,13 +62,16 @@ class ErrorsLineRight extends StatelessWidget {
                       color: Colors.black),
                 ),
               ),
-              subtitle: Text(
-                item.errorContent,
-                textAlign: TextAlign.justify,
-                style: const TextStyle(
-                    fontSize: 18,
+              subtitle: Html(
+                data: item.errorContent,
+                style: {
+                  '#': Style(
+                    textAlign: TextAlign.justify,
+                    fontSize: const FontSize(18),
                     fontWeight: FontWeight.w100,
-                    color: Colors.black87),
+                    color: Colors.black87,
+                  )
+                },
               ),
             ),
           ),
