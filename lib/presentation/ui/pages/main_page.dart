@@ -31,7 +31,7 @@ class MainPage extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: const Color(0xFFCE7D2E),
+          color: const Color(0xFFf9d9e2),
         ),
         child: const SalomonBottomNavigationBar(),
       ),

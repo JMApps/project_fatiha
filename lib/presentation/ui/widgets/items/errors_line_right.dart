@@ -21,25 +21,26 @@ class ErrorsLineRight extends StatelessWidget {
           alignment: TimelineAlign.manual,
           lineXY: 0.9,
           indicatorStyle: IndicatorStyle(
-              indicator: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color(0xFF79380E),
-                ),
-                child: Center(
-                  child: Text(
-                    item.id.toString(),
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    ),
+            indicator: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: const Color(0xFF320e1e),
+              ),
+              child: Center(
+                child: Text(
+                  item.id.toString(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
-              width: 30,
-              height: 30),
+            ),
+            width: 30,
+            height: 30,
+          ),
           beforeLineStyle: const LineStyle(
-            color: Color(0xFFF0BA64),
+            color: Color(0xFF775560),
             thickness: 2,
           ),
           startChild: Padding(
@@ -79,7 +80,7 @@ class ErrorsLineRight extends StatelessWidget {
         const TimelineDivider(
           begin: 0.1,
           end: 0.9,
-          color: Color(0xFFF0BA64),
+          color: Color(0xFF775560),
         ),
       ],
     );
