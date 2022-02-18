@@ -11,7 +11,20 @@ class PageFatiha extends StatelessWidget {
         preferredSize: Size(double.maxFinite, 50),
         child: MainAppBar(),
       ),
-      body: Container(),
+      body: Column(
+        children: [
+          Container(
+            height: 500,
+            width: 500,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/icons/surah_512.png'),
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
