@@ -46,14 +46,14 @@ class TajweedLineLeft extends StatelessWidget {
           horizontal: 24,
           vertical: 8,
         ),
-        elevation: 1,
+        elevation: 2,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(15),
           ),
           side: BorderSide(
             color: Color(0xFF775560),
-            width: 2,
+            width: 1,
           ),
         ),
         child: Padding(
@@ -66,7 +66,7 @@ class TajweedLineLeft extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                  color: Color(0xFF320e1e),
                   fontFamily: 'UthmanicRegular',
                 ),
               ),

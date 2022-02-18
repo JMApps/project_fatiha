@@ -39,7 +39,7 @@ class ErrorsLineLeft extends StatelessWidget {
               width: 30,
               height: 30),
           beforeLineStyle: const LineStyle(
-            color: Color(0xFF775560),
+            color: Color(0xFF775461),
             thickness: 2,
           ),
           endChild: Padding(
@@ -51,15 +51,16 @@ class ErrorsLineLeft extends StatelessWidget {
             child: ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(
-                  bottom: 16,
+                  bottom: 8,
                 ),
                 child: Text(
                   item.errorTitle,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF775461),
+                  ),
                 ),
               ),
               subtitle: Html(
@@ -79,7 +80,7 @@ class ErrorsLineLeft extends StatelessWidget {
         const TimelineDivider(
           begin: 0.1,
           end: 0.9,
-          color: Color(0xFF775560),
+          color: Color(0xFF775461),
         ),
       ],
     );

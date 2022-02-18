@@ -40,7 +40,7 @@ class AboutLineLeft extends StatelessWidget {
             height: 30,
           ),
           beforeLineStyle: const LineStyle(
-            color: Color(0xFF775560),
+            color: Color(0xFF775461),
             thickness: 2,
           ),
           endChild: Padding(
@@ -52,15 +52,16 @@ class AboutLineLeft extends StatelessWidget {
             child: ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(
-                  bottom: 16,
+                  bottom: 8,
                 ),
                 child: Text(
                   item.question,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF775461),
+                  ),
                 ),
               ),
               subtitle: Html(
@@ -80,7 +81,7 @@ class AboutLineLeft extends StatelessWidget {
         const TimelineDivider(
           begin: 0.1,
           end: 0.9,
-          color: Color(0xFF775560),
+          color: Color(0xFF775461),
         ),
       ],
     );

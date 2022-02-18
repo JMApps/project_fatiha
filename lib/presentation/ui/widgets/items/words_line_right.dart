@@ -36,7 +36,7 @@ class WordsLineRight extends StatelessWidget {
           width: 30,
           height: 30),
       beforeLineStyle: const LineStyle(
-        color: Color(0xFF775560),
+        color: Color(0xFF775461),
         thickness: 2,
       ),
       startChild: Padding(
@@ -54,9 +54,9 @@ class WordsLineRight extends StatelessWidget {
               item.word,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF320e1e),
               ),
             ),
           ),
