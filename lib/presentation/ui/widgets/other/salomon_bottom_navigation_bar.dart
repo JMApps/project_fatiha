@@ -15,8 +15,8 @@ class SalomonBottomNavigationBar extends StatelessWidget {
     return SalomonBottomBar(
       margin: const EdgeInsets.all(10),
       selectedColorOpacity: 0.2,
-      selectedItemColor: const Color(0xFF320e1e),
-      unselectedItemColor: const Color(0xFF775461),
+      selectedItemColor: const Color(0xff1c3116),
+      unselectedItemColor: const Color(0xFF54614d),
       itemShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.5),
       ),

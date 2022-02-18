@@ -22,7 +22,7 @@ class TajweedLineLeft extends StatelessWidget {
         indicator: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            color: const Color(0xFF320e1e),
+            color: const Color(0xff1c3116),
           ),
           child: Center(
             child: Text(
@@ -38,7 +38,7 @@ class TajweedLineLeft extends StatelessWidget {
         height: 30,
       ),
       beforeLineStyle: const LineStyle(
-        color: Color(0xFF775560),
+        color: Color(0xFF54614d),
         thickness: 2,
       ),
       endChild: Card(
@@ -52,7 +52,7 @@ class TajweedLineLeft extends StatelessWidget {
             Radius.circular(15),
           ),
           side: BorderSide(
-            color: Color(0xFF775560),
+            color: Color(0xFF54614d),
             width: 1,
           ),
         ),
@@ -66,7 +66,7 @@ class TajweedLineLeft extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xFF320e1e),
+                  color: Color(0xff1c3116),
                   fontFamily: 'UthmanicRegular',
                 ),
               ),

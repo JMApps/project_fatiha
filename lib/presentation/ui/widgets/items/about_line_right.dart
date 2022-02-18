@@ -24,7 +24,7 @@ class AboutLineRight extends StatelessWidget {
               indicator: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  color: const Color(0xFF320e1e),
+                  color: const Color(0xff1c3116),
                 ),
                 child: Center(
                   child: Text(
@@ -39,7 +39,7 @@ class AboutLineRight extends StatelessWidget {
               width: 30,
               height: 30),
           beforeLineStyle: const LineStyle(
-            color: Color(0xFF775461),
+            color: Color(0xFF54614d),
             thickness: 2,
           ),
           startChild: Padding(
@@ -59,7 +59,7 @@ class AboutLineRight extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFF775461),
+                    color: Color(0xFF54614d),
                   ),
                 ),
               ),
@@ -80,7 +80,7 @@ class AboutLineRight extends StatelessWidget {
         const TimelineDivider(
           begin: 0.1,
           end: 0.9,
-          color: Color(0xFF775461),
+          color: Color(0xFF54614d),
         ),
       ],
     );

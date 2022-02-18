@@ -21,7 +21,7 @@ class WordsLineRight extends StatelessWidget {
           indicator: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              color: const Color(0xFF320e1e),
+              color: const Color(0xff1c3116),
             ),
             child: Center(
               child: Text(
@@ -36,7 +36,7 @@ class WordsLineRight extends StatelessWidget {
           width: 30,
           height: 30),
       beforeLineStyle: const LineStyle(
-        color: Color(0xFF775461),
+        color: Color(0xFF54614d),
         thickness: 2,
       ),
       startChild: Padding(
@@ -56,7 +56,7 @@ class WordsLineRight extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF320e1e),
+                color: Color(0xff1c3116),
               ),
             ),
           ),
