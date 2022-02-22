@@ -51,16 +51,15 @@ class AboutLineRight extends StatelessWidget {
             child: ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(
-                  bottom: 8,
+                  bottom: 16,
                 ),
                 child: Text(
                   item.question,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF54614d),
-                  ),
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
                 ),
               ),
               subtitle: Html(
