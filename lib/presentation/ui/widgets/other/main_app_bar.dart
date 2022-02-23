@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/presentation/ui/widgets/app_settings.dart';
 
 class MainAppBar extends StatelessWidget {
   const MainAppBar({Key? key}) : super(key: key);
@@ -19,7 +21,14 @@ class MainAppBar extends StatelessWidget {
             scale: 0.9,
             child: Image.asset('assets/icons/main_menu.png'),
           ),
-          onPressed: () {},
+          onPressed: () {
+            showCupertinoModalPopup(
+              context: context,
+              builder: (BuildContext context) {
+                return const AppSettings();
+              },
+            );
+          },
         ),
       ],
     );
