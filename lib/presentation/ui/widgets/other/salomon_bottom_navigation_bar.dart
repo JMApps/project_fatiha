@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 class SalomonBottomNavigationBar extends StatelessWidget {
   const SalomonBottomNavigationBar({Key? key}) : super(key: key);
 
-  Widget bottomBarIcon(String iconName) {
+  Widget _bottomBarIcon(String iconName) {
     return Image.asset('assets/icons/$iconName', width: 25, height: 25);
   }
 
@@ -14,31 +14,30 @@ class SalomonBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SalomonBottomBar(
       margin: const EdgeInsets.all(10),
-      selectedColorOpacity: 0.2,
+      selectedColorOpacity: 0.1,
       selectedItemColor: const Color(0xff1c3116),
-      unselectedItemColor: const Color(0xFF54614d),
       itemShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.5),
       ),
       items: [
         SalomonBottomBarItem(
-          icon: bottomBarIcon('about_f.png'),
+          icon: _bottomBarIcon('about_f.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('tajweed_f.png'),
+          icon: _bottomBarIcon('tajweed_f.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('fatiha.png'),
+          icon: _bottomBarIcon('fatiha.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('words_f.png'),
+          icon: _bottomBarIcon('words_f.png'),
           title: const SizedBox(),
         ),
         SalomonBottomBarItem(
-          icon: bottomBarIcon('error_f.png'),
+          icon: _bottomBarIcon('error_f.png'),
           title: const SizedBox(),
         ),
       ],
