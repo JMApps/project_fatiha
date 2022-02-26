@@ -45,3 +45,6 @@ flutter:
     - family: UthmanicRegular
       fonts:
         - asset: assets/fonts/UthmanicRegular.ttf
+    - family: QuranFont
+      fonts:
+        - asset: assets/fonts/QuranFont.ttf

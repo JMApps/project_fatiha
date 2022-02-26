@@ -1,5 +1,6 @@
 import 'package:project_fatiha/data/databases/model/about.dart';
 import 'package:project_fatiha/data/databases/model/error.dart';
+import 'package:project_fatiha/data/databases/model/fatiha.dart';
 import 'package:project_fatiha/data/databases/model/tajweed.dart';
 import 'package:project_fatiha/data/databases/model/words.dart';
 import 'package:project_fatiha/data/databases/service/database_service.dart';
@@ -19,6 +20,13 @@ class DatabaseQuery {
     var res = await dbClient.query('Table_of_tajweed_fatiha');
     List<Tajweed>? tajweedContent = res.isNotEmpty ? res.map((c) => Tajweed.fromMap(c)).toList() : null;
     return tajweedContent!;
+  }
+
+  Future<List<Fatiha>> getFatihaContent() async {
+    var dbClient = await _db.db;
+    var res = await dbClient.query('Table_of_fatiha');
+    List<Fatiha>? fatihaContent = res.isNotEmpty ? res.map((c) => Fatiha.fromMap(c)).toList() : null;
+    return fatihaContent!;
   }
 
   Future<List<Words>> getWordsContent() async {
