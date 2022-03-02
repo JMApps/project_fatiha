@@ -17,6 +17,8 @@ class MainAppBar extends StatelessWidget {
       ),
       actions: [
         IconButton(
+          splashRadius: 20,
+          highlightColor: const Color(0xff1c3116).withOpacity(0.1),
           icon: Transform.scale(
             scale: 0.9,
             child: Image.asset('assets/icons/main_menu.png'),
