@@ -1,29 +1,59 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/widgets/items/main_item.dart';
-import 'package:project_fatiha/widgets/other/main_app_bar.dart';
+import 'package:flutter/rendering.dart';
+import 'package:project_fatiha/config/styles/custom_styles.dart';
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  MainPage({Key? key}) : super(key: key);
+
+  final customStyles = CustomStyles();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size(double.maxFinite, 50),
-        child: MainAppBar(),
-      ),
-      body: SizedBox(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            MainItem(currentIndex: 0),
-            MainItem(currentIndex: 1),
-            MainItem(currentIndex: 2),
-            MainItem(currentIndex: 3),
-            MainItem(currentIndex: 4),
+      appBar: PreferredSize(
+        preferredSize: const Size(double.maxFinite, 150),
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              shape: customStyles.bottomShapeRadius,
+              floating: false,
+              pinned: true,
+              primary: true,
+              expandedHeight: 150,
+              flexibleSpace: FlexibleSpaceBar(
+                collapseMode: CollapseMode.pin,
+                title: Text(
+                  'الفاتحة',
+                  style: TextStyle(
+                    fontFamily: 'Mothanna',
+                    color: Colors.deepOrange.shade300,
+                  ),
+                  textDirection: TextDirection.rtl,
+                ),
+              ),
+            ),
           ],
         ),
+      ),
+      body: Column(
+        children: [
+          Card(
+            elevation: 3,
+            margin: customStyles.mainMargin,
+            shape: customStyles.mainShapeRadius,
+            child: SizedBox(
+              height: 75,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

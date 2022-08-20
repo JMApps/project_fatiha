@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/config/themes/app_themes.dart';
 import 'package:project_fatiha/modules/screens/main_page.dart';
 
 class RootPage extends StatelessWidget {
-  const RootPage({Key? key}) : super(key: key);
+  RootPage({Key? key}) : super(key: key);
+
+  final appThemes = AppThemes();
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Фатиха',
-      color: Colors.blue,
+      theme: appThemes.lightTheme,
+      darkTheme: appThemes.darkTheme,
       home: MainPage(),
     );
   }
