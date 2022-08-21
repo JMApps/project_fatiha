@@ -1,32 +1,29 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/config/styles/custom_styles.dart';
-import 'package:project_fatiha/config/themes/app_themes.dart';
 
 class MainItem extends StatelessWidget {
-  const MainItem({
+  MainItem({
     Key? key,
-    required this.currentIndex,
+    required this.title,
   }) : super(key: key);
 
-  final int currentIndex;
+  final String title;
+  final customStyles = CustomStyles();
 
   @override
   Widget build(BuildContext context) {
-    final customStyles = CustomStyles();
-    return Card(
-      elevation: 1,
-      color: Theme.of(context).colorScheme.mainBackgroundColor,
-      child: Container(
-        width: double.infinity,
-        height: 75,
-        padding: customStyles.mainPadding,
-        decoration: BoxDecoration(
+    return InkWell(
+      child: ListTile(
+        contentPadding: const EdgeInsets.only(
+          left: 16,
+          top: 16,
+          right: 16,
         ),
-        child: Text(
-          'Yes $currentIndex',
-          textAlign: TextAlign.center,
-        ),
+        title: Text(title),
+        trailing: const Icon(CupertinoIcons.forward),
       ),
+      onTap: () {},
     );
   }
 }

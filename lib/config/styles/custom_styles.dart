@@ -6,6 +6,10 @@ class CustomStyles {
   final mainPadding = const EdgeInsets.all(16);
   final mainMargin = const EdgeInsets.all(16);
 
+  // Paddings // Margins
+  final mainPaddingWithoutBottom = const EdgeInsets.only(left: 16, top: 16, right: 16);
+  final mainMarginWithoutBottom = const EdgeInsets.only(left: 16, top: 16, right: 16);
+
   // Border Radius // Shape Radius
   final mainBorderRadius = const BorderRadius.all(Radius.circular(20));
   final mainShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20)));
