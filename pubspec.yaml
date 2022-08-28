@@ -31,6 +31,6 @@ flutter:
     - family: Mothanna
       fonts:
         - asset: assets/fonts/mothanna.ttf
-    - family: Ruberoid
+    - family: Sanfcancisco
       fonts:
-        - asset: assets/fonts/ruberoid.ttf
+        - asset: assets/fonts/sanfcancisco.ttf

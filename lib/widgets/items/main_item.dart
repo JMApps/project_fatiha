@@ -20,17 +20,18 @@ class MainItem extends StatelessWidget {
     final customStyles = CustomStyles();
     return Card(
       margin: customStyles.onlyBottomMargin,
-      elevation: 7.5,
+      elevation: 3,
       color: Theme.of(context).colorScheme.mainFirstCardColor,
       shape: customStyles.mainShapeRadius,
       child: Card(
         margin: customStyles.onlyLeftMargin,
-        color: Theme.of(context).colorScheme.mainBackgroundColor,
         shape: customStyles.mainShapeRadius,
+        color: Theme.of(context).colorScheme.mainBackgroundColor,
         child: InkWell(
           borderRadius: customStyles.mainBorderRadius,
+          onTap: () {},
           child: ListTile(
-            contentPadding: customStyles.mainPadding,
+            contentPadding: customStyles.mainPaddingMini,
             title: Text(
               cardTitle,
               style: customStyles.mainCardTitleTextStyle,
@@ -40,11 +41,12 @@ class MainItem extends StatelessWidget {
               cardTitleDescription,
               style: customStyles.mainCardSubTitleTextStyle,
             ),
-            trailing: const Icon(
+            trailing: Icon(
               CupertinoIcons.forward,
+              color: Theme.of(context).colorScheme.mainFirstCardColor,
+              size: 17.5,
             ),
           ),
-          onTap: () {},
         ),
       ),
     );
