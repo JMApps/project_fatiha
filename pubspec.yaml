@@ -26,7 +26,11 @@ flutter:
 
   assets:
     - assets/fonts/
+    - assets/pictures/
   fonts:
     - family: Mothanna
       fonts:
         - asset: assets/fonts/mothanna.ttf
+    - family: Ruberoid
+      fonts:
+        - asset: assets/fonts/ruberoid.ttf

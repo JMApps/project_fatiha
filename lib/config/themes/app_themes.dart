@@ -32,4 +32,8 @@ extension ColorSchemeS on ColorScheme {
   Color get mainBackgroundColor => brightness == Brightness.light
       ? const Color(0xFFEEEEEE)
       : const Color(0xFF192226);
+
+  Color get mainFirstCardColor => brightness == Brightness.light
+      ? const Color(0xFF71002b)
+      : const Color(0xFF263238);
 }
