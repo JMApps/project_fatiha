@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/config/styles/custom_styles.dart';
 import 'package:project_fatiha/config/themes/app_themes.dart';
+import 'package:project_fatiha/utils/helpers/style_helpers.dart';
 
 class MainItem extends StatelessWidget {
   const MainItem({
@@ -17,29 +17,28 @@ class MainItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final customStyles = CustomStyles();
+    final styleHelpers = StyleHelpers();
     return Card(
-      margin: customStyles.onlyBottomMargin,
+      margin: styleHelpers.onlyBottomMargin,
       elevation: 3,
       color: Theme.of(context).colorScheme.mainFirstCardColor,
-      shape: customStyles.mainShapeRadius,
+      shape: styleHelpers.mainShapeRadius,
       child: Card(
-        margin: customStyles.onlyLeftMargin,
-        shape: customStyles.mainShapeRadius,
-        color: Theme.of(context).colorScheme.mainBackgroundColor,
+        margin: styleHelpers.onlyLeftMargin,
+        shape: styleHelpers.mainShapeRadius,
         child: InkWell(
-          borderRadius: customStyles.mainBorderRadius,
+          borderRadius: styleHelpers.mainBorderRadius,
           onTap: () {},
           child: ListTile(
-            contentPadding: customStyles.mainPaddingMini,
+            contentPadding: styleHelpers.mainSymmetricListTilePadding,
             title: Text(
               cardTitle,
-              style: customStyles.mainCardTitleTextStyle,
+              style: styleHelpers.mainCardTitleTextStyle,
               textAlign: TextAlign.start,
             ),
             subtitle: Text(
               cardTitleDescription,
-              style: customStyles.mainCardSubTitleTextStyle,
+              style: styleHelpers.mainCardSubTitleTextStyle,
             ),
             trailing: Icon(
               CupertinoIcons.forward,
