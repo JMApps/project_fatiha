@@ -9,40 +9,48 @@ class MainItem extends StatelessWidget {
     required this.cardTitle,
     required this.cardTitleDescription,
     required this.routeName,
+    required this.cardColor,
   }) : super(key: key);
 
   final String cardTitle;
   final String cardTitleDescription;
   final String routeName;
+  final Color cardColor;
 
   @override
   Widget build(BuildContext context) {
     final styleHelpers = StyleHelpers();
+    final myColor = Theme.of(context).colorScheme;
     return Card(
-      margin: styleHelpers.onlyBottomMargin,
+      margin: styleHelpers.mainFirstCardBottomMargin,
       elevation: 3,
-      color: Theme.of(context).colorScheme.mainFirstCardColor,
-      shape: styleHelpers.mainShapeRadius,
+      color: cardColor,
+      shape: styleHelpers.mainShareRadius,
       child: Card(
-        margin: styleHelpers.onlyLeftMargin,
-        shape: styleHelpers.mainShapeRadius,
+        margin: styleHelpers.mainSecondCardLeftMargin,
+        shape: styleHelpers.mainShareRadius,
         child: InkWell(
-          borderRadius: styleHelpers.mainBorderRadius,
+          splashColor: cardColor.withOpacity(0.15),
           onTap: () {},
           child: ListTile(
-            contentPadding: styleHelpers.mainSymmetricListTilePadding,
             title: Text(
               cardTitle,
-              style: styleHelpers.mainCardTitleTextStyle,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                letterSpacing: -0.35,
+                color: myColor.mainSubTitleColor,
+              ),
               textAlign: TextAlign.start,
             ),
             subtitle: Text(
               cardTitleDescription,
-              style: styleHelpers.mainCardSubTitleTextStyle,
+              style: const TextStyle(
+                letterSpacing: -0.20,
+              ),
             ),
             trailing: Icon(
               CupertinoIcons.forward,
-              color: Theme.of(context).colorScheme.mainFirstCardColor,
+              color: cardColor,
               size: 17.5,
             ),
           ),
