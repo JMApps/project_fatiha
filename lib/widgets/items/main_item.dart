@@ -9,13 +9,11 @@ class MainItem extends StatelessWidget {
     required this.cardTitle,
     required this.cardTitleDescription,
     required this.routeName,
-    required this.cardColor,
   }) : super(key: key);
 
   final String cardTitle;
   final String cardTitleDescription;
   final String routeName;
-  final Color cardColor;
 
   @override
   Widget build(BuildContext context) {
@@ -24,20 +22,19 @@ class MainItem extends StatelessWidget {
     return Card(
       margin: styleHelpers.mainFirstCardBottomMargin,
       elevation: 3,
-      color: cardColor,
+      color: const Color(0xFF97CBDC),
       shape: styleHelpers.mainShareRadius,
       child: Card(
         margin: styleHelpers.mainSecondCardLeftMargin,
         shape: styleHelpers.mainShareRadius,
         child: InkWell(
-          splashColor: cardColor.withOpacity(0.15),
-          onTap: () {},
+          splashColor: const Color(0xFF97CBDC).withOpacity(0.15),
           child: ListTile(
             title: Text(
               cardTitle,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                letterSpacing: -0.35,
+                letterSpacing: -0.25,
                 color: myColor.mainSubTitleColor,
               ),
               textAlign: TextAlign.start,
@@ -45,15 +42,18 @@ class MainItem extends StatelessWidget {
             subtitle: Text(
               cardTitleDescription,
               style: const TextStyle(
-                letterSpacing: -0.20,
+                letterSpacing: -0.10,
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               CupertinoIcons.forward,
-              color: cardColor,
+              color: Color(0xFF004581),
               size: 17.5,
             ),
           ),
+          onTap: () {
+            Navigator.pushNamed(context, routeName);
+          },
         ),
       ),
     );
