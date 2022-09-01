@@ -28,7 +28,7 @@ class MainItem extends StatelessWidget {
         margin: styleHelpers.mainSecondCardLeftMargin,
         shape: styleHelpers.mainShapeRadius,
         child: InkWell(
-          splashColor: const Color(0xFF97CBDC).withOpacity(0.15),
+          splashColor: const Color(0xFF97CBDC).withOpacity(0.5),
           child: ListTile(
             title: Text(
               cardTitle,

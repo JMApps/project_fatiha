@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/config/themes/app_themes.dart';
 import 'package:project_fatiha/utils/helpers/style_helpers.dart';
-import 'package:project_fatiha/widgets/items/tajweed_surah_app_bar.dart';
+import 'package:project_fatiha/widgets/other/tajweed_surah_app_bar.dart';
 import 'package:project_fatiha/widgets/lists/tajweed_surah_page_list.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

@@ -7,6 +7,7 @@ class ContentSurahPageList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      physics: const BouncingScrollPhysics(),
       itemCount: 6,
       itemBuilder: (BuildContext context, int index) {
         return const TajweedSurahPageItem();

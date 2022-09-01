@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/config/themes/app_themes.dart';
 import 'package:project_fatiha/utils/helpers/style_helpers.dart';
-import 'package:project_fatiha/widgets/items/main_app_bar.dart';
+import 'package:project_fatiha/widgets/other/main_app_bar.dart';
 import 'package:project_fatiha/widgets/items/main_item.dart';
 
 class MainPage extends StatelessWidget {
@@ -27,6 +27,7 @@ class MainPage extends StatelessWidget {
           ),
           body: ListView(
             padding: styleHelpers.mainPadding,
+            physics: const BouncingScrollPhysics(),
             children: const [
               MainItem(
                 cardTitle: 'Достоинства суры',

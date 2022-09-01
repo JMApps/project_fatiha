@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/config/themes/app_themes.dart';
 import 'package:project_fatiha/utils/helpers/style_helpers.dart';
-import 'package:project_fatiha/widgets/items/about_surah_app_bar.dart';
+import 'package:project_fatiha/widgets/other/about_surah_app_bar.dart';
 import 'package:project_fatiha/widgets/lists/about_surah_content_list.dart';
 
 class AboutSurahPage extends StatelessWidget {

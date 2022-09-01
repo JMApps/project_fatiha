@@ -10,6 +10,7 @@ class AboutSurahContentList extends StatelessWidget {
   Widget build(BuildContext context) {
     final myColor = Theme.of(context).colorScheme;
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: Container(
         alignment: Alignment.centerLeft,
         padding: const EdgeInsets.symmetric(horizontal: 16),
