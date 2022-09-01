@@ -13,7 +13,7 @@ class AboutSurahPage extends StatelessWidget {
     final styleHelpers = StyleHelpers();
     final myColor = Theme.of(context).colorScheme;
     return Container(
-      color: myColor.mainStatusBarColor,
+      color: myColor.mainPrimaryColor,
       child: SafeArea(
         bottom: false,
         child: Scaffold(
@@ -21,7 +21,7 @@ class AboutSurahPage extends StatelessWidget {
             preferredSize: const Size(double.infinity, 66),
             child: Card(
               margin: styleHelpers.mainAppBarWithoutBottomMargin,
-              color: myColor.mainAppBarColor,
+              color: myColor.mainPrimaryColor,
               shape: styleHelpers.mainShareRadius,
               child: const AboutSurahAppBar(),
             ),
@@ -34,6 +34,7 @@ class AboutSurahPage extends StatelessWidget {
                 child: FixedTimeline.tileBuilder(
                   theme: TimelineTheme.of(context).copyWith(
                     nodePosition: 0,
+                    color: myColor.mainPrimaryColor,
                   ),
                   builder: TimelineTileBuilder.fromStyle(
                     contentsAlign: ContentsAlign.basic,

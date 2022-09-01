@@ -28,15 +28,11 @@ class AppThemes {
 
 extension ColorSchemeS on ColorScheme {
 
-  Color get mainStatusBarColor => brightness == Brightness.light
+  Color get mainPrimaryColor => brightness == Brightness.light
       ? const Color(0xFF018ABD)
       : const Color(0xFF0C2125);
 
-  Color get mainAppBarColor => brightness == Brightness.light
-      ? const Color(0xFF018ABD)
-      : const Color(0xFF0C2125);
-
-Color get mainSubTitleColor => brightness == Brightness.light
+  Color get mainSubTitleColor => brightness == Brightness.light
       ? const Color(0xFF018ABD)
       : const Color(0xFF0C2125);
 

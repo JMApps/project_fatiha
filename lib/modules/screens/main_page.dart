@@ -12,7 +12,7 @@ class MainPage extends StatelessWidget {
     final styleHelpers = StyleHelpers();
     final myColor = Theme.of(context).colorScheme;
     return Container(
-      color: myColor.mainStatusBarColor,
+      color: myColor.mainPrimaryColor,
       child: SafeArea(
         bottom: false,
         child: Scaffold(
@@ -20,7 +20,7 @@ class MainPage extends StatelessWidget {
             preferredSize: const Size(double.infinity, 66),
             child: Card(
               margin: styleHelpers.mainAppBarWithoutBottomMargin,
-              color: myColor.mainAppBarColor,
+              color: myColor.mainPrimaryColor,
               shape: styleHelpers.mainShareRadius,
               child: const MainAppBar(),
             ),
