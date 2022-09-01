@@ -17,11 +17,11 @@ class MainPage extends StatelessWidget {
         bottom: false,
         child: Scaffold(
           appBar: PreferredSize(
-            preferredSize: const Size(double.infinity, 66),
+            preferredSize: const Size(double.infinity, 70),
             child: Card(
               margin: styleHelpers.mainAppBarWithoutBottomMargin,
               color: myColor.mainPrimaryColor,
-              shape: styleHelpers.mainShareRadius,
+              shape: styleHelpers.mainShapeRadius,
               child: const MainAppBar(),
             ),
           ),

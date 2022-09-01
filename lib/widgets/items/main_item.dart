@@ -20,24 +20,24 @@ class MainItem extends StatelessWidget {
     final styleHelpers = StyleHelpers();
     final myColor = Theme.of(context).colorScheme;
     return Card(
-      margin: styleHelpers.mainFirstCardBottomMargin,
+      margin: styleHelpers.mainMarginBottomOnly,
       elevation: 3,
       color: const Color(0xFF97CBDC),
-      shape: styleHelpers.mainShareRadius,
+      shape: styleHelpers.mainShapeRadius,
       child: Card(
         margin: styleHelpers.mainSecondCardLeftMargin,
-        shape: styleHelpers.mainShareRadius,
+        shape: styleHelpers.mainShapeRadius,
         child: InkWell(
           splashColor: const Color(0xFF97CBDC).withOpacity(0.15),
           child: ListTile(
             title: Text(
               cardTitle,
+              textAlign: TextAlign.start,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 letterSpacing: -0.25,
-                color: myColor.mainSubTitleColor,
+                color: myColor.mainPrimaryColor,
               ),
-              textAlign: TextAlign.start,
             ),
             subtitle: Text(
               cardTitleDescription,
@@ -45,9 +45,9 @@ class MainItem extends StatelessWidget {
                 letterSpacing: -0.10,
               ),
             ),
-            trailing: const Icon(
+            trailing: Icon(
               CupertinoIcons.forward,
-              color: Color(0xFF004581),
+              color: myColor.mainAccentColor,
               size: 17.5,
             ),
           ),
