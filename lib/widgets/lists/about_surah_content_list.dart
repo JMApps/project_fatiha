@@ -10,7 +10,7 @@ class AboutSurahContentList extends StatelessWidget {
   Widget build(BuildContext context) {
     final myColor = Theme.of(context).colorScheme;
     return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
+      physics: const AlwaysScrollableScrollPhysics(),
       child: Container(
         alignment: Alignment.centerLeft,
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -24,7 +24,7 @@ class AboutSurahContentList extends StatelessWidget {
             contentsBuilder: (context, index) {
               return Card(
                 margin: const EdgeInsets.all(16),
-                color: myColor.mainPrimaryColor,
+                color: myColor.mainSecondaryColor,
                 child: const AboutSurahItem(),
               );
             },

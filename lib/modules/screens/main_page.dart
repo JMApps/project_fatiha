@@ -27,7 +27,7 @@ class MainPage extends StatelessWidget {
           ),
           body: ListView(
             padding: styleHelpers.mainPadding,
-            physics: const BouncingScrollPhysics(),
+            physics: const AlwaysScrollableScrollPhysics(),
             children: const [
               MainItem(
                 cardTitle: 'Достоинства суры',

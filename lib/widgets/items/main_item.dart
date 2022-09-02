@@ -22,13 +22,13 @@ class MainItem extends StatelessWidget {
     return Card(
       margin: styleHelpers.mainMarginBottomOnly,
       elevation: 3,
-      color: const Color(0xFF97CBDC),
+      color: myColor.mainSecondaryColor,
       shape: styleHelpers.mainShapeRadius,
       child: Card(
         margin: styleHelpers.mainSecondCardLeftMargin,
         shape: styleHelpers.mainShapeRadius,
         child: InkWell(
-          splashColor: const Color(0xFF97CBDC).withOpacity(0.5),
+          splashColor: myColor.mainSecondaryColor.withOpacity(0.15),
           child: ListTile(
             title: Text(
               cardTitle,

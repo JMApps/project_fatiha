@@ -6,7 +6,7 @@ class AppThemes {
     fontFamily: 'Sanfcancisco',
     colorScheme: const ColorScheme.light(),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFF018ABD),
+      backgroundColor: Color(0xFF1EB1F7),
       centerTitle: true,
       elevation: 0,
     ),
@@ -40,7 +40,15 @@ extension ColorSchemeS on ColorScheme {
       ? const Color(0xFF004581)
       : const Color(0xFF0C2125);
 
-  Color get mainLightPrimary => brightness == Brightness.light
+  Color get mainLightAccentColor => brightness == Brightness.light
       ? const Color(0xFF97CBDC)
+      : const Color(0xFF0C2125);
+
+  Color get mainSecondaryColor => brightness == Brightness.light
+      ? const Color(0xFFC1496C)
+      : const Color(0xFF0C2125);
+
+  Color get mainTernaryColor => brightness == Brightness.light
+      ? const Color(0xFF6FB632)
       : const Color(0xFF0C2125);
 }
