@@ -14,17 +14,17 @@ class TajweedSurahPageItem extends StatelessWidget {
       children: [
         Card(
           elevation: 3,
-          color: myColor.mainLightPrimary,
+          color: myColor.mainLightAccentColor,
           margin: styleHelpers.marginWithoutBottom,
           shape: styleHelpers.mainTopShapeRadius,
           child: Html(data: 'بِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيمِ', style: {
             '#': Style(
               wordSpacing: 15,
-              padding: styleHelpers.mainPaddingMini,
+              padding: styleHelpers.mainPadding,
               margin: EdgeInsets.zero,
               fontSize: const FontSize(22),
               fontFamily: 'Mothanna',
-              color: myColor.mainAccentColor,
+              color: myColor.mainAppBarTitleColor,
               textAlign: TextAlign.center,
               direction: TextDirection.rtl,
             )
