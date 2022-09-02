@@ -33,7 +33,7 @@ extension ColorSchemeS on ColorScheme {
       : const Color(0xFF0C2125);
 
   Color get mainPrimaryColor => brightness == Brightness.light
-      ? const Color(0xFF018ABD)
+      ? const Color(0xFF0196BE)
       : const Color(0xFF0C2125);
 
   Color get mainAccentColor => brightness == Brightness.light
@@ -45,7 +45,7 @@ extension ColorSchemeS on ColorScheme {
       : const Color(0xFF0C2125);
 
   Color get mainSecondaryColor => brightness == Brightness.light
-      ? const Color(0xFFC1496C)
+      ? const Color(0xFFC17878)
       : const Color(0xFF0C2125);
 
   Color get mainTernaryColor => brightness == Brightness.light

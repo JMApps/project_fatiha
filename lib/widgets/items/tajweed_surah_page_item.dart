@@ -19,7 +19,7 @@ class TajweedSurahPageItem extends StatelessWidget {
           shape: styleHelpers.mainTopShapeRadius,
           child: Html(data: 'بِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيمِ', style: {
             '#': Style(
-              wordSpacing: 15,
+              wordSpacing: 5,
               padding: styleHelpers.mainPadding,
               margin: EdgeInsets.zero,
               fontSize: const FontSize(22),
