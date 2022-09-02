@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/modules/screens/about_surah_page.dart';
 import 'package:project_fatiha/modules/screens/tajweed_surah_page.dart';
+import 'package:project_fatiha/modules/screens/write_surah_page.dart';
 
 class AppRoute {
   Route onGeneratorRoute(routeSettings) {
@@ -13,6 +14,11 @@ class AppRoute {
       case 'page_tajweed_surah':
         return MaterialPageRoute(
           builder: (_) => const TajweedSurahPage(),
+          settings: routeSettings,
+        );
+      case 'page_write_surah':
+        return MaterialPageRoute(
+          builder: (_) => const WriteSurahPage(),
           settings: routeSettings,
         );
       default: throw (Exception('Invalid route ${routeSettings.name}'));
