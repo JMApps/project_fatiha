@@ -11,7 +11,7 @@ class WriteSurahPlayer extends StatelessWidget {
     final styleHelpers = StyleHelpers();
     final myColor = Theme.of(context).colorScheme;
     return Material(
-      color: myColor.mainAccentColor,
+      color: myColor.mainPrimaryColor,
       borderRadius: styleHelpers.mainBorderRadius,
       child: Container(
         padding: styleHelpers.mainPadding,
