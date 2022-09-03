@@ -8,7 +8,8 @@ class TajweedSurahAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      elevation: 0,
       leading: IconButton(
         color: Colors.white,
         splashRadius: 20,
@@ -23,7 +24,6 @@ class TajweedSurahAppBar extends StatelessWidget {
         'Таджвид суры',
         style: TextStyle(
           color: Theme.of(context).colorScheme.mainAppBarTitleColor,
-          fontFamily: 'Sanfcancisco',
           letterSpacing: -0.40,
           fontWeight: FontWeight.bold,
         ),

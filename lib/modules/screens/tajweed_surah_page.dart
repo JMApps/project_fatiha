@@ -23,45 +23,58 @@ class TajweedSurahPage extends StatelessWidget {
       child: Container(
         color: myColor.mainPrimaryColor,
         child: SafeArea(
+          left: false,
+          right: false,
           bottom: false,
           child: Scaffold(
-            appBar: PreferredSize(
-              preferredSize: const Size(double.infinity, 70),
-              child: Card(
-                margin: styleHelpers.mainAppBarWithoutBottomMargin,
-                color: myColor.mainPrimaryColor,
-                shape: styleHelpers.mainShapeRadius,
-                child: const TajweedSurahAppBar(),
-              ),
+            backgroundColor: myColor.mainPrimaryColor,
+            appBar: const PreferredSize(
+              preferredSize: Size(double.infinity, 50),
+              child: TajweedSurahAppBar(),
             ),
-            body: const ContentSurahPageList(),
-            bottomNavigationBar: Container(
-              padding: styleHelpers.mainPaddingMini,
+            body: Container(
               decoration: BoxDecoration(
-                color: myColor.mainPrimaryColor,
-                borderRadius: styleHelpers.bottomNavigationTajweedTopRadius,
-              ),
-              height: 50,
-              child: Center(
-                child: Consumer<TajweedPageViewState>(
-                  builder: (context, pageViewState, _) {
-                    return AnimatedSmoothIndicator(
-                      count: 6,
-                      activeIndex: pageViewState.getCurrentPageIndex,
-                      onDotClicked: (index) {
-                        pageViewState.setPageIndex(index);
-                      },
-                      effect: ScrollingDotsEffect(
-                        dotWidth: 10,
-                        dotHeight: 6,
-                        strokeWidth: 1.5,
-                        paintStyle: PaintingStyle.fill,
-                        dotColor: Colors.white,
-                        activeDotColor: myColor.mainSecondaryColor,
-                      ),
-                    );
-                  },
+                color: myColor.mainBackgroundColor,
+                borderRadius: styleHelpers.tajweedContainerBorderRadius,
+                image: DecorationImage(
+                  image: const AssetImage('assets/pictures/main_background.png'),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                    myColor.mainBackgroundColor.withOpacity(0.85),
+                    BlendMode.srcATop,
+                  ),
                 ),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: styleHelpers.tajweedIndicatorContainerPadding,
+                    child: Center(
+                      child: Consumer<TajweedPageViewState>(
+                        builder: (context, pageViewState, _) {
+                          return AnimatedSmoothIndicator(
+                            count: 6,
+                            activeIndex: pageViewState.getCurrentPageIndex,
+                            onDotClicked: (index) {
+                              pageViewState.setPageIndex(index);
+                            },
+                            effect: ScrollingDotsEffect(
+                              dotWidth: 10,
+                              dotHeight: 6,
+                              strokeWidth: 1.5,
+                              paintStyle: PaintingStyle.fill,
+                              dotColor: Colors.white,
+                              activeDotColor: myColor.mainAccentColor,
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  const Expanded(
+                    child: ContentSurahPageList(),
+                  ),
+                ],
               ),
             ),
           ),
