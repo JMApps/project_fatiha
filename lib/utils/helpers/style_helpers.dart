@@ -17,6 +17,9 @@ class StyleHelpers {
 
   final mainAppBarWithoutBottomMargin = const EdgeInsets.only(left: 8, top: 16, right: 8);
 
+  final writeSurahItemWithoutLeft = const EdgeInsets.only(top: 16, right: 16);
+  final writeSurahItemWithoutRiht = const EdgeInsets.only(left: 16, top: 16);
+
   final tajweedIndicatorContainerPadding = const EdgeInsets.only(left: 16, top: 16, right: 16);
   final mainListIPadding = const EdgeInsets.only(left: 16, top: 66, right: 16, bottom: 16);
 
@@ -28,6 +31,8 @@ class StyleHelpers {
   final mainAppBarShapeRadius =  const RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.elliptical(175, 75)));
   final mainContainerBorderRadius =  const BorderRadius.only(bottomLeft: Radius.elliptical(250, 250), bottomRight: Radius.elliptical(250, 75));
   final tajweedContainerBorderRadius =  const BorderRadius.only(bottomLeft: Radius.elliptical(250, 250), bottomRight: Radius.elliptical(250, 150));
+  final tajweedWithoutLefShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15)));
+  final tajweedWithoutRightShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(15), bottomLeft: Radius.circular(15)));
 
   // Main page
   final mainSecondCardRightMargin = const EdgeInsets.only(right: 16, top: 2, bottom: 2, left: 2);

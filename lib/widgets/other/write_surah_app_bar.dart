@@ -8,7 +8,6 @@ class WriteSurahAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
       leading: IconButton(
         color: Colors.white,
         splashRadius: 20,
@@ -20,7 +19,7 @@ class WriteSurahAppBar extends StatelessWidget {
         },
       ),
       title: Text(
-        'Чтение суры',
+        'Обучающее чтение суры',
         style: TextStyle(
           color: Theme.of(context).colorScheme.mainAppBarTitleColor,
           letterSpacing: -0.40,

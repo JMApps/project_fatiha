@@ -24,7 +24,7 @@ class AboutSurahContentList extends StatelessWidget {
             contentsBuilder: (context, index) {
               return Card(
                 margin: const EdgeInsets.all(16),
-                color: myColor.mainSecondaryColor,
+                color: myColor.mainAccentColor,
                 child: const AboutSurahItem(),
               );
             },

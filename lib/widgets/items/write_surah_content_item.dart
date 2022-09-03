@@ -17,14 +17,27 @@ class WriteSurahContentItem extends StatelessWidget {
     return Card(
       elevation: 3,
       margin: styleHelpers.mainMarginBottomOnly,
-      shape: styleHelpers.mainShapeRadius,
-      color: myColor.mainSecondaryColor,
+      shape: itemIndex.isOdd ? styleHelpers.tajweedWithoutLefShapeRadius : styleHelpers.tajweedWithoutRightShapeRadius,
+      color: myColor.mainSecondaryAccentColor,
       child: Card(
         elevation: 0,
-        margin: styleHelpers.mainSecondCardLeftMargin,
-        shape: styleHelpers.mainShapeRadius,
-        child: Container(
-          height: 50,
+        margin: styleHelpers.mainSecondCardRightMargin,
+        shape: itemIndex.isOdd ? styleHelpers.tajweedWithoutLefShapeRadius : styleHelpers.tajweedWithoutRightShapeRadius,
+        child: InkWell(
+          borderRadius: styleHelpers.mainBorderRadius,
+          splashColor: myColor.mainSecondaryAccentColor.withOpacity(0.15),
+          child: SizedBox(
+            height: 50,
+            child: Center(
+              child: Text(
+                'Чтец $itemIndex',
+                style: const TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ),
+          onTap: () {},
         ),
       ),
     );
