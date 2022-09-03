@@ -21,14 +21,14 @@ class MainItem extends StatelessWidget {
     final myColor = Theme.of(context).colorScheme;
     return Card(
       margin: styleHelpers.mainMarginBottomOnly,
-      elevation: 3,
-      color: myColor.mainSecondaryColor,
+      elevation: 5,
+      color: myColor.mainSecondaryAccentColor,
       shape: styleHelpers.mainShapeRadius,
       child: Card(
-        margin: styleHelpers.mainSecondCardLeftMargin,
+        margin: styleHelpers.mainSecondCardRightMargin,
         shape: styleHelpers.mainShapeRadius,
         child: InkWell(
-          splashColor: myColor.mainSecondaryColor.withOpacity(0.15),
+          splashColor: myColor.mainSecondaryPrimaryColor.withOpacity(0.25),
           child: ListTile(
             title: Text(
               cardTitle,
@@ -47,7 +47,7 @@ class MainItem extends StatelessWidget {
             ),
             trailing: Icon(
               CupertinoIcons.forward,
-              color: myColor.mainAccentColor,
+              color: myColor.mainPrimaryColor,
               size: 17.5,
             ),
           ),
