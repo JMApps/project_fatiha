@@ -18,13 +18,14 @@ class StyleHelpers {
   final mainAppBarWithoutBottomMargin = const EdgeInsets.only(left: 8, top: 16, right: 8);
 
   final tajweedIndicatorContainerPadding = const EdgeInsets.only(left: 16, top: 16, right: 16);
+  final mainListIPadding = const EdgeInsets.only(left: 16, top: 66, right: 16, bottom: 16);
 
   // Border radius
   final mainShapeRadius = RoundedRectangleBorder(borderRadius: BorderRadius.circular(15));
   final mainBorderRadius =  BorderRadius.circular(15);
   final mainTopShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)));
   final mainBottomShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15)));
-  final mainAppBarShapeRadius =  const RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.elliptical(175, 75)));
+  final mainAppBarShapeRadius =  const RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.elliptical(175, 75)));
   final mainContainerBorderRadius =  const BorderRadius.only(bottomLeft: Radius.elliptical(250, 250), bottomRight: Radius.elliptical(250, 75));
   final tajweedContainerBorderRadius =  const BorderRadius.only(bottomLeft: Radius.elliptical(250, 250), bottomRight: Radius.elliptical(250, 150));
 

@@ -35,12 +35,7 @@ class MainPage extends StatelessWidget {
                   ),
                 ),
                 child: ListView(
-                  padding: const EdgeInsets.only(
-                    left: 16,
-                    top: 66,
-                    right: 16,
-                    bottom: 16,
-                  ),
+                  padding: styleHelpers.mainListIPadding,
                   children: const [
                     MainItem(
                       cardTitle: 'Достоинства суры',
