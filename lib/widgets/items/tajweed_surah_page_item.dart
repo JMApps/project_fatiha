@@ -17,18 +17,21 @@ class TajweedSurahPageItem extends StatelessWidget {
           color: myColor.mainAccentColor,
           margin: styleHelpers.marginWithoutBottom,
           shape: styleHelpers.mainTopShapeRadius,
-          child: Html(data: 'بِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيمِ', style: {
-            '#': Style(
-              wordSpacing: 5,
-              padding: styleHelpers.mainPadding,
-              margin: EdgeInsets.zero,
-              fontSize: const FontSize(22),
-              fontFamily: 'Mothanna',
-              color: myColor.mainAppBarTitleColor,
-              textAlign: TextAlign.center,
-              direction: TextDirection.rtl,
-            )
-          }),
+          child: Html(
+            data: 'بِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيمِ',
+            style: {
+              '#': Style(
+                wordSpacing: 5,
+                padding: styleHelpers.mainPadding,
+                margin: EdgeInsets.zero,
+                fontSize: const FontSize(22),
+                fontFamily: 'Mothanna',
+                color: myColor.mainTitleColor,
+                textAlign: TextAlign.center,
+                direction: TextDirection.rtl,
+              )
+            },
+          ),
         ),
         Expanded(
           // PageStorage

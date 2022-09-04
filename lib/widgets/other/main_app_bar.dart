@@ -15,7 +15,7 @@ class MainAppBar extends StatelessWidget {
       title: Text(
         'الفاتحة',
         style: TextStyle(
-          color: Theme.of(context).colorScheme.mainAppBarTitleColor,
+          color: Theme.of(context).colorScheme.mainTitleColor,
           fontFamily: 'Mothanna',
           fontWeight: FontWeight.bold,
         ),

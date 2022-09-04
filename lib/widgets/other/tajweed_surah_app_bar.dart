@@ -23,7 +23,7 @@ class TajweedSurahAppBar extends StatelessWidget {
       title: Text(
         'Таджвид суры',
         style: TextStyle(
-          color: Theme.of(context).colorScheme.mainAppBarTitleColor,
+          color: Theme.of(context).colorScheme.mainTitleColor,
           letterSpacing: -0.40,
           fontWeight: FontWeight.bold,
         ),
