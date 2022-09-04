@@ -15,19 +15,30 @@ class AboutSurahPage extends StatelessWidget {
     return Container(
       color: myColor.mainPrimaryColor,
       child: SafeArea(
+        left: false,
+        right: false,
         bottom: false,
         child: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: const Size(double.infinity, 70),
-            child: Card(
-              margin: styleHelpers.mainAppBarWithoutBottomMargin,
-              color: myColor.mainPrimaryColor,
-              shape: styleHelpers.mainShapeRadius,
-              child: const AboutSurahAppBar(),
-            ),
+          appBar: const PreferredSize(
+            preferredSize: Size(double.infinity, 50),
+            child: AboutSurahAppBar(),
           ),
-          body: const CupertinoScrollbar(
-            child: AboutSurahContentList(),
+          body: Container(
+            decoration: BoxDecoration(
+              color: myColor.mainBackgroundColor,
+              borderRadius: styleHelpers.mainContainerBorderRadius,
+              image: DecorationImage(
+                image: const AssetImage('assets/pictures/main_background.png'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  myColor.mainBackgroundColor.withOpacity(0.85),
+                  BlendMode.srcATop,
+                ),
+              ),
+            ),
+            child: const CupertinoScrollbar(
+              child: AboutSurahContentList(),
+            ),
           ),
         ),
       ),

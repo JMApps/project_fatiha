@@ -8,7 +8,6 @@ class AboutSurahAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
       leading: IconButton(
         color: Colors.white,
         splashRadius: 20,
