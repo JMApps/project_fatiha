@@ -29,8 +29,8 @@ class MainPage extends StatelessWidget {
                     image: const AssetImage('assets/pictures/main_background.png'),
                     fit: BoxFit.cover,
                     colorFilter: ColorFilter.mode(
-                      myColor.mainBackgroundColor.withOpacity(0.85),
-                      BlendMode.srcATop,
+                      myColor.mainPrimaryColor.withOpacity(0.1),
+                      BlendMode.modulate,
                     ),
                   ),
                 ),

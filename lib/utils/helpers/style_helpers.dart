@@ -10,8 +10,10 @@ class StyleHelpers {
   final mainMarginMini = const EdgeInsets.all(8);
 
   final mainMarginBottomOnly = const EdgeInsets.only(bottom: 16);
+  final mainMarginLeftOnlyMini = const EdgeInsets.only(left: 8);
 
   final mainPaddingTopOnly = const EdgeInsets.only(top: 16);
+  final mainPaddingLeftBottom = const EdgeInsets.only(left: 16, bottom: 16);
   final mainPaddingBottomOnly = const EdgeInsets.only(bottom: 16);
 
   final mainMarginWithoutTop = const EdgeInsets.only(left: 16, bottom: 16, right: 16);

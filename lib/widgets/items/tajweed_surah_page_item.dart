@@ -14,7 +14,7 @@ class TajweedSurahPageItem extends StatelessWidget {
       children: [
         Card(
           elevation: 3,
-          color: myColor.mainAccentColor,
+          color: myColor.mainSecondaryAccentColor,
           margin: styleHelpers.marginWithoutBottom,
           shape: styleHelpers.mainTopShapeRadius,
           child: Html(
@@ -26,7 +26,7 @@ class TajweedSurahPageItem extends StatelessWidget {
                 margin: EdgeInsets.zero,
                 fontSize: const FontSize(22),
                 fontFamily: 'Mothanna',
-                color: myColor.mainTitleColor,
+                color: myColor.tajweedAyahColor,
                 textAlign: TextAlign.center,
                 direction: TextDirection.rtl,
               )

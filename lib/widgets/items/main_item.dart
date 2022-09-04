@@ -29,6 +29,7 @@ class MainItem extends StatelessWidget {
         shape: styleHelpers.mainShapeRadius,
         child: InkWell(
           splashColor: myColor.mainSecondaryPrimaryColor.withOpacity(0.25),
+          borderRadius: styleHelpers.mainBorderRadius,
           child: ListTile(
             title: Text(
               cardTitle,
@@ -36,7 +37,7 @@ class MainItem extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 letterSpacing: -0.25,
-                color: myColor.mainPrimaryColor,
+                color: myColor.mainCardTitleColor,
               ),
             ),
             subtitle: Text(
