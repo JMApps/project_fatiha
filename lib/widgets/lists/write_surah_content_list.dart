@@ -9,7 +9,7 @@ class WriteSurahContentList extends StatelessWidget {
   Widget build(BuildContext context) {
     final styleHelpers = StyleHelpers();
     return ListView.builder(
-      padding: styleHelpers.writeSurahItemWithoutLeft,
+      padding: styleHelpers.mainPaddingTopOnly,
       physics: const AlwaysScrollableScrollPhysics(),
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {

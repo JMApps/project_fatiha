@@ -12,7 +12,7 @@ class WriteSurahPlayer extends StatelessWidget {
     final myColor = Theme.of(context).colorScheme;
     return Material(
       color: myColor.mainPrimaryColor,
-      borderRadius: styleHelpers.mainBorderRadius,
+      borderRadius: styleHelpers.writeOnlyTopRadius,
       child: Container(
         padding: styleHelpers.mainPadding,
         child: Row(
@@ -20,27 +20,39 @@ class WriteSurahPlayer extends StatelessWidget {
           children: [
             IconButton(
               splashRadius: 20,
-              icon: const Icon(
-                CupertinoIcons.backward_end,
-                color: Colors.white,
-              ),
-              onPressed: () {},
-            ),
-            IconButton(
-              splashRadius: 20,
-              icon: const Icon(
+              icon: Icon(
                 CupertinoIcons.play,
-                color: Colors.white,
+                color: myColor.mainIconColor,
+              ),
+              onPressed: () {},
+            ),
+            Expanded(
+              child: Slider.adaptive(
+                value: 0,
+                onChanged: (double onChanged) {},
+              ),
+            ),
+            IconButton(
+              splashRadius: 20,
+              icon: Icon(
+                CupertinoIcons.arrow_2_squarepath,
+                color: myColor.mainIconColor,
               ),
               onPressed: () {},
             ),
             IconButton(
               splashRadius: 20,
-              icon: const Icon(
-                CupertinoIcons.forward_end,
-                color: Colors.white,
+              icon: Icon(
+                CupertinoIcons.speedometer,
+                color: myColor.mainIconColor,
               ),
               onPressed: () {},
+            ),
+            Text(
+              '03:34',
+              style: TextStyle(
+                color: myColor.mainTitleColor,
+              ),
             ),
           ],
         ),

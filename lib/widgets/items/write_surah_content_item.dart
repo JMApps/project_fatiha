@@ -17,12 +17,12 @@ class WriteSurahContentItem extends StatelessWidget {
     return Card(
       elevation: 3,
       margin: styleHelpers.mainMarginBottomOnly,
-      shape: itemIndex.isOdd ? styleHelpers.tajweedWithoutLefShapeRadius : styleHelpers.tajweedWithoutRightShapeRadius,
+      shape: itemIndex.isOdd ? styleHelpers.tajweedWithoutLeftShapeRadius : styleHelpers.tajweedWithoutRightShapeRadius,
       color: myColor.mainSecondaryAccentColor,
       child: Card(
         elevation: 0,
         margin: styleHelpers.mainSecondCardRightMargin,
-        shape: itemIndex.isOdd ? styleHelpers.tajweedWithoutLefShapeRadius : styleHelpers.tajweedWithoutRightShapeRadius,
+        shape: itemIndex.isOdd ? styleHelpers.tajweedWithoutLeftShapeRadius : styleHelpers.tajweedWithoutRightShapeRadius,
         child: InkWell(
           borderRadius: styleHelpers.mainBorderRadius,
           splashColor: myColor.mainSecondaryAccentColor.withOpacity(0.15),

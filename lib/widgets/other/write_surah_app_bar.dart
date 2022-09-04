@@ -21,7 +21,7 @@ class WriteSurahAppBar extends StatelessWidget {
       title: Text(
         'Обучающее чтение суры',
         style: TextStyle(
-          color: Theme.of(context).colorScheme.mainAppBarTitleColor,
+          color: Theme.of(context).colorScheme.mainTitleColor,
           letterSpacing: -0.40,
           fontWeight: FontWeight.bold,
         ),
