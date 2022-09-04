@@ -5,19 +5,19 @@ import 'package:project_fatiha/utils/helpers/style_helpers.dart';
 class WriteSurahAudioList extends StatelessWidget {
   WriteSurahAudioList({Key? key}) : super(key: key);
 
-  String dropdownValue = 'Item 1';
+  String dropdownValue = 'Чтец 1';
 
   var items = [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5',
-    'Item 6',
-    'Item 7',
-    'Item 8',
-    'Item 9',
-    'Item 10'
+    'Чтец 1',
+    'Чтец 2',
+    'Чтец 3',
+    'Чтец 4',
+    'Чтец 5',
+    'Чтец 6',
+    'Чтец 7',
+    'Чтец 8',
+    'Чтец 9',
+    'Чтец 10'
   ];
 
   @override

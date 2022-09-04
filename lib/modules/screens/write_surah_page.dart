@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/config/themes/app_themes.dart';
 import 'package:project_fatiha/widgets/lists/write_surah_auido_list.dart';
