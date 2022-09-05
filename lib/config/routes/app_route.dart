@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/modules/screens/about_surah_page.dart';
+import 'package:project_fatiha/modules/screens/memorization_surah_page.dart';
 import 'package:project_fatiha/modules/screens/read_errors_page.dart';
 import 'package:project_fatiha/modules/screens/reading_features_page.dart';
 import 'package:project_fatiha/modules/screens/tajweed_surah_page.dart';
@@ -31,6 +32,11 @@ class AppRoute {
       case 'page_read_errors':
         return MaterialPageRoute(
           builder: (_) => const ReadErrorsPage(),
+          settings: routeSettings,
+        );
+      case 'page_memorization_surah':
+        return MaterialPageRoute(
+          builder: (_) => const MemorizationSurahPage(),
           settings: routeSettings,
         );
       default:
