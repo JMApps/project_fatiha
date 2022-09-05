@@ -12,8 +12,11 @@ class StyleHelpers {
   final mainMarginBottomOnly = const EdgeInsets.only(bottom: 16);
   final mainMarginLeftOnlyMini = const EdgeInsets.only(left: 8);
   final mainMarginRightOnlyMini = const EdgeInsets.only(right: 8);
+  final mainMarginRightBottomOnly = const EdgeInsets.only(right: 16, bottom: 16);
+  final mainMarginLeftBottomOnly = const EdgeInsets.only(left: 16, bottom: 16);
 
   final mainPaddingTopOnly = const EdgeInsets.only(top: 16);
+  final mainPaddingTopBottom = const EdgeInsets.only(top: 16, bottom: 16);
   final mainPaddingLeftBottom = const EdgeInsets.only(left: 16, bottom: 16);
   final mainPaddingRightBottom = const EdgeInsets.only(right: 16, bottom: 16);
   final mainPaddingBottomOnly = const EdgeInsets.only(bottom: 16);
@@ -39,6 +42,8 @@ class StyleHelpers {
   final tajweedWithoutLeftShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(topRight: Radius.circular(25), bottomRight: Radius.circular(25)));
   final tajweedWithoutRightShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25)));
   final writeOnlyTopRadius = const BorderRadius.only(topLeft: Radius.elliptical(75, 50), topRight: Radius.elliptical(75, 50));
+  final readErrorRightOnlyShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(topRight: Radius.circular(25), bottomRight: Radius.circular(25)));
+  final readErrorLeftOnlyShapeRadius = const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomLeft: Radius.circular(25)));
 
   // Main page
   final mainSecondCardRightMargin = const EdgeInsets.only(right: 16, top: 2, bottom: 2, left: 2);
