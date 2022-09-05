@@ -16,21 +16,21 @@ class AboutSurahContentList extends StatelessWidget {
       children: [
         FixedTimeline.tileBuilder(
           theme: TimelineTheme.of(context).copyWith(
-            nodePosition: 0,
+            nodePosition: 1,
             color: myColor.mainPrimaryDarkColor,
           ),
           builder: TimelineTileBuilder.fromStyle(
             contentsAlign: ContentsAlign.basic,
-            contentsBuilder: (context, index) {
+            oppositeContentsBuilder: (context, index) {
               return Card(
-                margin: styleHelpers.mainPaddingLeftBottom,
+                margin: styleHelpers.mainPaddingRightBottom,
                 color: myColor.mainSecondaryAccentColor,
                 shape: styleHelpers.mainShapeRadius,
                 child: const AboutSurahItem(),
               );
             },
-            indicatorStyle: IndicatorStyle.outlined,
-            connectorStyle: ConnectorStyle.solidLine,
+            indicatorStyle: IndicatorStyle.dot,
+            connectorStyle: ConnectorStyle.dashedLine,
             endConnectorStyle: ConnectorStyle.dashedLine,
             itemCount: 10,
           ),

@@ -55,7 +55,7 @@ class MainPage extends StatelessWidget {
                     MainItem(
                       cardTitle: 'Тонкости чтения',
                       cardTitleDescription: 'Особенности чтения суры',
-                      routeName: 'page_subtleties_errors',
+                      routeName: 'page_reading_features',
                     ),
                     MainItem(
                       cardTitle: 'Ошибки при чтении',
