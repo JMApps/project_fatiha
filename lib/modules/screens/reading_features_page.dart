@@ -12,17 +12,29 @@ class ReadingFeaturesPage extends StatelessWidget {
     final myColor = Theme.of(context).colorScheme;
     return Container(
       color: myColor.mainPrimaryColor,
-      child: const SafeArea(
+      child: SafeArea(
         left: false,
         right: false,
         bottom: false,
         child: Scaffold(
-          appBar: PreferredSize(
+          appBar: const PreferredSize(
             preferredSize: Size(double.infinity, 50),
             child: ReadingFeaturesAppBar(),
           ),
-          body: CupertinoScrollbar(
-            child: ReadingFeaturesContentList(),
+          body: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: const AssetImage('assets/pictures/main_background.png'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  myColor.mainPrimaryColor.withOpacity(0.1),
+                  BlendMode.modulate,
+                ),
+              ),
+            ),
+            child: const CupertinoScrollbar(
+              child: ReadingFeaturesContentList(),
+            ),
           ),
         ),
       ),
