@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/modules/screens/about_surah_page.dart';
+import 'package:project_fatiha/modules/screens/reading_features_page.dart';
 import 'package:project_fatiha/modules/screens/tajweed_surah_page.dart';
 import 'package:project_fatiha/modules/screens/write_surah_page.dart';
 
@@ -21,7 +22,13 @@ class AppRoute {
           builder: (_) => const WriteSurahPage(),
           settings: routeSettings,
         );
-      default: throw (Exception('Invalid route ${routeSettings.name}'));
+      case 'page_reading_features':
+        return MaterialPageRoute(
+          builder: (_) => const ReadingFeaturesPage(),
+          settings: routeSettings,
+        );
+      default:
+        throw (Exception('Invalid route ${routeSettings.name}'));
     }
   }
 }
