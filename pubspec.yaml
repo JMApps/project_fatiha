@@ -13,11 +13,8 @@ dependencies:
 
   cupertino_icons: ^1.0.5
   provider: ^6.0.3
-  timelines: ^0.1.0
   smooth_page_indicator: ^1.0.0+2
   flutter_html: ^2.2.1
-  font_awesome_flutter: ^10.1.0
-  circular_menu: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +33,9 @@ flutter:
     - family: Mothanna
       fonts:
         - asset: assets/fonts/mothanna.ttf
-    - family: Sanfcancisco
+    - family: Aqum
       fonts:
-        - asset: assets/fonts/sanfcancisco.ttf
+        - asset: assets/fonts/aqum_two.ttf
+    - family: Ruberoid
+      fonts:
+        - asset: assets/fonts/ruberoid.ttf
