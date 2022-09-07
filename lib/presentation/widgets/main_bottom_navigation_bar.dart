@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/state/provider/main_bottom_navigation_state.dart';
+import 'package:provider/provider.dart';
 
 class MainBottomNavigationBar extends StatelessWidget {
   const MainBottomNavigationBar({Key? key}) : super(key: key);
@@ -32,6 +34,8 @@ class MainBottomNavigationBar extends StatelessWidget {
             label: 'Настройки',
           ),
         ],
+        currentIndex: context.watch<MainBottomNavigationState>().getInitialNavigationIndex,
+        onTap: context.read<MainBottomNavigationState>().changeNavigationIndex,
       ),
     );
   }

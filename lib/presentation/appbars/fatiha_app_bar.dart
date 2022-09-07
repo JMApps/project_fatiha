@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MainAppBar extends StatelessWidget {
-  const MainAppBar({Key? key}) : super(key: key);
+class FatihaAppBar extends StatelessWidget {
+  const FatihaAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class MainAppBar extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Mothanna',
                   fontSize: 23,
-                  color: Colors.blueGrey.shade800,
+                  color: Colors.red.shade400,
                 ),
                 textAlign: TextAlign.center,
               ),

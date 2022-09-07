@@ -10,14 +10,14 @@ class MainMenuList extends StatelessWidget {
       scrollDirection: Axis.vertical,
       padding: const EdgeInsets.symmetric(
         horizontal: 32,
-        vertical: 16,
+        vertical: 8,
       ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount:
             MediaQuery.of(context).orientation == Orientation.portrait ? 1 : 2,
         childAspectRatio: MediaQuery.of(context).devicePixelRatio,
         crossAxisSpacing: 16,
-        mainAxisSpacing: 16,
+        mainAxisSpacing: 4,
       ),
       children: [
         MainMenuItem(
