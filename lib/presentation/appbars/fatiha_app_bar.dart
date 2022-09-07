@@ -22,9 +22,9 @@ class FatihaAppBar extends StatelessWidget {
           AppBar(
             elevation: 0,
             backgroundColor: Colors.white,
-            leading: Icon(
-              CupertinoIcons.airplane,
-              color: Colors.blueGrey.shade800,
+            leading: CircleAvatar(
+              backgroundColor: Colors.transparent,
+              backgroundImage: AssetImage('assets/pictures/app_icon.png'),
             ),
             actions: [
               IconButton(
