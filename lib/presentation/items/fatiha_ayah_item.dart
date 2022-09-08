@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
 
 class FatihaAyahItem extends StatelessWidget {
   const FatihaAyahItem({Key? key}) : super(key: key);
@@ -25,10 +26,9 @@ class FatihaAyahItem extends StatelessWidget {
               child: Text(
                 'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ',
                 style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.blueGrey.shade900,
-                  fontFamily: 'Quran'
-                ),
+                    fontSize: 30,
+                    color: Colors.blueGrey.shade900,
+                    fontFamily: 'Quran'),
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
               ),
@@ -80,7 +80,18 @@ class FatihaAyahItem extends StatelessWidget {
                         splashRadius: 20,
                         splashColor: Colors.red.shade100,
                         icon: Icon(
-                          CupertinoIcons.folder_open,
+                          CupertinoIcons.arrow_2_circlepath,
+                          color: Colors.blueGrey.shade600,
+                        ),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        constraints: const BoxConstraints(),
+                        padding: const EdgeInsets.only(top: 8),
+                        splashRadius: 20,
+                        splashColor: Colors.red.shade100,
+                        icon: Icon(
+                          CupertinoIcons.doc_on_doc,
                           color: Colors.blueGrey.shade600,
                         ),
                         onPressed: () {},
@@ -116,7 +127,24 @@ class FatihaAyahItem extends StatelessWidget {
                           CupertinoIcons.t_bubble,
                           color: Colors.blueGrey.shade600,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          showModalBottomSheet(
+                            backgroundColor: Colors.transparent,
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (context) {
+                              return SizedBox(
+                                height: 500,
+                                child: AnimatedPadding(
+                                  padding: MediaQuery.of(context).viewInsets,
+                                  duration: const Duration(milliseconds: 250),
+                                  curve: Curves.decelerate,
+                                  child: const TafseerAyahBottomSheetPage(),
+                                ),
+                              );
+                            },
+                          );
+                        },
                       ),
                     ],
                   ),
