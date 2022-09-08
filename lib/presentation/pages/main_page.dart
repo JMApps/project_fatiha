@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/state/provider/main_bottom_navigation_state.dart';
-import 'package:project_fatiha/presentation/lists/main_menu_list.dart';
+import 'package:project_fatiha/presentation/pages/app_settings_page.dart';
 import 'package:project_fatiha/presentation/pages/fatiha_page.dart';
 import 'package:project_fatiha/presentation/pages/main_menu_page.dart';
 import 'package:project_fatiha/presentation/widgets/main_bottom_navigation_bar.dart';
@@ -12,7 +12,7 @@ class MainPage extends StatelessWidget {
   final _mainContainer = [
     const MainMenuPage(),
     const FatihaPage(),
-    const MainMenuList(),
+    const AppSettingsPage(),
   ];
 
   @override

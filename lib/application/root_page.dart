@@ -22,7 +22,7 @@ class RootPage extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Фатиха',
         theme: ThemeData(
-          fontFamily: 'Ruberoid',
+          fontFamily: 'Manrope',
         ),
         home: MainPage(),
       ),

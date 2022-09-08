@@ -10,7 +10,7 @@ class MainMenuPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey.shade50,
       appBar: const PreferredSize(
-        preferredSize: Size(double.infinity, 50),
+        preferredSize: Size(double.infinity, 66),
         child: MainMenuAppBar(),
       ),
       body: const MainMenuList(),

@@ -37,6 +37,6 @@ flutter:
     - family: Aqum
       fonts:
         - asset: assets/fonts/aqum_two.ttf
-    - family: Ruberoid
+    - family: Manrope
       fonts:
-        - asset: assets/fonts/ruberoid.ttf
+        - asset: assets/fonts/manrope.ttf

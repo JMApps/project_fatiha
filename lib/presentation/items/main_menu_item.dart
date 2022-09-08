@@ -46,16 +46,12 @@ class MainMenuItem extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.blueGrey.shade800,
-              fontFamily: 'Ruberoid',
-              letterSpacing: -0.40,
             ),
           ),
           subtitle: Text(
             subTitle,
             style: TextStyle(
               color: Colors.blueGrey.shade800,
-              fontFamily: 'Ruberoid',
-              letterSpacing: -0.20,
             ),
           ),
         ),
