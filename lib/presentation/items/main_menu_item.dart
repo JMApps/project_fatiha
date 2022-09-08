@@ -8,6 +8,7 @@ class MainMenuItem extends StatelessWidget {
     required this.icon,
     required this.title,
     required this.subTitle,
+    required this.routeName,
   }) : super(key: key);
 
   final int index;
@@ -15,6 +16,7 @@ class MainMenuItem extends StatelessWidget {
   final IconData icon;
   final String title;
   final String subTitle;
+  final String routeName;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,9 @@ class MainMenuItem extends StatelessWidget {
             ),
           ),
         ),
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, routeName);
+        },
       ),
     );
   }

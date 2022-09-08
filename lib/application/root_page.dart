@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/route/app_route.dart';
 import 'package:project_fatiha/domain/state/provider/home_sliding_segment_state.dart';
 import 'package:project_fatiha/domain/state/provider/main_bottom_navigation_state.dart';
 import 'package:project_fatiha/presentation/pages/main_page.dart';
@@ -24,6 +25,7 @@ class RootPage extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'Manrope',
         ),
+        onGenerateRoute: AppRoute().onGeneratorRoute,
         home: MainPage(),
       ),
     );

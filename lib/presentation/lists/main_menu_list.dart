@@ -26,6 +26,7 @@ class MainMenuList extends StatelessWidget {
           icon: Icons.confirmation_num_outlined,
           title: 'Достоинства',
           subTitle: 'О достоинствах суры',
+          routeName: 'about_surah_page',
         ),
         MainMenuItem(
           index: 1,
@@ -33,6 +34,7 @@ class MainMenuList extends StatelessWidget {
           icon: Icons.chrome_reader_mode_outlined,
           title: 'Правила',
           subTitle: 'Таджвид суры',
+          routeName: 'tajweed_surah_page',
         ),
         MainMenuItem(
           index: 2,
@@ -40,6 +42,7 @@ class MainMenuList extends StatelessWidget {
           icon: Icons.account_tree_outlined,
           title: 'Тонкости',
           subTitle: 'Тонкости чтения суры',
+          routeName: 'subtleties_surah_page',
         ),
         MainMenuItem(
           index: 3,
@@ -47,6 +50,7 @@ class MainMenuList extends StatelessWidget {
           icon: Icons.error_outline_sharp,
           title: 'Ошибки',
           subTitle: 'Частые ошибки при чтении суры',
+          routeName: 'read_error_page',
         ),
         MainMenuItem(
           index: 4,
@@ -54,6 +58,7 @@ class MainMenuList extends StatelessWidget {
           icon: Icons.manage_accounts_outlined,
           title: 'Руководство',
           subTitle: 'Руководство по использованию приложения',
+          routeName: 'management_app_page',
         ),
       ],
     );
