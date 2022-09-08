@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/state/provider/home_sliding_segment_state.dart';
 import 'package:project_fatiha/domain/state/provider/read_surah_state.dart';
 import 'package:project_fatiha/presentation/appbars/fatiha_app_bar.dart';
+import 'package:project_fatiha/presentation/lists/fatiha_list.dart';
 import 'package:project_fatiha/presentation/widgets/read_fatiha_container.dart';
 import 'package:provider/provider.dart';
 
@@ -11,7 +12,7 @@ class FatihaPage extends StatelessWidget {
 
   static const _homePageContainer = [
     ReadFatihaContainer(),
-    SizedBox(),
+    FatihaList(),
   ];
 
   @override

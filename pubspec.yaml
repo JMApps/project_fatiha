@@ -40,3 +40,6 @@ flutter:
     - family: Manrope
       fonts:
         - asset: assets/fonts/manrope.ttf
+    - family: Quran
+      fonts:
+        - asset: assets/fonts/quran.ttf
