@@ -26,6 +26,7 @@ class ReadFatihaContainer extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: Card(
+            elevation: 0,
             margin: const EdgeInsets.all(16),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25),
@@ -134,7 +135,9 @@ class ReadFatihaContainer extends StatelessWidget {
                         ),
                       ],
                       onChanged: (int? value) {
-                        context.read<ReadSurahState>().changeReaderIndex(value!);
+                        context
+                            .read<ReadSurahState>()
+                            .changeReaderIndex(value!);
                       },
                     ),
                   ),
@@ -151,7 +154,9 @@ class ReadFatihaContainer extends StatelessWidget {
                   const SizedBox(width: 8),
                   const Text(
                     '03:53',
-                    style: TextStyle(color: Colors.red, letterSpacing: -0.40),
+                    style: TextStyle(
+                      color: Colors.red,
+                    ),
                   ),
                 ],
               ),

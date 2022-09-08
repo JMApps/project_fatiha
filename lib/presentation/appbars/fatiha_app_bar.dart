@@ -22,7 +22,7 @@ class FatihaAppBar extends StatelessWidget {
           AppBar(
             elevation: 0,
             backgroundColor: Colors.white,
-            leading: CircleAvatar(
+            leading: const CircleAvatar(
               backgroundColor: Colors.transparent,
               backgroundImage: AssetImage('assets/pictures/app_icon.png'),
             ),
@@ -46,7 +46,7 @@ class FatihaAppBar extends StatelessWidget {
                 'سورة الفاتحة',
                 style: TextStyle(
                   fontFamily: 'Mothanna',
-                  fontSize: 23,
+                  fontSize: 25,
                   color: Colors.red.shade400,
                 ),
                 textAlign: TextAlign.center,
@@ -55,7 +55,7 @@ class FatihaAppBar extends StatelessWidget {
                 'Открывающая Книгу',
                 style: TextStyle(
                   fontFamily: 'Aqum',
-                  fontSize: 12,
+                  fontSize: 14,
                   color: Colors.blueGrey.shade800,
                 ),
                 textAlign: TextAlign.center,

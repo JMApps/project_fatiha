@@ -34,11 +34,24 @@ class FatihaPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16),
               child: CustomSlidingSegmentedControl(
+                innerPadding: const EdgeInsets.all(4),
                 padding: 32,
-                initialValue: context.read<HomeSlidingSegmentState>().getInitialSlidingIndex,
+                initialValue: context
+                    .read<HomeSlidingSegmentState>()
+                    .getInitialSlidingIndex,
                 children: const {
-                  1: Text('Чтение'),
-                  2: Text('Перевод'),
+                  1: Text(
+                    'Чтение',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  2: Text(
+                    'Перевод',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 },
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -50,20 +63,25 @@ class FatihaPage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.blueGrey.withOpacity(0.5),
-                      blurRadius: 1,
-                      spreadRadius: 1,
+                      blurRadius: 0.3,
+                      spreadRadius: 0.3,
                     ),
                   ],
                 ),
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeIn,
                 onValueChanged: (int newIndex) {
-                  context.read<HomeSlidingSegmentState>().changeSlidingIndex(newIndex);
+                  context
+                      .read<HomeSlidingSegmentState>()
+                      .changeSlidingIndex(newIndex);
                 },
               ),
             ),
             Expanded(
-              child: _homePageContainer[context.watch<HomeSlidingSegmentState>().getInitialSlidingIndex - 1],
+              child: _homePageContainer[context
+                      .watch<HomeSlidingSegmentState>()
+                      .getInitialSlidingIndex -
+                  1],
             ),
           ],
         ),
