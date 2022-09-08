@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/presentation/pages/about_surah_page.dart';
+import 'package:project_fatiha/presentation/pages/management_app_page.dart';
 import 'package:project_fatiha/presentation/pages/read_error_page.dart';
 import 'package:project_fatiha/presentation/pages/subtleties_surah_page.dart';
 import 'package:project_fatiha/presentation/pages/tajweed_surah_page.dart';
@@ -29,10 +30,11 @@ class AppRoute {
         );
       case 'management_app_page':
         return MaterialPageRoute(
-          builder: (_) => const AboutSurahPage(),
+          builder: (_) => const ManagementAppPage(),
           settings: routeSettings,
         );
-      default: throw (Exception('Invalid route ${routeSettings.name}'));
+      default:
+        throw (Exception('Invalid route ${routeSettings.name}'));
     }
   }
 }
