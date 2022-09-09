@@ -15,11 +15,11 @@ class AboutSurahAppBar extends StatelessWidget {
         ),
       ),
       leading: IconButton(
-        splashColor: Colors.red.shade100,
+        splashColor: Colors.teal.shade100,
         splashRadius: 20,
-        icon: Icon(
+        icon: const Icon(
           CupertinoIcons.back,
-          color: Colors.red.shade400,
+          color: Colors.teal,
           size: 25,
         ),
         onPressed: () {
