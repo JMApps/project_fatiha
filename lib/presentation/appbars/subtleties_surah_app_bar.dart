@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 
 class SubtletiesSurahAppBar extends StatelessWidget {
@@ -8,7 +7,6 @@ class SubtletiesSurahAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final myColors = Theme.of(context).colorScheme;
     return AppBar(
       title: const Text(
         'Тонкости чтения',
@@ -17,11 +15,11 @@ class SubtletiesSurahAppBar extends StatelessWidget {
         ),
       ),
       leading: IconButton(
-        splashColor: myColors.lightIconSplashColor,
+        splashColor: Colors.blue.shade100,
         splashRadius: 20,
-        icon: Icon(
+        icon: const Icon(
           CupertinoIcons.back,
-          color: Colors.blue.shade400,
+          color: Colors.blueAccent,
           size: 25,
         ),
         onPressed: () {

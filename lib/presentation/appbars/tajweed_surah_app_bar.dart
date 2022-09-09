@@ -17,9 +17,9 @@ class TajweedSurahAppBar extends StatelessWidget {
       leading: IconButton(
         splashColor: Colors.orange.shade100,
         splashRadius: 20,
-        icon: Icon(
+        icon: const Icon(
           CupertinoIcons.back,
-          color: Colors.orange.shade400,
+          color: Colors.orangeAccent,
           size: 25,
         ),
         onPressed: () {

@@ -15,11 +15,11 @@ class ReadErrorAppBar extends StatelessWidget {
         ),
       ),
       leading: IconButton(
-        splashColor: Colors.purple.shade100,
+        splashColor: Colors.red.shade100,
         splashRadius: 20,
-        icon: Icon(
+        icon: const Icon(
           CupertinoIcons.back,
-          color: Colors.purple.shade400,
+          color: Colors.redAccent,
           size: 25,
         ),
         onPressed: () {

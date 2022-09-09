@@ -28,14 +28,14 @@ class MainMenuItem extends StatelessWidget {
       shape: appWidgetStyle.mainShape,
       child: InkWell(
         borderRadius: appWidgetStyle.mainBorderRadius,
-        splashColor: color.withOpacity(0.3),
+        splashColor: color.withOpacity(0.1),
         child: ListTile(
           visualDensity: VisualDensity.adaptivePlatformDensity,
           contentPadding: appWidgetStyle.mainPadding,
           leading: Container(
             padding: appWidgetStyle.mainPadding,
             decoration: BoxDecoration(
-              color: color.withOpacity(0.10),
+              color: color.withOpacity(0.1),
               borderRadius: appWidgetStyle.menuColorContainerBorderRadius,
             ),
             child: Icon(
