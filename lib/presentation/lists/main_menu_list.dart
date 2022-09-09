@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/items/main_menu_item.dart';
 
 class MainMenuList extends StatelessWidget {
@@ -8,13 +9,9 @@ class MainMenuList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView(
       scrollDirection: Axis.vertical,
-      padding: const EdgeInsets.symmetric(
-        horizontal: 32,
-        vertical: 8,
-      ),
+      padding: appWidgetStyle.mainPaddingHorizontalBigVerticalMini,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount:
-            MediaQuery.of(context).orientation == Orientation.portrait ? 1 : 2,
+        crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 1 : 2,
         childAspectRatio: MediaQuery.of(context).devicePixelRatio,
         crossAxisSpacing: 16,
         mainAxisSpacing: 4,

@@ -19,8 +19,7 @@ class DropDownReaderNumber extends StatelessWidget {
             ? Colors.red.shade400
             : Colors.blueGrey.shade800,
         fontSize: 16,
-        fontWeight:
-            readerNumber == positionIndex ? FontWeight.bold : FontWeight.normal,
+        fontWeight: readerNumber == positionIndex ? FontWeight.bold : FontWeight.normal,
       ),
     );
   }

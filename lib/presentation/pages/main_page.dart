@@ -19,8 +19,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey.shade50,
-      body: _mainContainer[
-          context.watch<MainBottomNavigationState>().getInitialNavigationIndex],
+      body: _mainContainer[context.watch<MainBottomNavigationState>().getInitialNavigationIndex],
       bottomNavigationBar: const MainBottomNavigationBar(),
     );
   }

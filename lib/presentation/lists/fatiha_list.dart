@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/items/fatiha_ayah_item.dart';
 
 class FatihaList extends StatelessWidget {
@@ -8,16 +9,10 @@ class FatihaList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      margin: const EdgeInsets.only(left: 8, right: 8, bottom: 16),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
+      margin: appWidgetStyle.fatihaContainerMargin,
+      shape: appWidgetStyle.mainShape,
       child: ListView.builder(
-        padding: const EdgeInsets.only(
-          left: 16,
-          top: 16,
-          right: 16,
-        ),
+        padding: appWidgetStyle.mainPaddingWithoutBottom,
         itemCount: 7,
         itemBuilder: (BuildContext context, int index) {
           return const FatihaAyahItem();

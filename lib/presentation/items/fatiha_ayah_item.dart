@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
 
 class FatihaAyahItem extends StatelessWidget {
@@ -8,17 +9,11 @@ class FatihaAyahItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.only(bottom: 16),
+      margin: appWidgetStyle.mainMarginOnlyBottom,
       color: Colors.blueGrey.shade50,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25),
-      ),
+      shape: appWidgetStyle.mainShape,
       child: Padding(
-        padding: const EdgeInsets.only(
-          left: 16,
-          top: 16,
-          right: 16,
-        ),
+        padding: appWidgetStyle.mainPaddingWithoutBottom,
         child: Column(
           children: [
             SizedBox(
@@ -26,9 +21,10 @@ class FatihaAyahItem extends StatelessWidget {
               child: Text(
                 'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ',
                 style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.blueGrey.shade900,
-                    fontFamily: 'Quran'),
+                  fontSize: 30,
+                  color: Colors.blueGrey.shade900,
+                  fontFamily: 'Quran',
+                ),
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
               ),
@@ -44,7 +40,7 @@ class FatihaAyahItem extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             ExpansionTile(
-              tilePadding: const EdgeInsets.symmetric(horizontal: 8),
+              tilePadding: appWidgetStyle.mainPaddingHorizontalMini,
               controlAffinity: ListTileControlAffinity.trailing,
               childrenPadding: EdgeInsets.zero,
               collapsedIconColor: Colors.blueGrey.shade800,
@@ -59,13 +55,13 @@ class FatihaAyahItem extends StatelessWidget {
               ),
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 16),
+                  padding: appWidgetStyle.mainPaddingOnlyBottom,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconButton(
                         constraints: const BoxConstraints(),
-                        padding: const EdgeInsets.only(top: 8),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: Colors.red.shade100,
                         icon: Icon(
@@ -76,7 +72,7 @@ class FatihaAyahItem extends StatelessWidget {
                       ),
                       IconButton(
                         constraints: const BoxConstraints(),
-                        padding: const EdgeInsets.only(top: 8),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: Colors.red.shade100,
                         icon: Icon(
@@ -87,7 +83,7 @@ class FatihaAyahItem extends StatelessWidget {
                       ),
                       IconButton(
                         constraints: const BoxConstraints(),
-                        padding: const EdgeInsets.only(top: 8),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: Colors.red.shade100,
                         icon: Icon(
@@ -98,7 +94,7 @@ class FatihaAyahItem extends StatelessWidget {
                       ),
                       IconButton(
                         constraints: const BoxConstraints(),
-                        padding: const EdgeInsets.only(top: 8),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: Colors.red.shade100,
                         icon: Icon(
@@ -109,7 +105,7 @@ class FatihaAyahItem extends StatelessWidget {
                       ),
                       IconButton(
                         constraints: const BoxConstraints(),
-                        padding: const EdgeInsets.only(top: 8),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: Colors.red.shade100,
                         icon: Icon(
@@ -120,7 +116,7 @@ class FatihaAyahItem extends StatelessWidget {
                       ),
                       IconButton(
                         constraints: const BoxConstraints(),
-                        padding: const EdgeInsets.only(top: 8),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: Colors.red.shade100,
                         icon: Icon(

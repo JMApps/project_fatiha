@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/state/provider/read_surah_state.dart';
+import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/widgets/drop_down_reader_number.dart';
 import 'package:provider/provider.dart';
 
@@ -27,12 +28,10 @@ class ReadFatihaContainer extends StatelessWidget {
           width: double.infinity,
           child: Card(
             elevation: 0,
-            margin: const EdgeInsets.all(16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25),
-            ),
+            margin: appWidgetStyle.mainMargin,
+            shape: appWidgetStyle.mainShape,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              padding: appWidgetStyle.mainPaddingHorizontalNormalVerticalMini,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -48,7 +47,7 @@ class ReadFatihaContainer extends StatelessWidget {
                   const SizedBox(width: 8),
                   Expanded(
                     child: DropdownButton(
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: appWidgetStyle.mainBorderRadius,
                       value: context.watch<ReadSurahState>().getReaderIndex,
                       isExpanded: true,
                       underline: const SizedBox(),

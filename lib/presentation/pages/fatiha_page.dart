@@ -2,6 +2,7 @@ import 'package:custom_sliding_segmented_control/custom_sliding_segmented_contro
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/state/provider/home_sliding_segment_state.dart';
 import 'package:project_fatiha/domain/state/provider/read_surah_state.dart';
+import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/appbars/fatiha_app_bar.dart';
 import 'package:project_fatiha/presentation/lists/fatiha_list.dart';
 import 'package:project_fatiha/presentation/widgets/read_fatiha_container.dart';
@@ -33,13 +34,11 @@ class FatihaPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: appWidgetStyle.mainPadding,
               child: CustomSlidingSegmentedControl(
                 innerPadding: const EdgeInsets.all(4),
                 padding: 32,
-                initialValue: context
-                    .read<HomeSlidingSegmentState>()
-                    .getInitialSlidingIndex,
+                initialValue: context.read<HomeSlidingSegmentState>().getInitialSlidingIndex,
                 children: const {
                   1: Text(
                     'Чтение',
@@ -56,11 +55,11 @@ class FatihaPage extends StatelessWidget {
                 },
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: appWidgetStyle.mainBorderRadius,
                 ),
                 thumbDecoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: appWidgetStyle.mainBorderRadius,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.blueGrey.withOpacity(0.5),
@@ -72,17 +71,12 @@ class FatihaPage extends StatelessWidget {
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeIn,
                 onValueChanged: (int newIndex) {
-                  context
-                      .read<HomeSlidingSegmentState>()
-                      .changeSlidingIndex(newIndex);
+                  context.read<HomeSlidingSegmentState>().changeSlidingIndex(newIndex);
                 },
               ),
             ),
             Expanded(
-              child: _homePageContainer[context
-                      .watch<HomeSlidingSegmentState>()
-                      .getInitialSlidingIndex -
-                  1],
+              child: _homePageContainer[context.watch<HomeSlidingSegmentState>().getInitialSlidingIndex - 1],
             ),
           ],
         ),

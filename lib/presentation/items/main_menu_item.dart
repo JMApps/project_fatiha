@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/main.dart';
 
 class MainMenuItem extends StatelessWidget {
   const MainMenuItem({
@@ -23,20 +24,18 @@ class MainMenuItem extends StatelessWidget {
     return Card(
       elevation: 0,
       color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(35),
-      ),
+      shape: appWidgetStyle.mainShape,
       child: InkWell(
-        borderRadius: BorderRadius.circular(35),
+        borderRadius: appWidgetStyle.mainBorderRadius,
         splashColor: color.withOpacity(0.3),
         child: ListTile(
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          contentPadding: const EdgeInsets.all(16),
+          contentPadding: appWidgetStyle.mainPadding,
           leading: Container(
-            padding: const EdgeInsets.all(16),
+            padding: appWidgetStyle.mainPadding,
             decoration: BoxDecoration(
               color: color.withOpacity(0.10),
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: appWidgetStyle.menuColorContainerBorderRadius,
             ),
             child: Icon(
               icon,

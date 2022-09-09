@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/main.dart';
 
 class SubtletiesSurahAppBar extends StatelessWidget {
   const SubtletiesSurahAppBar({Key? key}) : super(key: key);
@@ -29,10 +30,10 @@ class SubtletiesSurahAppBar extends StatelessWidget {
           Navigator.of(context).pop();
         },
       ),
-      actions: const [
+      actions: [
         Padding(
-          padding: EdgeInsets.all(8),
-          child: CircleAvatar(
+          padding: appWidgetStyle.mainPaddingMini,
+          child: const CircleAvatar(
             backgroundColor: Colors.transparent,
             backgroundImage: AssetImage('assets/pictures/app_icon.png'),
           ),
