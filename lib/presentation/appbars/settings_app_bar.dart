@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/theme/app_theme.dart';
 
 class SettingsAppBar extends StatelessWidget {
   const SettingsAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final myColors = Theme.of(context).colorScheme;
     return AppBar(
-      backgroundColor: Colors.blueGrey.shade50,
-      elevation: 0,
-      centerTitle: true,
-      title: Text(
+      title: const Text(
         'Настройки',
         style: TextStyle(
-          color: Colors.blueGrey.shade800,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -23,10 +21,10 @@ class SettingsAppBar extends StatelessWidget {
       actions: [
         IconButton(
           splashRadius: 20,
-          splashColor: Colors.red.shade100,
+          splashColor: myColors.lightIconSplashColor,
           icon: Icon(
             Icons.apps_sharp,
-            color: Colors.blueGrey.shade800,
+            color: myColors.mainIconColor,
           ),
           onPressed: () {
             // Делиться заранее заготовленной картинкой с QR кодом

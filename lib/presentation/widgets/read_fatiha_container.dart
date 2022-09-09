@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/state/provider/read_surah_state.dart';
+import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/widgets/drop_down_reader_number.dart';
 import 'package:provider/provider.dart';
@@ -10,14 +11,19 @@ class ReadFatihaContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myColors = Theme.of(context).colorScheme;
     return Column(
       children: [
         Expanded(
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.scaleDown,
-                image: AssetImage(
+                colorFilter: ColorFilter.mode(
+                  myColors.mainTitleColor,
+                  BlendMode.srcATop,
+                ),
+                image: const AssetImage(
                   'assets/pictures/surah.png',
                 ),
               ),
@@ -37,10 +43,10 @@ class ReadFatihaContainer extends StatelessWidget {
                 children: [
                   IconButton(
                     splashRadius: 20,
-                    splashColor: Colors.red.shade100,
+                    splashColor: myColors.lightIconSplashColor,
                     icon: Icon(
                       CupertinoIcons.play_arrow,
-                      color: Colors.blueGrey.shade800,
+                      color: myColors.mainIconColor,
                     ),
                     onPressed: () {},
                   ),
@@ -134,27 +140,25 @@ class ReadFatihaContainer extends StatelessWidget {
                         ),
                       ],
                       onChanged: (int? value) {
-                        context
-                            .read<ReadSurahState>()
-                            .changeReaderIndex(value!);
+                        context.read<ReadSurahState>().changeReaderIndex(value!);
                       },
                     ),
                   ),
                   const SizedBox(width: 8),
                   IconButton(
                     splashRadius: 20,
-                    splashColor: Colors.red.shade100,
+                    splashColor: myColors.lightIconSplashColor,
                     icon: Icon(
                       CupertinoIcons.arrow_counterclockwise,
-                      color: Colors.blueGrey.shade800,
+                      color: myColors.mainIconColor,
                     ),
                     onPressed: () {},
                   ),
                   const SizedBox(width: 8),
-                  const Text(
+                  Text(
                     '03:53',
                     style: TextStyle(
-                      color: Colors.red,
+                      color: myColors.mainAccentColor,
                     ),
                   ),
                 ],

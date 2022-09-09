@@ -8,13 +8,9 @@ class TajweedSurahAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.blueGrey.shade50,
-      elevation: 0,
-      centerTitle: true,
-      title: Text(
+      title: const Text(
         'Таджвид суры',
         style: TextStyle(
-          color: Colors.blueGrey.shade800,
           fontWeight: FontWeight.bold,
         ),
       ),

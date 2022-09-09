@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
 
@@ -8,9 +9,10 @@ class FatihaAyahItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myColors = Theme.of(context).colorScheme;
     return Card(
+      color: myColors.translationCardColor,
       margin: appWidgetStyle.mainMarginOnlyBottom,
-      color: Colors.blueGrey.shade50,
       shape: appWidgetStyle.mainShape,
       child: Padding(
         padding: appWidgetStyle.mainPaddingWithoutBottom,
@@ -22,7 +24,7 @@ class FatihaAyahItem extends StatelessWidget {
                 'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ',
                 style: TextStyle(
                   fontSize: 30,
-                  color: Colors.blueGrey.shade900,
+                  color: myColors.mainTitleColor,
                   fontFamily: 'Quran',
                 ),
                 textAlign: TextAlign.center,
@@ -34,7 +36,7 @@ class FatihaAyahItem extends StatelessWidget {
               'С именем Аллаха, Милостивого, Милосердного',
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.blueGrey.shade900,
+                color: myColors.mainPrimaryColor,
               ),
               textAlign: TextAlign.center,
             ),
@@ -43,10 +45,10 @@ class FatihaAyahItem extends StatelessWidget {
               tilePadding: appWidgetStyle.mainPaddingHorizontalMini,
               controlAffinity: ListTileControlAffinity.trailing,
               childrenPadding: EdgeInsets.zero,
-              collapsedIconColor: Colors.blueGrey.shade800,
-              collapsedTextColor: Colors.blueGrey.shade800,
-              textColor: Colors.red.shade400,
-              iconColor: Colors.red.shade400,
+              collapsedIconColor: myColors.mainIconColor,
+              collapsedTextColor: myColors.mainIconColor,
+              textColor: myColors.mainAccentColor,
+              iconColor: myColors.mainAccentColor,
               title: const Text(
                 'Дополнительно',
                 style: TextStyle(
@@ -63,10 +65,10 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
-                        splashColor: Colors.red.shade100,
+                        splashColor: myColors.lightIconSplashColor,
                         icon: Icon(
                           CupertinoIcons.play,
-                          color: Colors.blueGrey.shade600,
+                          color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
                       ),
@@ -74,10 +76,10 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
-                        splashColor: Colors.red.shade100,
+                        splashColor: myColors.lightIconSplashColor,
                         icon: Icon(
                           CupertinoIcons.arrow_2_circlepath,
-                          color: Colors.blueGrey.shade600,
+                          color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
                       ),
@@ -85,10 +87,10 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
-                        splashColor: Colors.red.shade100,
+                        splashColor: myColors.lightIconSplashColor,
                         icon: Icon(
                           CupertinoIcons.doc_on_doc,
-                          color: Colors.blueGrey.shade600,
+                          color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
                       ),
@@ -96,10 +98,10 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
-                        splashColor: Colors.red.shade100,
+                        splashColor: myColors.lightIconSplashColor,
                         icon: Icon(
                           CupertinoIcons.share,
-                          color: Colors.blueGrey.shade600,
+                          color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
                       ),
@@ -107,10 +109,10 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
-                        splashColor: Colors.red.shade100,
+                        splashColor: myColors.lightIconSplashColor,
                         icon: Icon(
                           CupertinoIcons.photo,
-                          color: Colors.blueGrey.shade600,
+                          color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
                       ),
@@ -118,10 +120,10 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
-                        splashColor: Colors.red.shade100,
+                        splashColor: myColors.lightIconSplashColor,
                         icon: Icon(
                           CupertinoIcons.t_bubble,
-                          color: Colors.blueGrey.shade600,
+                          color: myColors.mainIconColor,
                         ),
                         onPressed: () {
                           showModalBottomSheet(

@@ -1,17 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/theme/app_theme.dart';
 
 class FatihaAppBar extends StatelessWidget {
   const FatihaAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final myColors = Theme.of(context).colorScheme;
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.elliptical(45, 50),
-          bottomRight: Radius.elliptical(45, 50),
+      decoration: BoxDecoration(
+        color: myColors.mainAppBarColor,
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.elliptical(35, 35),
+          bottomRight: Radius.elliptical(35, 35),
         ),
       ),
       child: Wrap(
@@ -20,19 +22,29 @@ class FatihaAppBar extends StatelessWidget {
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           AppBar(
-            elevation: 0,
-            backgroundColor: Colors.white,
+            backgroundColor: myColors.mainAppBarColor,
+            title: Text(
+              'سورة الفاتحة',
+              style: TextStyle(
+                fontFamily: 'Mothanna',
+                fontSize: 25,
+                color: myColors.mainAccentColor,
+              ),
+              textAlign: TextAlign.center,
+            ),
             leading: const CircleAvatar(
               backgroundColor: Colors.transparent,
-              backgroundImage: AssetImage('assets/pictures/app_icon.png'),
+              backgroundImage: AssetImage(
+                'assets/pictures/app_icon.png',
+              ),
             ),
             actions: [
               IconButton(
                 splashRadius: 20,
-                splashColor: Colors.red.shade100,
+                splashColor: myColors.lightIconSplashColor,
                 icon: Icon(
                   CupertinoIcons.share,
-                  color: Colors.blueGrey.shade800,
+                  color: myColors.mainIconColor,
                 ),
                 onPressed: () {
                   // Делиться заранее заготовленной картинкой с QR кодом
@@ -43,20 +55,11 @@ class FatihaAppBar extends StatelessWidget {
           Column(
             children: [
               Text(
-                'سورة الفاتحة',
-                style: TextStyle(
-                  fontFamily: 'Mothanna',
-                  fontSize: 25,
-                  color: Colors.red.shade400,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              Text(
                 'Открывающая Книгу',
                 style: TextStyle(
                   fontFamily: 'Aqum',
                   fontSize: 14,
-                  color: Colors.blueGrey.shade800,
+                  color: myColors.mainTitleColor,
                 ),
                 textAlign: TextAlign.center,
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/theme/app_theme.dart';
 
 class DropDownReaderNumber extends StatelessWidget {
   const DropDownReaderNumber({
@@ -12,12 +13,13 @@ class DropDownReaderNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myColors = Theme.of(context).colorScheme;
     return Text(
       'Чтец $readerNumber',
       style: TextStyle(
         color: readerNumber == positionIndex
-            ? Colors.red.shade400
-            : Colors.blueGrey.shade800,
+            ? myColors.mainAccentColor
+            : myColors.mainPrimaryColor,
         fontSize: 16,
         fontWeight: readerNumber == positionIndex ? FontWeight.bold : FontWeight.normal,
       ),

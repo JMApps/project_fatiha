@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 
 class TafseerAyahBottomSheetPage extends StatelessWidget {
@@ -6,6 +7,7 @@ class TafseerAyahBottomSheetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myColors = Theme.of(context).colorScheme;
     return Card(
       elevation: 0,
       margin: appWidgetStyle.mainMargin,
@@ -17,7 +19,7 @@ class TafseerAyahBottomSheetPage extends StatelessWidget {
             'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ',
             style: TextStyle(
               fontSize: 30,
-              color: Colors.blueGrey.shade900,
+              color: myColors.mainTitleColor,
               fontFamily: 'Quran',
             ),
             textAlign: TextAlign.center,
@@ -28,7 +30,7 @@ class TafseerAyahBottomSheetPage extends StatelessWidget {
             'С именем Аллаха, Милостивого, Милосердного',
             style: TextStyle(
               fontSize: 18,
-              color: Colors.blueGrey.shade900,
+              color: myColors.secondaryPrimaryColor,
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,

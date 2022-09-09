@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 
 class MainMenuItem extends StatelessWidget {
@@ -21,9 +22,9 @@ class MainMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myColors = Theme.of(context).colorScheme;
     return Card(
       elevation: 0,
-      color: Colors.white,
       shape: appWidgetStyle.mainShape,
       child: InkWell(
         borderRadius: appWidgetStyle.mainBorderRadius,
@@ -46,13 +47,13 @@ class MainMenuItem extends StatelessWidget {
             title,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.blueGrey.shade800,
+              color: myColors.mainTitleColor,
             ),
           ),
           subtitle: Text(
             subTitle,
             style: TextStyle(
-              color: Colors.blueGrey.shade800,
+              color: myColors.mainSubTitleColor,
             ),
           ),
         ),

@@ -7,13 +7,12 @@ class MainMenuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blueGrey.shade50,
-      appBar: const PreferredSize(
+    return const Scaffold(
+      appBar: PreferredSize(
         preferredSize: Size(double.infinity, 66),
         child: MainMenuAppBar(),
       ),
-      body: const MainMenuList(),
+      body: MainMenuList(),
     );
   }
 }
