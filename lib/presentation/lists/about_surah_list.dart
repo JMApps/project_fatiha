@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/items/about_surah_item.dart';
 
@@ -7,12 +7,14 @@ class AboutSurahList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: appWidgetStyle.mainPadding,
-      itemCount: 20,
-      itemBuilder: (BuildContext context, int index) {
-        return const AboutSurahItem();
-      },
+    return CupertinoScrollbar(
+      child: ListView.builder(
+        padding: appWidgetStyle.mainPadding,
+        itemCount: 20,
+        itemBuilder: (BuildContext context, int index) {
+          return const AboutSurahItem();
+        },
+      ),
     );
   }
 }

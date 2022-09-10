@@ -8,7 +8,7 @@ class AppTheme {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     canvasColor: const Color(0xFFFFFFFF),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFFECEFF1),
+      backgroundColor: Color(0xFFCFD8DC),
       elevation: 0,
       centerTitle: true,
       titleTextStyle: TextStyle(
@@ -87,7 +87,7 @@ extension ColorSchemeS on ColorScheme {
       : const Color(0xFFECEFF1);
 
   Color get mainAppBarColor => brightness == Brightness.light
-      ? const Color(0xFFFFFFFF)
+      ? const Color(0xFFCFD8DC)
       : const Color(0xFF263238);
 
   Color get bottomNavigationClipColor => brightness == Brightness.light
