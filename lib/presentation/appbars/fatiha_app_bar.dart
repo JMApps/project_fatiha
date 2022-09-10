@@ -40,6 +40,7 @@ class FatihaAppBar extends StatelessWidget {
             ),
             actions: [
               IconButton(
+                tooltip: 'Поделиться qr-кодом',
                 splashRadius: 20,
                 splashColor: myColors.lightIconSplashColor,
                 icon: Icon(

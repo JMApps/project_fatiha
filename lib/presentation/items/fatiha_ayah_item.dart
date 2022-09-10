@@ -1,11 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/data/local/sqflite/model/tafseer_surah_item_model.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
 
 class FatihaAyahItem extends StatelessWidget {
-  const FatihaAyahItem({Key? key}) : super(key: key);
+  const FatihaAyahItem({
+    Key? key,
+    required this.item,
+  }) : super(key: key);
+
+  final TafseerSurahItemModel item;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +27,12 @@ class FatihaAyahItem extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: Text(
-                'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ',
+                item.ayahArabic,
                 style: TextStyle(
                   fontSize: 30,
                   color: myColors.mainTitleColor,
                   fontFamily: 'Quran',
+                  wordSpacing: 3,
                 ),
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
@@ -33,7 +40,7 @@ class FatihaAyahItem extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'С именем Аллаха, Милостивого, Милосердного',
+              item.ayahTranslation,
               style: TextStyle(
                 fontSize: 16,
                 color: myColors.mainPrimaryColor,
@@ -61,62 +68,25 @@ class FatihaAyahItem extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      IconButton(
-                        constraints: const BoxConstraints(),
-                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
-                        splashRadius: 20,
-                        splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.play,
-                          color: myColors.mainIconColor,
+                      Container(
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 4,
                         ),
-                        onPressed: () {},
+                        decoration: BoxDecoration(
+                          color: myColors.mainAccentColor.withOpacity(0.25),
+                          borderRadius: appWidgetStyle.mainBorderRadius,
+                        ),
+                        child: Text(
+                          item.id.toString(),
+                          style: TextStyle(
+                            color: myColors.mainAccentColor,
+                          ),
+                        ),
                       ),
                       IconButton(
-                        constraints: const BoxConstraints(),
-                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
-                        splashRadius: 20,
-                        splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.arrow_2_circlepath,
-                          color: myColors.mainIconColor,
-                        ),
-                        onPressed: () {},
-                      ),
-                      IconButton(
-                        constraints: const BoxConstraints(),
-                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
-                        splashRadius: 20,
-                        splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.doc_on_doc,
-                          color: myColors.mainIconColor,
-                        ),
-                        onPressed: () {},
-                      ),
-                      IconButton(
-                        constraints: const BoxConstraints(),
-                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
-                        splashRadius: 20,
-                        splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.share,
-                          color: myColors.mainIconColor,
-                        ),
-                        onPressed: () {},
-                      ),
-                      IconButton(
-                        constraints: const BoxConstraints(),
-                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
-                        splashRadius: 20,
-                        splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.photo,
-                          color: myColors.mainIconColor,
-                        ),
-                        onPressed: () {},
-                      ),
-                      IconButton(
+                        tooltip: 'Тафсир аята',
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
@@ -137,12 +107,72 @@ class FatihaAyahItem extends StatelessWidget {
                                   padding: MediaQuery.of(context).viewInsets,
                                   duration: const Duration(milliseconds: 250),
                                   curve: Curves.decelerate,
-                                  child: const TafseerAyahBottomSheetPage(),
+                                  child: TafseerAyahBottomSheetPage(item: item),
                                 ),
                               );
                             },
                           );
                         },
+                      ),
+                      IconButton(
+                        tooltip: 'Воспроизведение/пауза',
+                        constraints: const BoxConstraints(),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
+                        splashRadius: 20,
+                        splashColor: myColors.lightIconSplashColor,
+                        icon: Icon(
+                          CupertinoIcons.play,
+                          color: myColors.mainIconColor,
+                        ),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        tooltip: 'Повтор аята',
+                        constraints: const BoxConstraints(),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
+                        splashRadius: 20,
+                        splashColor: myColors.lightIconSplashColor,
+                        icon: Icon(
+                          CupertinoIcons.arrow_2_circlepath,
+                          color: myColors.mainIconColor,
+                        ),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        tooltip: 'Скопировать аят',
+                        constraints: const BoxConstraints(),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
+                        splashRadius: 20,
+                        splashColor: myColors.lightIconSplashColor,
+                        icon: Icon(
+                          CupertinoIcons.doc_on_doc,
+                          color: myColors.mainIconColor,
+                        ),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        tooltip: 'Поделиться аятом',
+                        constraints: const BoxConstraints(),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
+                        splashRadius: 20,
+                        splashColor: myColors.lightIconSplashColor,
+                        icon: Icon(
+                          CupertinoIcons.share,
+                          color: myColors.mainIconColor,
+                        ),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        tooltip: 'Поделиться в виде картинки',
+                        constraints: const BoxConstraints(),
+                        padding: appWidgetStyle.mainPaddingOnlyTopMini,
+                        splashRadius: 20,
+                        splashColor: myColors.lightIconSplashColor,
+                        icon: Icon(
+                          CupertinoIcons.photo,
+                          color: myColors.mainIconColor,
+                        ),
+                        onPressed: () {},
                       ),
                     ],
                   ),

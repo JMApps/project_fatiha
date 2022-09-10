@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:project_fatiha/data/local/sqflite/model/tafseer_surah_item_model.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 
 class TafseerAyahBottomSheetPage extends StatelessWidget {
-  const TafseerAyahBottomSheetPage({Key? key}) : super(key: key);
+  const TafseerAyahBottomSheetPage({
+    Key? key,
+    required this.item,
+  }) : super(key: key);
+
+  final TafseerSurahItemModel item;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +22,7 @@ class TafseerAyahBottomSheetPage extends StatelessWidget {
         padding: appWidgetStyle.mainPadding,
         children: [
           Text(
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ',
+            item.ayahArabic,
             style: TextStyle(
               fontSize: 30,
               color: myColors.mainTitleColor,
@@ -27,7 +33,7 @@ class TafseerAyahBottomSheetPage extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'С именем Аллаха, Милостивого, Милосердного',
+            item.ayahTranslation,
             style: TextStyle(
               fontSize: 18,
               color: myColors.secondaryPrimaryColor,
@@ -36,9 +42,9 @@ class TafseerAyahBottomSheetPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 8),
-          const Text(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            style: TextStyle(
+          Text(
+            item.ayahTafseer,
+            style: const TextStyle(
               fontSize: 18,
             ),
             textAlign: TextAlign.justify,

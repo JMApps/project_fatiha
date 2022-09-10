@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/route/app_route.dart';
+import 'package:project_fatiha/domain/state/provider/database_state.dart';
 import 'package:project_fatiha/domain/state/provider/home_sliding_segment_state.dart';
 import 'package:project_fatiha/domain/state/provider/main_bottom_navigation_state.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
@@ -13,6 +14,9 @@ class RootPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider<DatabaseState>(
+          create: (_) => DatabaseState(),
+        ),
         ChangeNotifierProvider<MainBottomNavigationState>(
           create: (_) => MainBottomNavigationState(),
         ),

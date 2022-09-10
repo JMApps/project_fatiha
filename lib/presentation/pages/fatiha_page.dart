@@ -12,9 +12,9 @@ import 'package:provider/provider.dart';
 class FatihaPage extends StatelessWidget {
   const FatihaPage({Key? key}) : super(key: key);
 
-  static const _homePageContainer = [
-    ReadFatihaContainer(),
-    FatihaList(),
+  static final List<StatelessWidget> _homePageContainer = [
+    const ReadFatihaContainer(),
+    const FatihaList(),
   ];
 
   @override
