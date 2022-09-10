@@ -27,7 +27,7 @@ class RootPage extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Фатиха',
-        theme: AppTheme.darkTheme,
+        theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         onGenerateRoute: AppRoute().onGeneratorRoute,
         home: MainPage(),

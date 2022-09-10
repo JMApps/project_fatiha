@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
@@ -32,15 +34,24 @@ class MainMenuItem extends StatelessWidget {
         child: ListTile(
           visualDensity: VisualDensity.adaptivePlatformDensity,
           contentPadding: appWidgetStyle.mainPadding,
-          leading: Container(
-            padding: appWidgetStyle.mainPadding,
-            decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
-              borderRadius: appWidgetStyle.menuColorContainerBorderRadius,
-            ),
-            child: Icon(
-              icon,
-              color: color,
+          leading: Transform.rotate(
+            angle: pi / 4,
+            child: Container(
+              padding: appWidgetStyle.mainPadding,
+              alignment: Alignment.center,
+              width: 55,
+              height: 75,
+              decoration: BoxDecoration(
+                color: color.withOpacity(0.1),
+                borderRadius: appWidgetStyle.menuColorContainerBorderRadius,
+              ),
+              child: Transform.rotate(
+                angle: pi / -4,
+                child: Icon(
+                  icon,
+                  color: color,
+                ),
+              ),
             ),
           ),
           title: Text(
