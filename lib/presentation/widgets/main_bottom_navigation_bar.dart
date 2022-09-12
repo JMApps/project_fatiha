@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/state/provider/main_bottom_navigation_state.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MainBottomNavigationBar extends StatelessWidget {
   const MainBottomNavigationBar({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class MainBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return Container(
       color: myColors.bottomNavigationClipColor,
       child: ClipRRect(
@@ -19,18 +21,18 @@ class MainBottomNavigationBar extends StatelessWidget {
         ),
         child: BottomNavigationBar(
           backgroundColor: myColors.mainAppBarColor,
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.collections),
-              label: 'Меню',
+              icon: const Icon(CupertinoIcons.collections),
+              label: localizations.menu_page,
             ),
             BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.home),
-              label: 'Главная',
+              icon: const Icon(CupertinoIcons.home),
+              label: localizations.main_page,
             ),
             BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.settings),
-              label: 'Настройки',
+              icon: const Icon(CupertinoIcons.settings),
+              label: localizations.setting_page,
             ),
           ],
           currentIndex: context.watch<MainBottomNavigationState>().getInitialNavigationIndex,

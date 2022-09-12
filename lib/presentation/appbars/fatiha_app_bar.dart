@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 
 class FatihaAppBar extends StatelessWidget {
@@ -8,6 +9,7 @@ class FatihaAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return Container(
       decoration: BoxDecoration(
         color: myColors.mainAppBarColor,
@@ -40,7 +42,7 @@ class FatihaAppBar extends StatelessWidget {
             ),
             actions: [
               IconButton(
-                tooltip: 'Поделиться qr-кодом',
+                tooltip: localizations.share_app_picture,
                 splashRadius: 20,
                 splashColor: myColors.lightIconSplashColor,
                 icon: Icon(
@@ -56,7 +58,7 @@ class FatihaAppBar extends StatelessWidget {
           Column(
             children: [
               Text(
-                'Открывающая Книгу',
+                localizations.open_book,
                 style: TextStyle(
                   fontFamily: 'Aqum',
                   fontSize: 14,

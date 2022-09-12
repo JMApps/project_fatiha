@@ -8,6 +8,7 @@ import 'package:project_fatiha/presentation/appbars/fatiha_app_bar.dart';
 import 'package:project_fatiha/presentation/lists/fatiha_list.dart';
 import 'package:project_fatiha/presentation/widgets/read_fatiha_container.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FatihaPage extends StatelessWidget {
   const FatihaPage({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class FatihaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<ReadSurahState>(
@@ -42,14 +44,14 @@ class FatihaPage extends StatelessWidget {
                 initialValue: context.read<HomeSlidingSegmentState>().getInitialSlidingIndex,
                 children: {
                   1: Text(
-                    'Чтение',
+                    localizations.read,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: myColors.mainTitleColor,
                     ),
                   ),
                   2: Text(
-                    'Перевод',
+                    localizations.translation,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: myColors.mainTitleColor,

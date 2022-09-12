@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DropDownReaderNumber extends StatelessWidget {
   const DropDownReaderNumber({
@@ -14,8 +15,9 @@ class DropDownReaderNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return Text(
-      'Чтец $readerNumber',
+      '${localizations.reader} $readerNumber',
       style: TextStyle(
         color: readerNumber == positionIndex
             ? myColors.mainAccentColor

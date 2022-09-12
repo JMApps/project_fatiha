@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SettingsAppBar extends StatelessWidget {
   const SettingsAppBar({Key? key}) : super(key: key);
@@ -7,10 +8,11 @@ class SettingsAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return AppBar(
-      title: const Text(
-        'Настройки',
-        style: TextStyle(
+      title: Text(
+        localizations.settings,
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
         ),
       ),

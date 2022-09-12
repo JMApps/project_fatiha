@@ -4,6 +4,7 @@ import 'package:project_fatiha/data/local/sqflite/model/tafseer_surah_item_model
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FatihaAyahItem extends StatelessWidget {
   const FatihaAyahItem({
@@ -16,6 +17,7 @@ class FatihaAyahItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return Card(
       color: myColors.translationCardColor,
       margin: appWidgetStyle.mainMarginOnlyBottom,
@@ -56,9 +58,9 @@ class FatihaAyahItem extends StatelessWidget {
               collapsedTextColor: myColors.mainIconColor,
               textColor: myColors.mainAccentColor,
               iconColor: myColors.mainAccentColor,
-              title: const Text(
-                'Дополнительно',
-                style: TextStyle(
+              title: Text(
+                localizations.additionally,
+                style: const TextStyle(
                   fontSize: 12,
                 ),
               ),
@@ -86,7 +88,7 @@ class FatihaAyahItem extends StatelessWidget {
                         ),
                       ),
                       IconButton(
-                        tooltip: 'Тафсир аята',
+                        tooltip: localizations.tafseer_ayah,
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
@@ -115,7 +117,7 @@ class FatihaAyahItem extends StatelessWidget {
                         },
                       ),
                       IconButton(
-                        tooltip: 'Воспроизведение/пауза',
+                        tooltip: localizations.play_pause,
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
@@ -127,7 +129,7 @@ class FatihaAyahItem extends StatelessWidget {
                         onPressed: () {},
                       ),
                       IconButton(
-                        tooltip: 'Повтор аята',
+                        tooltip: localizations.loop_ayah,
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
@@ -139,7 +141,7 @@ class FatihaAyahItem extends StatelessWidget {
                         onPressed: () {},
                       ),
                       IconButton(
-                        tooltip: 'Скопировать аят',
+                        tooltip: localizations.copy_ayah,
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
@@ -151,7 +153,7 @@ class FatihaAyahItem extends StatelessWidget {
                         onPressed: () {},
                       ),
                       IconButton(
-                        tooltip: 'Поделиться аятом',
+                        tooltip: localizations.share_ayah,
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
@@ -163,7 +165,7 @@ class FatihaAyahItem extends StatelessWidget {
                         onPressed: () {},
                       ),
                       IconButton(
-                        tooltip: 'Поделиться в виде картинки',
+                        tooltip: localizations.share_ayah_picture,
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,

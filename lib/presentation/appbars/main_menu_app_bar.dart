@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 
 class MainMenuAppBar extends StatelessWidget {
@@ -7,10 +8,11 @@ class MainMenuAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return AppBar(
-      title: const Text(
-        'Главное меню',
-        style: TextStyle(
+      title: Text(
+        localizations.main_menu,
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
         ),
       ),

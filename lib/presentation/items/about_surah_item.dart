@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AboutSurahItem extends StatelessWidget {
   const AboutSurahItem({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class AboutSurahItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
     return Card(
       margin: appWidgetStyle.mainMarginOnlyBottom,
       shape: appWidgetStyle.mainShape,
@@ -41,7 +43,7 @@ class AboutSurahItem extends StatelessWidget {
           ),
         ),
         title: Text(
-          'Достоинство',
+          localizations.dignity,
           style: TextStyle(
             color: myColors.mainTitleColor,
           ),

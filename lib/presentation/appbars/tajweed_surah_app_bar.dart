@@ -1,16 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/main.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TajweedSurahAppBar extends StatelessWidget {
   const TajweedSurahAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return AppBar(
-      title: const Text(
-        'Таджвид суры',
-        style: TextStyle(
+      title: Text(
+        localizations.main_tajweed,
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
         ),
       ),

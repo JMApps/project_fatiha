@@ -6,6 +6,7 @@ import 'package:project_fatiha/domain/state/provider/main_bottom_navigation_stat
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/presentation/pages/main_page.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RootPage extends StatelessWidget {
   const RootPage({Key? key}) : super(key: key);
@@ -30,6 +31,8 @@ class RootPage extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         onGenerateRoute: AppRoute().onGeneratorRoute,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
         home: MainPage(),
       ),
     );

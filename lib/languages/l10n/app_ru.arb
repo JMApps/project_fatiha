@@ -1,0 +1,38 @@
+{
+ "app_name": "Фатиха",
+
+ "menu_page": "Меню",
+ "main_page": "Главная",
+ "setting_page": "Настройки",
+
+ "main_menu": "Главное меню",
+ "open_book": "Открывающая книгу",
+ "settings": "Настройки",
+
+ "share_app_picture": "Поделиться приложением",
+
+ "read": "Чтение",
+ "reader": "Чтец",
+ "translation": "Перевод",
+
+ "additionally": "Дополнительно",
+ "tafseer_ayah": "Тафсир аята",
+ "play_pause": "Воспроизведение/пауза",
+ "loop_ayah": "Повтор аята",
+ "copy_ayah": "Скопировать аят",
+ "share_ayah": "Поделиться аятом",
+ "share_ayah_picture": "Поделиться в виде картинки",
+
+ "dignities": "Достоинства",
+ "dignities_description": "О достоинствах суры",
+ "dignity": "Достоинство",
+
+ "main_tajweed": "Основной таджвид",
+ "main_tajweed_description": "Основные правила чтения Корана",
+ "detailed_tajweed": "Детальный таджвид",
+ "detailed_tajweed_description": "Детальные правила чтения Корана",
+ "read_errors": "Ошибки при чтении",
+ "read_errors_description": "Частые ошибки при чтении суры",
+ "manual": "Руководство",
+ "manual_description": "Руководство по использованию приложения"
+}

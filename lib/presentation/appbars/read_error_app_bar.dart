@@ -1,16 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/main.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ReadErrorAppBar extends StatelessWidget {
   const ReadErrorAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return AppBar(
-      title: const Text(
-        'Ошибки при чтении',
-        style: TextStyle(
+      title: Text(
+        localizations.read_errors,
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
         ),
       ),
