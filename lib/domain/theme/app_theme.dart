@@ -74,6 +74,10 @@ extension ColorSchemeS on ColorScheme {
       ? const Color(0xFF263238)
       : const Color(0xFF90A4AE);
 
+  Color get mainSelectedIconColor => brightness == Brightness.light
+      ? const Color(0xFFF44336)
+      : const Color(0xFFFFC107);
+
   Color get lightIconSplashColor => brightness == Brightness.light
       ? const Color(0xFFFFCDD2)
       : const Color(0xFFFFECB3);

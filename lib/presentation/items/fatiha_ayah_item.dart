@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:project_fatiha/data/local/sqflite/model/tafseer_surah_item_model.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FatihaAyahItem extends StatelessWidget {
   const FatihaAyahItem({
@@ -93,8 +93,10 @@ class FatihaAyahItem extends StatelessWidget {
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.t_bubble,
+                        icon: Image.asset(
+                          'assets/icons/tafseer.png',
+                          height: 25,
+                          width: 25,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {
@@ -122,8 +124,10 @@ class FatihaAyahItem extends StatelessWidget {
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.play,
+                        icon: Image.asset(
+                          'assets/icons/play.png',
+                          height: 25,
+                          width: 25,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -134,8 +138,10 @@ class FatihaAyahItem extends StatelessWidget {
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.arrow_2_circlepath,
+                        icon: Image.asset(
+                          'assets/icons/repeat.png',
+                          height: 25,
+                          width: 25,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -146,8 +152,10 @@ class FatihaAyahItem extends StatelessWidget {
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.doc_on_doc,
+                        icon: Image.asset(
+                          'assets/icons/copy.png',
+                          height: 25,
+                          width: 25,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -158,8 +166,10 @@ class FatihaAyahItem extends StatelessWidget {
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.share,
+                        icon: Image.asset(
+                          'assets/icons/share.png',
+                          height: 25,
+                          width: 25,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -170,8 +180,10 @@ class FatihaAyahItem extends StatelessWidget {
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
                         splashColor: myColors.lightIconSplashColor,
-                        icon: Icon(
-                          CupertinoIcons.photo,
+                        icon: Image.asset(
+                          'assets/icons/share_picture.png',
+                          height: 25,
+                          width: 25,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},

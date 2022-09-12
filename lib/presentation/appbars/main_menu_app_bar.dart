@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
@@ -25,8 +27,12 @@ class MainMenuAppBar extends StatelessWidget {
           tooltip: localizations.go_to_store,
           splashRadius: 20,
           splashColor: myColors.lightIconSplashColor,
-          icon: Icon(
-            Icons.apps_sharp,
+          icon: Image.asset(
+            Platform.isIOS
+                ? 'assets/icons/app_store.png'
+                : 'assets/icons/google_play.png',
+            height: 25,
+            width: 25,
             color: myColors.mainIconColor,
           ),
           onPressed: () {

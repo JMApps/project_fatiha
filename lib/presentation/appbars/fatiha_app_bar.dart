@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
@@ -45,8 +44,10 @@ class FatihaAppBar extends StatelessWidget {
                 tooltip: localizations.share_app_picture,
                 splashRadius: 20,
                 splashColor: myColors.lightIconSplashColor,
-                icon: Icon(
-                  CupertinoIcons.share,
+                icon: Image.asset(
+                  'assets/icons/main_share.png',
+                  height: 25,
+                  width: 25,
                   color: myColors.mainIconColor,
                 ),
                 onPressed: () {
