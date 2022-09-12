@@ -22,6 +22,7 @@ class MainMenuAppBar extends StatelessWidget {
       ),
       actions: [
         IconButton(
+          tooltip: localizations.go_to_store,
           splashRadius: 20,
           splashColor: myColors.lightIconSplashColor,
           icon: Icon(

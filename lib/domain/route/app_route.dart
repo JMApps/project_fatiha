@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/presentation/pages/about_surah_page.dart';
-import 'package:project_fatiha/presentation/pages/management_app_page.dart';
+import 'package:project_fatiha/presentation/pages/manual_app_page.dart';
 import 'package:project_fatiha/presentation/pages/read_error_page.dart';
-import 'package:project_fatiha/presentation/pages/subtleties_surah_page.dart';
+import 'package:project_fatiha/presentation/pages/detail_tajweed_surah_page.dart';
 import 'package:project_fatiha/presentation/pages/tajweed_surah_page.dart';
 
 class AppRoute {
@@ -20,7 +20,7 @@ class AppRoute {
         );
       case 'subtleties_surah_page':
         return MaterialPageRoute(
-          builder: (_) => const SubtletiesSurahPage(),
+          builder: (_) => const DetailTajweedSurahPage(),
           settings: routeSettings,
         );
       case 'read_error_page':
@@ -30,7 +30,7 @@ class AppRoute {
         );
       case 'management_app_page':
         return MaterialPageRoute(
-          builder: (_) => const ManagementAppPage(),
+          builder: (_) => const ManualAppPage(),
           settings: routeSettings,
         );
       default:

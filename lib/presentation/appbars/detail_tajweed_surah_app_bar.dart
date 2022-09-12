@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class SubtletiesSurahAppBar extends StatelessWidget {
-  const SubtletiesSurahAppBar({Key? key}) : super(key: key);
+class DetailTajweedSurahAppBar extends StatelessWidget {
+  const DetailTajweedSurahAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
