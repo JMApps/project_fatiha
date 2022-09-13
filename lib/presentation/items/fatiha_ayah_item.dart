@@ -5,6 +5,7 @@ import 'package:project_fatiha/data/local/sqflite/model/tafseer_surah_item_model
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
+import 'package:word_selectable_text/word_selectable_text.dart';
 
 class FatihaAyahItem extends StatelessWidget {
   const FatihaAyahItem({
@@ -28,15 +29,16 @@ class FatihaAyahItem extends StatelessWidget {
           children: [
             SizedBox(
               width: double.infinity,
-              child: Text(
-                item.ayahArabic,
+              child: WordSelectableText(
+                selectable: true,
+                highlight: true,
+                text: item.ayahArabic,
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 29,
                   color: myColors.mainTitleColor,
                   fontFamily: 'Quran',
                   wordSpacing: 3,
                 ),
-                textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
               ),
             ),
@@ -44,7 +46,7 @@ class FatihaAyahItem extends StatelessWidget {
             Text(
               item.ayahTranslation,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 color: myColors.mainPrimaryColor,
               ),
               textAlign: TextAlign.center,
@@ -70,23 +72,6 @@ class FatihaAyahItem extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: myColors.mainAccentColor.withOpacity(0.25),
-                          borderRadius: appWidgetStyle.mainBorderRadius,
-                        ),
-                        child: Text(
-                          item.id.toString(),
-                          style: TextStyle(
-                            color: myColors.mainAccentColor,
-                          ),
-                        ),
-                      ),
                       IconButton(
                         tooltip: localizations.tafseer_ayah,
                         constraints: const BoxConstraints(),
@@ -95,8 +80,8 @@ class FatihaAyahItem extends StatelessWidget {
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/tafseer.png',
-                          height: 25,
-                          width: 25,
+                          height: 20,
+                          width: 20,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {
@@ -109,7 +94,7 @@ class FatihaAyahItem extends StatelessWidget {
                                 height: 500,
                                 child: AnimatedPadding(
                                   padding: MediaQuery.of(context).viewInsets,
-                                  duration: const Duration(milliseconds: 250),
+                                  duration: const Duration(milliseconds: 200),
                                   curve: Curves.decelerate,
                                   child: TafseerAyahBottomSheetPage(item: item),
                                 ),
@@ -126,8 +111,8 @@ class FatihaAyahItem extends StatelessWidget {
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/play.png',
-                          height: 25,
-                          width: 25,
+                          height: 20,
+                          width: 20,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -140,8 +125,8 @@ class FatihaAyahItem extends StatelessWidget {
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/repeat.png',
-                          height: 25,
-                          width: 25,
+                          height: 20,
+                          width: 20,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -154,8 +139,8 @@ class FatihaAyahItem extends StatelessWidget {
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/copy.png',
-                          height: 25,
-                          width: 25,
+                          height: 20,
+                          width: 20,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -168,8 +153,8 @@ class FatihaAyahItem extends StatelessWidget {
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/share.png',
-                          height: 25,
-                          width: 25,
+                          height: 20,
+                          width: 20,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},
@@ -182,8 +167,8 @@ class FatihaAyahItem extends StatelessWidget {
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/share_picture.png',
-                          height: 25,
-                          width: 25,
+                          height: 20,
+                          width: 20,
                           color: myColors.mainIconColor,
                         ),
                         onPressed: () {},

@@ -36,7 +36,7 @@ class TafseerAyahBottomSheetPage extends StatelessWidget {
             item.ayahTranslation,
             style: TextStyle(
               fontSize: 18,
-              color: myColors.secondaryPrimaryColor,
+              color: myColors.mainPrimaryColor,
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,

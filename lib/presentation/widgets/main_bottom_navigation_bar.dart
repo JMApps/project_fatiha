@@ -25,14 +25,14 @@ class MainBottomNavigationBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image.asset(
                 'assets/icons/apps.png',
-                height: 25,
-                width: 25,
+                height: 20,
+                width: 20,
                 color: myColors.mainIconColor,
               ),
               activeIcon: Image.asset(
                 'assets/icons/apps.png',
-                height: 25,
-                width: 25,
+                height: 20,
+                width: 20,
                 color: myColors.mainSelectedIconColor,
               ),
               label: localizations.menu_page,
@@ -40,14 +40,14 @@ class MainBottomNavigationBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image.asset(
                 'assets/icons/home.png',
-                height: 25,
-                width: 25,
+                height: 20,
+                width: 20,
                 color: myColors.mainIconColor,
               ),
               activeIcon: Image.asset(
                 'assets/icons/home.png',
-                height: 25,
-                width: 25,
+                height: 20,
+                width: 20,
                 color: myColors.mainSelectedIconColor,
               ),
               label: localizations.main_page,
@@ -55,14 +55,14 @@ class MainBottomNavigationBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image.asset(
                 'assets/icons/settings.png',
-                height: 25,
-                width: 25,
+                height: 20,
+                width: 20,
                 color: myColors.mainIconColor,
               ),
               activeIcon: Image.asset(
                 'assets/icons/settings.png',
-                height: 25,
-                width: 25,
+                height: 20,
+                width: 20,
                 color: myColors.mainSelectedIconColor,
               ),
               label: localizations.setting_page,

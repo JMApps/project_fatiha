@@ -45,9 +45,9 @@ class FatihaAppBar extends StatelessWidget {
                 splashRadius: 20,
                 splashColor: myColors.lightIconSplashColor,
                 icon: Image.asset(
-                  'assets/icons/main_share.png',
-                  height: 25,
-                  width: 25,
+                  height: 20,
+                  width: 20,
+                  'assets/icons/share.png',
                   color: myColors.mainIconColor,
                 ),
                 onPressed: () {
