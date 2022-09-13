@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:project_fatiha/data/local/sqflite/model/tafseer_surah_item_model.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/pages/tafseer_ayah_bottom_sheet_page.dart';
-import 'package:word_selectable_text/word_selectable_text.dart';
 
 class FatihaAyahItem extends StatelessWidget {
   const FatihaAyahItem({
@@ -29,16 +27,15 @@ class FatihaAyahItem extends StatelessWidget {
           children: [
             SizedBox(
               width: double.infinity,
-              child: WordSelectableText(
-                selectable: true,
-                highlight: true,
-                text: item.ayahArabic,
+              child: Text(
+                item.ayahArabic,
                 style: TextStyle(
                   fontSize: 29,
                   color: myColors.mainTitleColor,
                   fontFamily: 'Quran',
                   wordSpacing: 3,
                 ),
+                textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
               ),
             ),
