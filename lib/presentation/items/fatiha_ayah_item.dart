@@ -33,7 +33,7 @@ class FatihaAyahItem extends StatelessWidget {
                   fontSize: 29,
                   color: myColors.mainTitleColor,
                   fontFamily: 'Quran',
-                  wordSpacing: 3,
+                  wordSpacing: -3,
                 ),
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
