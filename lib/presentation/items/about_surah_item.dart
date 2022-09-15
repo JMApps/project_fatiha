@@ -1,52 +1,50 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:project_fatiha/data/local/sqflite/model/about_surah_item_model.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
 import 'package:project_fatiha/main.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AboutSurahItem extends StatelessWidget {
-  const AboutSurahItem({Key? key}) : super(key: key);
+  const AboutSurahItem({
+    Key? key,
+    required this.item,
+  }) : super(key: key);
+
+  final AboutSurahItemModel item;
 
   @override
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
-    final localizations = AppLocalizations.of(context)!;
     return Card(
       margin: appWidgetStyle.mainMarginOnlyBottom,
       shape: appWidgetStyle.mainShape,
       child: ListTile(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         contentPadding: appWidgetStyle.mainPadding,
-        leading: Container(
-          decoration: BoxDecoration(
-            borderRadius: appWidgetStyle.menuColorContainerBorderRadius,
-          ),
-          child: Transform.rotate(
-            angle: pi / 4,
-            child: Container(
-              alignment: Alignment.center,
-              width: 35,
-              height: 35,
-              decoration: BoxDecoration(
-                color: Colors.teal.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Transform.rotate(
-                angle: pi / -4,
-                child: const Icon(
-                  Icons.diamond_outlined,
-                  color: Colors.teal,
-                ),
-              ),
-            ),
-          ),
-        ),
         title: Text(
-          localizations.dignity,
+          item.title,
           style: TextStyle(
             color: myColors.mainTitleColor,
+            fontWeight: FontWeight.bold,
           ),
+          textAlign: TextAlign.center,
+        ),
+        subtitle: Html(
+          data: item.content,
+          style: {
+            '#': Style(
+              padding: EdgeInsets.zero,
+              fontSize: const FontSize(18),
+            ),
+            'small': Style(
+              padding: EdgeInsets.zero,
+              fontSize: const FontSize(12),
+            ),
+            'a': Style(
+              padding: EdgeInsets.zero,
+              fontSize: const FontSize(12),
+            ),
+          },
         ),
       ),
     );
