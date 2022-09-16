@@ -38,6 +38,7 @@ class AyahPictureForShare extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               color: myColors.mainPrimaryColor,
+              fontFamily: 'Manrope'
             ),
             textAlign: TextAlign.center,
           ),

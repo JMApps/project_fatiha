@@ -5,7 +5,7 @@ class AppWidgetStyle {
   final mainPadding = const EdgeInsets.all(16);
   final mainPaddingMini = const EdgeInsets.all(8);
   final mainPaddingOnlyBottom = const EdgeInsets.only(bottom: 16);
-  final mainPaddingWithoutBottom = const EdgeInsets.only(left: 16, top: 16, right: 16);
+  final mainPaddingWithoutTop = const EdgeInsets.only(left: 16, bottom: 16, right: 16);
   final mainPaddingOnlyTopMini = const EdgeInsets.only(top: 8);
   final mainPaddingHorizontalMini = const EdgeInsets.symmetric(horizontal: 8);
   final mainPaddingHorizontalNormalVerticalMini = const EdgeInsets.symmetric(horizontal: 16, vertical: 8);

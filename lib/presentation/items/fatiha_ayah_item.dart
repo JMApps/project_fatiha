@@ -57,7 +57,7 @@ class FatihaAyahItem extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 16),
               ExpansionTile(
                 controlAffinity: ListTileControlAffinity.trailing,
                 childrenPadding: EdgeInsets.zero,
@@ -80,6 +80,7 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
+                        color: myColors.mainIconColor,
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/tafseer.png',
@@ -111,6 +112,7 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
+                        color: myColors.mainIconColor,
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/play.png',
@@ -125,6 +127,7 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
+                        color: myColors.mainIconColor,
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/repeat.png',
@@ -139,6 +142,7 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
+                        color: myColors.mainIconColor,
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/copy.png',
@@ -175,6 +179,7 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
+                        color: myColors.mainIconColor,
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/share.png',
@@ -195,6 +200,7 @@ class FatihaAyahItem extends StatelessWidget {
                         constraints: const BoxConstraints(),
                         padding: appWidgetStyle.mainPaddingOnlyTopMini,
                         splashRadius: 20,
+                        color: myColors.mainIconColor,
                         splashColor: myColors.lightIconSplashColor,
                         icon: Image.asset(
                           'assets/icons/share_picture.png',
