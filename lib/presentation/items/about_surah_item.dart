@@ -18,33 +18,43 @@ class AboutSurahItem extends StatelessWidget {
     return Card(
       margin: appWidgetStyle.mainMarginOnlyBottom,
       shape: appWidgetStyle.mainShape,
-      child: ListTile(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        contentPadding: appWidgetStyle.mainPadding,
-        title: Text(
-          item.title,
-          style: TextStyle(
-            color: myColors.mainTitleColor,
-            fontWeight: FontWeight.bold,
+      child: Padding(
+        padding: appWidgetStyle.mainPadding,
+        child: ExpansionTile(
+          controlAffinity: ListTileControlAffinity.trailing,
+          childrenPadding: appWidgetStyle.mainPaddingMini,
+          collapsedIconColor: Colors.teal,
+          collapsedTextColor: myColors.mainPrimaryColor,
+          textColor: Colors.teal,
+          iconColor: myColors.mainPrimaryColor,
+          title: Text(
+            item.title,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-        ),
-        subtitle: Html(
-          data: item.content,
-          style: {
-            '#': Style(
-              padding: EdgeInsets.zero,
-              fontSize: const FontSize(18),
+          children: [
+            SelectableHtml(
+              data: item.content,
+              style: {
+                '#': Style(
+                  padding: EdgeInsets.zero,
+                  margin: EdgeInsets.zero,
+                  fontSize: const FontSize(18),
+                  textAlign: TextAlign.justify,
+                ),
+                'small': Style(
+                  padding: EdgeInsets.zero,
+                  fontSize: const FontSize(12),
+                ),
+                'a': Style(
+                  padding: EdgeInsets.zero,
+                  fontSize: const FontSize(12),
+                ),
+              },
             ),
-            'small': Style(
-              padding: EdgeInsets.zero,
-              fontSize: const FontSize(12),
-            ),
-            'a': Style(
-              padding: EdgeInsets.zero,
-              fontSize: const FontSize(12),
-            ),
-          },
+          ],
         ),
       ),
     );

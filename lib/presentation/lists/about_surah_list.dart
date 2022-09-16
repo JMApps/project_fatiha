@@ -14,18 +14,14 @@ class AboutSurahList extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         return snapshot.hasData
             ? CupertinoScrollbar(
-                child: PageStorage(
-                  bucket: context.read<DatabaseState>().getAboutSurahBucket,
-                  child: ListView.builder(
-                    padding: appWidgetStyle.mainPadding,
-                    itemCount: snapshot.data!.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return AboutSurahItem(
-                        key: PageStorageKey<int>(index),
-                        item: snapshot.data![index],
-                      );
-                    },
-                  ),
+                child: ListView.builder(
+                  padding: appWidgetStyle.mainPadding,
+                  itemCount: snapshot.data!.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return AboutSurahItem(
+                      item: snapshot.data![index],
+                    );
+                  },
                 ),
               )
             : const Center(
