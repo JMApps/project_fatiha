@@ -34,7 +34,7 @@ class AppTheme {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     canvasColor: const Color(0xFF263238),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFF37474F),
+      backgroundColor: Color(0xFF263238),
       elevation: 0,
       centerTitle: true,
       titleTextStyle: TextStyle(

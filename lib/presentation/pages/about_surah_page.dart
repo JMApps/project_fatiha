@@ -7,8 +7,8 @@ class AboutSurahPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size(double.infinity, 60),
         child: AboutSurahAppBar(),
       ),

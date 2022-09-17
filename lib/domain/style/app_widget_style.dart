@@ -15,6 +15,7 @@ class AppWidgetStyle {
   final mainMargin = const EdgeInsets.all(16);
   final mainMarginMini = const EdgeInsets.all(8);
   final mainMarginOnlyBottom = const EdgeInsets.only(bottom: 16);
+  final mainMarginOnlyTop = const EdgeInsets.only(top: 16);
 
   // Shape's
   final mainShape = RoundedRectangleBorder(borderRadius: BorderRadius.circular(25));
