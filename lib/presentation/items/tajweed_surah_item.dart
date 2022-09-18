@@ -17,9 +17,9 @@ class TajweedSurahItem extends StatelessWidget {
         child: ExpansionTile(
           controlAffinity: ListTileControlAffinity.trailing,
           childrenPadding: appWidgetStyle.mainPaddingMini,
-          collapsedIconColor: Colors.teal,
+          collapsedIconColor: Colors.orangeAccent,
           collapsedTextColor: myColors.mainPrimaryColor,
-          textColor: Colors.teal,
+          textColor: Colors.orangeAccent,
           iconColor: myColors.mainPrimaryColor,
           title: const Text(
             'Title',

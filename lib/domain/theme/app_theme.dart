@@ -4,7 +4,9 @@ class AppTheme {
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFFECEFF1),
     fontFamily: 'Noto Sans',
-    colorScheme: const ColorScheme.light(),
+    colorScheme: const ColorScheme.light(
+      primary: Colors.red
+    ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     canvasColor: const Color(0xFFFFFFFF),
     appBarTheme: const AppBarTheme(
@@ -21,16 +23,19 @@ class AppTheme {
       elevation: 0,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      selectedItemColor: Color(0xFFF44336),
-      unselectedItemColor: Color(0xFF263238),
     ),
     cardColor: const Color(0xFFFFFFFF),
+    textSelectionTheme: const TextSelectionThemeData(
+      selectionColor: Color(0xFFB0BEC5),
+    ),
   );
 
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFF37474F),
     fontFamily: 'Noto Sans',
-    colorScheme: const ColorScheme.dark(),
+    colorScheme: const ColorScheme.dark(
+        primary: Colors.orangeAccent,
+    ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     canvasColor: const Color(0xFF263238),
     appBarTheme: const AppBarTheme(
@@ -46,10 +51,11 @@ class AppTheme {
       elevation: 0,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      selectedItemColor: Color(0xFFFFC107),
-      unselectedItemColor: Color(0xFFECEFF1),
     ),
     cardColor: const Color(0xFF263238),
+    textSelectionTheme: const TextSelectionThemeData(
+      selectionColor: Color(0xFF263238),
+    ),
   );
 }
 
