@@ -18,6 +18,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: _mainContainer[context.watch<MainBottomNavigationState>().getInitialNavigationIndex],
       bottomNavigationBar: const MainBottomNavigationBar(),
     );

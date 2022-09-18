@@ -12,68 +12,64 @@ class MainBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final myColors = Theme.of(context).colorScheme;
     final localizations = AppLocalizations.of(context)!;
-    return Container(
-      color: myColors.bottomNavigationClipColor,
-      child: ClipRRect(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.elliptical(45, 50),
-          topRight: Radius.elliptical(45, 50),
-        ),
-        child: BottomNavigationBar(
-          backgroundColor: myColors.mainAppBarColor,
-          items: [
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/icons/apps.png',
-                height: 20,
-                width: 20,
-                color: myColors.mainIconColor,
-              ),
-              activeIcon: Image.asset(
-                'assets/icons/apps.png',
-                height: 20,
-                width: 20,
-                color: myColors.mainSelectedIconColor,
-              ),
-              label: localizations.menu_page,
+    return ClipRRect(
+      borderRadius: const BorderRadius.only(
+        topLeft: Radius.elliptical(45, 50),
+        topRight: Radius.elliptical(45, 50),
+      ),
+      child: BottomNavigationBar(
+        backgroundColor: myColors.mainAppBarColor,
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/apps.png',
+              height: 20,
+              width: 20,
+              color: myColors.mainIconColor,
             ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/icons/home.png',
-                height: 20,
-                width: 20,
-                color: myColors.mainIconColor,
-              ),
-              activeIcon: Image.asset(
-                'assets/icons/home.png',
-                height: 20,
-                width: 20,
-                color: myColors.mainSelectedIconColor,
-              ),
-              label: localizations.main_page,
+            activeIcon: Image.asset(
+              'assets/icons/apps.png',
+              height: 20,
+              width: 20,
+              color: myColors.mainSelectedIconColor,
             ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/icons/settings.png',
-                height: 20,
-                width: 20,
-                color: myColors.mainIconColor,
-              ),
-              activeIcon: Image.asset(
-                'assets/icons/settings.png',
-                height: 20,
-                width: 20,
-                color: myColors.mainSelectedIconColor,
-              ),
-              label: localizations.setting_page,
+            label: localizations.menu_page,
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/home.png',
+              height: 20,
+              width: 20,
+              color: myColors.mainIconColor,
             ),
-          ],
-          currentIndex: context
-              .watch<MainBottomNavigationState>()
-              .getInitialNavigationIndex,
-          onTap:
-              context.read<MainBottomNavigationState>().changeNavigationIndex,
-        ),
+            activeIcon: Image.asset(
+              'assets/icons/home.png',
+              height: 20,
+              width: 20,
+              color: myColors.mainSelectedIconColor,
+            ),
+            label: localizations.main_page,
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/settings.png',
+              height: 20,
+              width: 20,
+              color: myColors.mainIconColor,
+            ),
+            activeIcon: Image.asset(
+              'assets/icons/settings.png',
+              height: 20,
+              width: 20,
+              color: myColors.mainSelectedIconColor,
+            ),
+            label: localizations.setting_page,
+          ),
+        ],
+        currentIndex: context
+            .watch<MainBottomNavigationState>()
+            .getInitialNavigationIndex,
+        onTap: context.read<MainBottomNavigationState>().changeNavigationIndex,
       ),
     );
   }

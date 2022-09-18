@@ -8,7 +8,7 @@ class AppTheme {
       primary: Colors.red
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    canvasColor: const Color(0xFFFFFFFF),
+    canvasColor: Colors.transparent,
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFFCFD8DC),
       elevation: 0,
@@ -23,6 +23,7 @@ class AppTheme {
       elevation: 0,
       showSelectedLabels: false,
       showUnselectedLabels: false,
+      backgroundColor: Color(0xFFECEFF1)
     ),
     cardColor: const Color(0xFFFFFFFF),
     textSelectionTheme: const TextSelectionThemeData(

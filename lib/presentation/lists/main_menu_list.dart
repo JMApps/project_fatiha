@@ -11,7 +11,7 @@ class MainMenuList extends StatelessWidget {
     final localizations = AppLocalizations.of(context)!;
     return GridView(
       scrollDirection: Axis.vertical,
-      padding: appWidgetStyle.mainPaddingHorizontalBigVerticalMini,
+      padding: appWidgetStyle.mainPadding,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 1 : 2,
         childAspectRatio: MediaQuery.of(context).devicePixelRatio,
