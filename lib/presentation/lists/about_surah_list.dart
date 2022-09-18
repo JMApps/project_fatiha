@@ -39,6 +39,11 @@ class AboutSurahList extends StatelessWidget {
                       effect: CustomizableEffect(
                         activeDotDecoration: DotDecoration(
                           color: myColors.mainPrimaryColor,
+                          dotBorder: const DotBorder(
+                            padding: 2,
+                            color: Colors.teal,
+                            width: 2,
+                          ),
                           width: 14,
                           height: 14,
                           borderRadius: BorderRadius.circular(4),
@@ -46,8 +51,8 @@ class AboutSurahList extends StatelessWidget {
                         ),
                         dotDecoration: DotDecoration(
                           color: Colors.teal,
-                          width: 9,
-                          height: 9,
+                          width: 10,
+                          height: 10,
                           borderRadius: BorderRadius.circular(3),
                         ),
                         spacing: 8,

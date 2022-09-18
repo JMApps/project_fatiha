@@ -11,11 +11,11 @@ class MainMenuList extends StatelessWidget {
     final localizations = AppLocalizations.of(context)!;
     return GridView(
       scrollDirection: Axis.vertical,
-      padding: appWidgetStyle.mainPadding,
+      padding: appWidgetStyle.mainPaddingHorizontalBigVerticalMini,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 1 : 2,
         childAspectRatio: MediaQuery.of(context).devicePixelRatio,
-        crossAxisSpacing: 16,
+        crossAxisSpacing: 4,
         mainAxisSpacing: 4,
       ),
       children: [

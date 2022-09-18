@@ -8,7 +8,7 @@ class AppTheme {
       primary: Colors.red
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    canvasColor: Colors.transparent,
+    canvasColor: Colors.white,
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFFCFD8DC),
       elevation: 0,
