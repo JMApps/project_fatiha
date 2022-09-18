@@ -59,6 +59,7 @@ class FatihaAyahItem extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               ExpansionTile(
+                key: PageStorageKey<int>(item.id),
                 controlAffinity: ListTileControlAffinity.trailing,
                 childrenPadding: EdgeInsets.zero,
                 collapsedIconColor: myColors.mainIconColor,
