@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_fatiha/domain/state/provider/database_state.dart';
 import 'package:project_fatiha/domain/theme/app_theme.dart';
+import 'package:project_fatiha/main.dart';
 import 'package:project_fatiha/presentation/items/about_surah_item.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -31,7 +32,7 @@ class AboutSurahList extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(16),
+                    padding: appWidgetStyle.mainPadding,
                     child: SmoothPageIndicator(
                       controller: _pageController,
                       count: 9,
@@ -45,8 +46,8 @@ class AboutSurahList extends StatelessWidget {
                         ),
                         dotDecoration: DotDecoration(
                           color: Colors.teal,
-                          width: 11,
-                          height: 11,
+                          width: 9,
+                          height: 9,
                           borderRadius: BorderRadius.circular(3),
                         ),
                         spacing: 8,

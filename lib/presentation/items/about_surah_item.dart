@@ -18,6 +18,7 @@ class AboutSurahItem extends StatelessWidget {
     final myColors = Theme.of(context).colorScheme;
     return CupertinoScrollbar(
       child: SingleChildScrollView(
+        primary: true,
         child: ListTile(
           contentPadding: appWidgetStyle.mainPadding,
           textColor: Colors.teal,
