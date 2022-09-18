@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFFECEFF1),
-    fontFamily: 'Manrope',
+    fontFamily: 'Noto Sans',
     colorScheme: const ColorScheme.light(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     canvasColor: const Color(0xFFFFFFFF),
@@ -13,7 +13,7 @@ class AppTheme {
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 18,
-        fontFamily: 'Manrope',
+        fontFamily: 'Noto Sans',
         color: Color(0xFF263238),
       ),
     ),
@@ -29,7 +29,7 @@ class AppTheme {
 
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFF37474F),
-    fontFamily: 'Manrope',
+    fontFamily: 'Noto Sans',
     colorScheme: const ColorScheme.dark(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     canvasColor: const Color(0xFF263238),
@@ -39,7 +39,7 @@ class AppTheme {
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 18,
-        fontFamily: 'Manrope',
+        fontFamily: 'Noto Sans',
       ),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(

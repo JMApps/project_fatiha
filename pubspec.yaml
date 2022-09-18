@@ -53,9 +53,9 @@ flutter:
     - family: Aqum
       fonts:
         - asset: assets/fonts/aqum_two.ttf
-    - family: Manrope
+    - family: Noto Sans
       fonts:
-        - asset: assets/fonts/manrope.ttf
+        - asset: assets/fonts/noto_sans.ttf
     - family: Quran
       fonts:
         - asset: assets/fonts/quran.ttf
