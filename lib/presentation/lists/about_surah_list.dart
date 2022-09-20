@@ -35,7 +35,7 @@ class AboutSurahList extends StatelessWidget {
                     padding: appWidgetStyle.mainPadding,
                     child: SmoothPageIndicator(
                       controller: _pageController,
-                      count: 9,
+                      count: snapshot.data!.length,
                       effect: CustomizableEffect(
                         activeDotDecoration: DotDecoration(
                           color: myColors.mainPrimaryColor,
