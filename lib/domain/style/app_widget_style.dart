@@ -22,6 +22,7 @@ class AppWidgetStyle {
 
   // Border radius
   final mainBorderRadius = BorderRadius.circular(25);
+  final mainBorderWithoutTopLeftRadius = const BorderRadius.only(topRight: Radius.circular(35), bottomRight: Radius.circular(35), bottomLeft: Radius.circular(35));
 
   final menuColorContainerBorderRadius = BorderRadius.circular(20);
   final fatihaContainerMargin = const EdgeInsets.only(left: 8, right: 8, bottom: 16);

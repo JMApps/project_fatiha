@@ -26,14 +26,18 @@ class AboutSurahItem extends StatelessWidget {
           title: Padding(
             padding: appWidgetStyle.mainPaddingOnlyBottom,
             child: Card(
-              shape: appWidgetStyle.mainShape,
+              elevation: 0,
+              //shape: appWidgetStyle.mainShape,
+              shape: RoundedRectangleBorder(
+                borderRadius: appWidgetStyle.mainBorderWithoutTopLeftRadius,
+              ),
               child: Padding(
                 padding: appWidgetStyle.mainPadding,
                 child: Text(
                   item.title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.teal,
+                    color: myColors.mainSubTitleColor,
                     fontSize: 18,
                   ),
                   textAlign: TextAlign.center,
