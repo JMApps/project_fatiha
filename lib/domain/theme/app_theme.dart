@@ -4,6 +4,7 @@ class AppTheme {
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFFECEFF1),
     fontFamily: 'Noto Sans',
+    brightness: Brightness.light,
     colorScheme: const ColorScheme.light(
       primary: Colors.red
     ),
@@ -34,6 +35,7 @@ class AppTheme {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFF37474F),
     fontFamily: 'Noto Sans',
+    brightness: Brightness.dark,
     colorScheme: const ColorScheme.dark(
         primary: Colors.orangeAccent,
     ),
