@@ -19,21 +19,21 @@ class MainBottomNavigationBar extends StatelessWidget {
       child: BottomNavigationBar(
         backgroundColor: myColors.mainAppBarColor,
         items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/apps.png',
-              height: 20,
-              width: 20,
-              color: myColors.mainIconColor,
-            ),
-            activeIcon: Image.asset(
-              'assets/icons/apps.png',
-              height: 20,
-              width: 20,
-              color: myColors.mainSelectedIconColor,
-            ),
-            label: localizations.menu_page,
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Image.asset(
+          //     'assets/icons/apps.png',
+          //     height: 20,
+          //     width: 20,
+          //     color: myColors.mainIconColor,
+          //   ),
+          //   activeIcon: Image.asset(
+          //     'assets/icons/apps.png',
+          //     height: 20,
+          //     width: 20,
+          //     color: myColors.mainSelectedIconColor,
+          //   ),
+          //   label: localizations.menu_page,
+          // ),
           BottomNavigationBarItem(
             icon: Image.asset(
               'assets/icons/home.png',
@@ -65,9 +65,7 @@ class MainBottomNavigationBar extends StatelessWidget {
             label: localizations.setting_page,
           ),
         ],
-        currentIndex: context
-            .watch<MainBottomNavigationState>()
-            .getInitialNavigationIndex,
+        currentIndex: context.watch<MainBottomNavigationState>().getInitialNavigationIndex,
         onTap: context.read<MainBottomNavigationState>().changeNavigationIndex,
       ),
     );

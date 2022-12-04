@@ -11,6 +11,7 @@ class ReadFatihaContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final readPlayer = context.watch<ReadSurahState>();
     final myColors = Theme.of(context).colorScheme;
     return Column(
       children: [
@@ -45,10 +46,14 @@ class ReadFatihaContainer extends StatelessWidget {
                     splashRadius: 20,
                     splashColor: myColors.lightIconSplashColor,
                     icon: Icon(
-                      CupertinoIcons.play_arrow,
+                      readPlayer.getPlayingState
+                          ? CupertinoIcons.pause
+                          : CupertinoIcons.play,
                       color: myColors.mainIconColor,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<ReadSurahState>().playPause();
+                    },
                   ),
                   const SizedBox(width: 8),
                   Expanded(
@@ -98,49 +103,11 @@ class ReadFatihaContainer extends StatelessWidget {
                                 context.watch<ReadSurahState>().getReaderIndex,
                           ),
                         ),
-                        DropdownMenuItem(
-                          value: 6,
-                          child: DropDownReaderNumber(
-                            readerNumber: 6,
-                            positionIndex:
-                                context.watch<ReadSurahState>().getReaderIndex,
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 7,
-                          child: DropDownReaderNumber(
-                            readerNumber: 7,
-                            positionIndex:
-                                context.watch<ReadSurahState>().getReaderIndex,
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 8,
-                          child: DropDownReaderNumber(
-                            readerNumber: 8,
-                            positionIndex:
-                                context.watch<ReadSurahState>().getReaderIndex,
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 9,
-                          child: DropDownReaderNumber(
-                            readerNumber: 9,
-                            positionIndex:
-                                context.watch<ReadSurahState>().getReaderIndex,
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 10,
-                          child: DropDownReaderNumber(
-                            readerNumber: 10,
-                            positionIndex:
-                                context.watch<ReadSurahState>().getReaderIndex,
-                          ),
-                        ),
                       ],
                       onChanged: (int? value) {
-                        context.read<ReadSurahState>().changeReaderIndex(value!);
+                        context
+                            .read<ReadSurahState>()
+                            .changeReaderIndex(value!);
                       },
                     ),
                   ),
@@ -150,7 +117,9 @@ class ReadFatihaContainer extends StatelessWidget {
                     splashColor: myColors.lightIconSplashColor,
                     icon: Icon(
                       CupertinoIcons.arrow_counterclockwise,
-                      color: myColors.mainIconColor,
+                      color: context.watch<ReadSurahState>().getTrackLoopState
+                          ? myColors.mainAccentColor
+                          : myColors.mainIconColor,
                     ),
                     onPressed: () {},
                   ),

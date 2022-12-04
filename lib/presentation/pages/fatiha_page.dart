@@ -28,63 +28,68 @@ class FatihaPage extends StatelessWidget {
           create: (_) => ReadSurahState(),
         ),
       ],
-      child: Scaffold(
-        appBar: const PreferredSize(
-          preferredSize: Size(double.infinity, 160),
-          child: FatihaAppBar(),
-        ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: appWidgetStyle.mainPadding,
-              child: CustomSlidingSegmentedControl(
-                innerPadding: const EdgeInsets.all(4),
-                padding: 32,
-                initialValue: context.read<HomeSlidingSegmentState>().getInitialSlidingIndex,
-                children: {
-                  1: Text(
-                    localizations.read,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: myColors.mainTitleColor,
-                    ),
-                  ),
-                  2: Text(
-                    localizations.translation,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: myColors.mainTitleColor,
-                    ),
-                  ),
-                },
-                decoration: BoxDecoration(
-                  color: myColors.mainAppBarColor,
-                  borderRadius: appWidgetStyle.mainBorderRadius,
-                ),
-                thumbDecoration: BoxDecoration(
-                  color: myColors.mainAppBarColor,
-                  borderRadius: appWidgetStyle.mainBorderRadius,
-                  boxShadow: [
-                    BoxShadow(
-                      color: myColors.mainPrimaryColor.withOpacity(0.5),
-                      blurRadius: 0.3,
-                      spreadRadius: 0.3,
-                    ),
-                  ],
-                ),
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-                onValueChanged: (int newIndex) {
-                  context.read<HomeSlidingSegmentState>().changeSlidingIndex(newIndex);
-                },
-              ),
+      child: Consumer<ReadSurahState>(
+        builder: (context, readSurahState, _) {
+          readSurahState.initPlayer();
+          return Scaffold(
+            appBar: const PreferredSize(
+              preferredSize: Size(double.infinity, 160),
+              child: FatihaAppBar(),
             ),
-            Expanded(
-              child: _homePageContainer[context.watch<HomeSlidingSegmentState>().getInitialSlidingIndex - 1],
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: appWidgetStyle.mainPadding,
+                  child: CustomSlidingSegmentedControl(
+                    innerPadding: const EdgeInsets.all(4),
+                    padding: 32,
+                    initialValue: context.read<HomeSlidingSegmentState>().getInitialSlidingIndex,
+                    children: {
+                      1: Text(
+                        localizations.read,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: myColors.mainTitleColor,
+                        ),
+                      ),
+                      2: Text(
+                        localizations.translation,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: myColors.mainTitleColor,
+                        ),
+                      ),
+                    },
+                    decoration: BoxDecoration(
+                      color: myColors.mainAppBarColor,
+                      borderRadius: appWidgetStyle.mainBorderRadius,
+                    ),
+                    thumbDecoration: BoxDecoration(
+                      color: myColors.mainAppBarColor,
+                      borderRadius: appWidgetStyle.mainBorderRadius,
+                      boxShadow: [
+                        BoxShadow(
+                          color: myColors.mainPrimaryColor.withOpacity(0.5),
+                          blurRadius: 0.3,
+                          spreadRadius: 0.3,
+                        ),
+                      ],
+                    ),
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                    onValueChanged: (int newIndex) {
+                      context.read<HomeSlidingSegmentState>().changeSlidingIndex(newIndex);
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: _homePageContainer[context.watch<HomeSlidingSegmentState>().getInitialSlidingIndex - 1],
+                ),
+              ],
             ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
